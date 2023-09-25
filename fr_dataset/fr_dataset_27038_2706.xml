@@ -8,7 +8,7 @@
   <updating data_type="character" is_pk="false"/>
   <md5 data_type="character" is_pk="false"/>
   <help data_type="character varying" is_pk="false"/>
-  <ordem data_type="integer" is_pk="false">5</ordem>
+  <ordem data_type="integer" is_pk="false">4</ordem>
   <alias data_type="integer" is_pk="false">2706</alias>
   <linhas_pagina data_type="integer" is_pk="false">20</linhas_pagina>
   <pagina data_type="character" is_pk="false">S</pagina>

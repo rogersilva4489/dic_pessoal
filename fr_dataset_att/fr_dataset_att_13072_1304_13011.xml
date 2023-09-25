@@ -15,7 +15,7 @@
   <height data_type="integer" is_pk="false">19</height>
   <show_grid data_type="character" is_pk="false">S</show_grid>
   <title_grid data_type="character varying" is_pk="false"/>
-  <order_grid data_type="integer" is_pk="false">13</order_grid>
+  <order_grid data_type="integer" is_pk="false">9</order_grid>
   <width_grid data_type="integer" is_pk="false"/>
   <flex_grid data_type="character" is_pk="false"/>
   <compute_grid data_type="character varying" is_pk="false"/>
@@ -26,7 +26,7 @@
   <default_value data_type="character varying" is_pk="false"/>
   <pwd data_type="character" is_pk="false"/>
   <required data_type="character" is_pk="false"/>
-  <taborder data_type="integer" is_pk="false">12</taborder>
+  <taborder data_type="integer" is_pk="false">8</taborder>
   <updatable data_type="character" is_pk="false">S</updatable>
   <readonly data_type="character" is_pk="false">N</readonly>
   <show_form data_type="character" is_pk="false">N</show_form>

@@ -3,10 +3,10 @@
   <id_form data_type="integer" is_pk="true">27038</id_form>
   <id_dataset data_type="integer" is_pk="true">2701</id_dataset>
   <id_dataset_att data_type="integer" is_pk="true">2702</id_dataset_att>
-  <id_form_rel data_type="integer" is_pk="false">27039</id_form_rel>
-  <id_dataset_lkp data_type="integer" is_pk="false">2705</id_dataset_lkp>
-  <id_attribute_lkpkey data_type="integer" is_pk="false">2701</id_attribute_lkpkey>
-  <id_attribute_lkpdesc data_type="integer" is_pk="false">2702</id_attribute_lkpdesc>
+  <id_form_rel data_type="integer" is_pk="false">110031</id_form_rel>
+  <id_dataset_lkp data_type="integer" is_pk="false">1301</id_dataset_lkp>
+  <id_attribute_lkpkey data_type="integer" is_pk="false">1301</id_attribute_lkpkey>
+  <id_attribute_lkpdesc data_type="integer" is_pk="false">1302</id_attribute_lkpdesc>
   <id_cursor data_type="integer" is_pk="false">110036</id_cursor>
   <id_cursor_att data_type="integer" is_pk="false">11002</id_cursor_att>
   <att_name data_type="character varying" is_pk="false">ID_MATRIZ</att_name>
@@ -37,8 +37,8 @@
   <id_conteiner data_type="integer" is_pk="false"/>
   <obj_type data_type="character varying" is_pk="false">Combo</obj_type>
   <id_charcase data_type="character" is_pk="false">N</id_charcase>
-  <id_dataset_rel data_type="integer" is_pk="false">2703</id_dataset_rel>
-  <id_attribute_rel data_type="integer" is_pk="false"/>
+  <id_dataset_rel data_type="integer" is_pk="false">11001</id_dataset_rel>
+  <id_attribute_rel data_type="integer" is_pk="false">11001</id_attribute_rel>
   <row data_type="integer" is_pk="false"/>
   <col data_type="integer" is_pk="false"/>
   <row_span data_type="integer" is_pk="false"/>

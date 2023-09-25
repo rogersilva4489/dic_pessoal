@@ -3,7 +3,7 @@
   <id_table data_type="integer" is_pk="true">2200167</id_table>
   <id_cols data_type="integer" is_pk="true">220012</id_cols>
   <column_name data_type="character varying" is_pk="false">DATA_CHANGED</column_name>
-  <ordem data_type="integer" is_pk="false">13</ordem>
+  <ordem data_type="integer" is_pk="false">14</ordem>
   <length data_type="integer" is_pk="false"/>
   <dec data_type="integer" is_pk="false"/>
   <primary_key data_type="character" is_pk="false"/>

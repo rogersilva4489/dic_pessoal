@@ -11,7 +11,7 @@
   <pg data_type="text" is_pk="false"/>
   <type data_type="character" is_pk="false">T</type>
   <seq_id_cols data_type="integer" is_pk="false"/>
-  <usuario_locked data_type="character varying" is_pk="false"/>
-  <comment_locked data_type="character varying" is_pk="false"/>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"><![CDATA[<<Deprecated>>> será utilizada a tabela de xgp_inventario]]></comment_locked>
   <is_fix_table data_type="character" is_pk="false">N</is_fix_table>
 </db_table>

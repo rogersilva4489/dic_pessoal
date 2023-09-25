@@ -26,10 +26,10 @@
   <default_value data_type="character varying" is_pk="false"/>
   <pwd data_type="character" is_pk="false"/>
   <required data_type="character" is_pk="false">N</required>
-  <taborder data_type="integer" is_pk="false">6</taborder>
+  <taborder data_type="integer" is_pk="false">19</taborder>
   <updatable data_type="character" is_pk="false">S</updatable>
   <readonly data_type="character" is_pk="false">N</readonly>
-  <show_form data_type="character" is_pk="false">S</show_form>
+  <show_form data_type="character" is_pk="false">N</show_form>
   <newline data_type="integer" is_pk="false">0</newline>
   <full_size data_type="character" is_pk="false">N</full_size>
   <orderby data_type="character varying" is_pk="false"/>

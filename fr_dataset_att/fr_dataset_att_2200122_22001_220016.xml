@@ -14,7 +14,7 @@
   <width data_type="integer" is_pk="false">80</width>
   <height data_type="integer" is_pk="false">19</height>
   <show_grid data_type="character" is_pk="false">S</show_grid>
-  <title_grid data_type="character varying" is_pk="false">Idade Saída  (mês)</title_grid>
+  <title_grid data_type="character varying" is_pk="false">Idade Saí</title_grid>
   <order_grid data_type="integer" is_pk="false">8</order_grid>
   <width_grid data_type="integer" is_pk="false">80</width_grid>
   <flex_grid data_type="character" is_pk="false">N</flex_grid>

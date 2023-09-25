@@ -26,7 +26,7 @@
   <default_value data_type="character varying" is_pk="false"/>
   <pwd data_type="character" is_pk="false"/>
   <required data_type="character" is_pk="false"/>
-  <taborder data_type="integer" is_pk="false">9</taborder>
+  <taborder data_type="integer" is_pk="false">8</taborder>
   <updatable data_type="character" is_pk="false">S</updatable>
   <readonly data_type="character" is_pk="false">N</readonly>
   <show_form data_type="character" is_pk="false">S</show_form>

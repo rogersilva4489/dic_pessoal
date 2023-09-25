@@ -12,7 +12,7 @@
   <dec data_type="integer" is_pk="false"/>
   <help data_type="character varying" is_pk="false">Peso de Entrada</help>
   <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
-  <md5 data_type="character varying" is_pk="false">9D579B7F2BFCDE050E953FD03066D32D</md5>
+  <md5 data_type="character varying" is_pk="false">BC75884D971AD0211B9CE30A75DB833A</md5>
   <id_table data_type="integer" is_pk="false">130210</id_table>
   <id_cols data_type="integer" is_pk="false">1304</id_cols>
   <id_type data_type="integer" is_pk="false"/>

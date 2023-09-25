@@ -48,7 +48,7 @@ union all
        null as nome_empresa,
        a.id_lote_animal as id,  
        a.id_fracao as id_pai,
-       c.descricao || ' - ' || coalesce(f.descricao,'') as descricao,
+       c.descricao,
        null as capacidade,
        (a.qtde_animais * a.peso_medio_animais /450) as lotacao_ua,
        a.qtde_animais,
@@ -56,7 +56,7 @@ union all
        a.data_media_nasc,
        0 as id_estrategia,   
        '' as descr_estrategia,
-       f.descricao as descr_tipo_aparte,
+       '' as descr_tipo_aparte,
        null as data_inicio,
        'L' as tipo_registro  -- lote animal
 from xgp_lote_animal a
@@ -70,9 +70,6 @@ left join xgp_categoria c on
 left join xgp_fracao e on
   e.id_fracao = b.id_fracao
   
-left join xgp_grupo_animal f on
-  f.id_grupo_animal = c.id_grupo_animal
-
 where a.qtde_animais > 0
 order by c.sexo, c.idade_entrada desc)        
 ]]></body>

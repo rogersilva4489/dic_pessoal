@@ -15,7 +15,7 @@
   <height data_type="integer" is_pk="false">19</height>
   <show_grid data_type="character" is_pk="false"/>
   <title_grid data_type="character varying" is_pk="false"/>
-  <order_grid data_type="integer" is_pk="false">15</order_grid>
+  <order_grid data_type="integer" is_pk="false">14</order_grid>
   <width_grid data_type="integer" is_pk="false"/>
   <flex_grid data_type="character" is_pk="false"/>
   <compute_grid data_type="character varying" is_pk="false"/>

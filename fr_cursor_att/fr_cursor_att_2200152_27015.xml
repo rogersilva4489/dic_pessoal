@@ -14,7 +14,7 @@
   <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
   <md5 data_type="character varying" is_pk="false">B7ECC974A5C8C5402FC3A16BBF0F47D0</md5>
   <id_table data_type="integer" is_pk="false">2200160</id_table>
-  <id_cols data_type="integer" is_pk="false">2702</id_cols>
+  <id_cols data_type="integer" is_pk="false">13011</id_cols>
   <id_type data_type="integer" is_pk="false"/>
   <lkp_desc data_type="character" is_pk="false"/>
   <show_grid data_type="character" is_pk="false"/>

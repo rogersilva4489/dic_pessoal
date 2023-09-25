@@ -9,7 +9,7 @@
   <md5 data_type="character varying" is_pk="false"/>
   <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
   <join_fk data_type="character" is_pk="false">A</join_fk>
-  <usuario_join_fk data_type="character varying" is_pk="false">ROGERIO</usuario_join_fk>
+  <usuario_join_fk data_type="character varying" is_pk="false">GERSON</usuario_join_fk>
   <data_join_fk data_type="timestamp without time zone" is_pk="false">2023-09-23T00:00:00.000</data_join_fk>
   <usuario_join_table data_type="character varying" is_pk="false"/>
   <data_join_table data_type="timestamp without time zone" is_pk="false"/>

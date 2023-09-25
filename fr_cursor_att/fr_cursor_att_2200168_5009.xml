@@ -10,9 +10,16 @@
         when a.status = 'B' then
                   'Baixado'
         when a.status = 'I' then
-                  'Indefinido'
-        else 
-               ''
+                 'Baixa Inventario'
+        when a.status = 'T' then
+                 'Em Transito'
+        when a.status = 'A' then
+                  'Aguardando Abate'
+        when a.status = 'S' then
+                  'Ativo'
+        when a.status = 'N' then
+                  'Inativo'
+        else   ''
 end 
 </expressao>
   <group_by data_type="character" is_pk="false"/>

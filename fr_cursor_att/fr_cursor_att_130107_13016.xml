@@ -4,7 +4,7 @@
   <id_cursor_att data_type="integer" is_pk="true">13016</id_cursor_att>
   <column_cursor data_type="character varying" is_pk="false">ID_CATEGORIA</column_cursor>
   <alias data_type="character varying" is_pk="false">A</alias>
-  <ordem data_type="integer" is_pk="false">16</ordem>
+  <ordem data_type="integer" is_pk="false">15</ordem>
   <expressao data_type="character varying" is_pk="false"/>
   <group_by data_type="character" is_pk="false"/>
   <order_by data_type="character" is_pk="false"/>
