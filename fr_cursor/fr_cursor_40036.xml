@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">40036</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_TITULOS</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_TITULO, 
+     A.ID_PESSOA, 
+     A.ID_NATUREZA, 
+     A.NR_DOCUMENTO, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.NOME as NOME_PESSOA, 
+     C.DESCRICAO as DESCR_NATUREZA, 
+     A.ID_EMPRESA, 
+     A.DATA_EMISSAO, 
+     A.ID_CARTEIRA, 
+     A.VALOR, 
+     A.ID_ORIGENS, 
+     D.TIPO_TITULO, 
+     A.ID_LCONTAS, 
+     A.DATA_ENTRADA, 
+     A.QTDE_PARCELA, 
+     A.ID_COND_PAGTO, 
+     A.ID_TAREFA, 
+     A.ID_CONTA, 
+     A.CHEQUE, 
+     A.ANEXO, 
+     A.ID_ANEXO, 
+     D.DESCRICAO as DESCR_CARTEIRA, 
+     A.MOTIVO_LIBERACAO, 
+     E.OBSERVACAO as OBSERVACAO_COMPLETA 
+from XGP_TITULOS A 
+     inner join XGP_PESSOA B on 
+           B.ID_PESSOA = A.ID_PESSOA
+     inner join XGP_NATUREZA C on 
+           C.ID_NATUREZA = A.ID_NATUREZA
+     inner join XGP_CARTEIRA D on 
+           D.ID_CARTEIRA = A.ID_CARTEIRA
+     left join VW_XGP_TITULOS_OBSERVACAO E on 
+           e.id_titulo = a.id_titulo
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">40041</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

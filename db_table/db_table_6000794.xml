@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000794</id_table>
+  <table_name data_type="character varying" is_pk="false">MS_TP_EVENTOFINAN</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela Fixa do Sistema que Define os Eventos entre as transações de recebimento, Pagamento e Compensações
+
+REC - Recebimento
+NFV - Nota Fiscal de Venda  (Verificar o Uso)
+PAG - Pagamento
+COM - Compensação Cheque Emitido
+TRA - Transferencia
+TES - Tesouraria - Lançamentos que são originados na tesouraria
+CHE - Entrada de Cheque - Entrada de Cheque via Digitação na Carteira
+BCH - Baixa de Cheque 
+CAR - Entrada de Cartão Credito/Debito via Digitação
+BCA - Baixa de Cartão de Credito/Debito
+ADT - Entrada Adiantamento
+BAD - Baixa de Adiantamento
+VAL - Entrada de Vale
+BVA - Baixa de Vale
+CRC - Compensação Receber e Cheque
+CRT - Compensação Receber e Cartão
+CRP - Compensação Receber e Pagar
+CRA - Compensação Receber e Adiantamento
+CPA - Compensação Pagar e Adiantamento
+CPC - Compensação Contas a Pagar e Cheque Pré-Datado
+CCH - Compensação Baixa Cheque com Entrada Cheque (Troca)
+CCA - Compensação Baixa de Cheque com Entrada de Cartão
+CRE - Compensação Receber c/ Receber
+VEN - Venda a Vista
+CAV - Cheque Emitido Avista
+BAF - Baixa de Adiantamento a Funcionario - Este evento baixa diretamente na Ficha do Func.
+PED - Perda Duplicata
+PEC - Perda Cheque</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">2</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

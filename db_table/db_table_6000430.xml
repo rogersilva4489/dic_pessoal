@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000430</id_table>
+  <table_name data_type="character varying" is_pk="false">CT_TIPO_CONTRATO</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela onde são definidos os Serviços (Padrão) que a Empresa Presta.
+Esta Tabela inicialmente era fixa e deixou de ser, devido a necesseidade de maior flexibilidade para o sistema de contrato. Para controlar o prazo de cobrança do contrato foi criado o tipo de Contrato (ct_Tipo_Contrato.Tipo) . Nesta tabela tambem é definida a descrição para nota fiscal e o codigo Fiscal do Serviço. Quando o tipo de contrato é T, o sistema de contratos permitir definir livremente a descrição da NF (ct_Contrato.Descricao_Item_NF) porem mesmo com esta liberdade o usuario tem que definir um tipo padrão de serviço devido ao codigo fiscal</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">13</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

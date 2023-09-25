@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">220086</id_table>
+  <id_cols data_type="integer" is_pk="true">220011</id_cols>
+  <id_enum data_type="character" is_pk="true">A</id_enum>
+  <descricao data_type="character varying" is_pk="false">Todos</descricao>
+  <comentario data_type="character varying" is_pk="false">Todos os tipo de evento eviarão comunicação</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</fr_enum>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">360019</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">AGDONLINE_VEICULO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_VEICULO, 
+      A.ID_CLIENTE, 
+      A.ID_PESSOA, 
+      A.ID_VEICULOMODELO, 
+      A.PLACA, 
+      A.CHASSI, 
+      A.VERSAO, 
+      A.KM, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      B.ID_FABRICANTE, 
+      B.DESCRICAO as DESCR_AGDONLINE_VEICULOMODELO, 
+      B.FOTO, 
+      E.ID_FABRICANTE as ID_FABRICANTE_E, 
+      E.NOME as NOME_AGDONLINE_FABRICANTE, 
+      C.ID_CLIENTE as ID_CLIENTE_C, 
+      D.ID_PESSOA as ID_PESSOA_D, 
+      F.NOME as NOME_PESSOA 
+from AGDONLINE_VEICULO A 
+     inner join AGDONLINE_VEICULOMODELO B on 
+           B.ID_VEICULOMODELO = A.ID_VEICULOMODELO
+     inner join AGDONLINE_FABRICANTE E on 
+           E.ID_FABRICANTE = B.ID_FABRICANTE
+     inner join AGDONLINE_CLIENTE C on 
+           C.ID_CLIENTE = A.ID_CLIENTE and 
+           C.ID_PESSOA = A.ID_PESSOA
+     inner join PESSOA_FISICA D on 
+           D.ID_PESSOA = C.ID_PESSOA
+     inner join PESSOA F on 
+           F.ID_PESSOA = D.ID_PESSOA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false">DESCR_AGDONLINE_VEICULOMODELO, NOME_AGDONLINE_FABRICANTE</order_by>
+  <usuario_created data_type="character varying" is_pk="false">ELIAS</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Cadastro de Veículos do Cliente]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">360013</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">200</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

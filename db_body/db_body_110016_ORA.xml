@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">110016</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT OWNER, SYNONYM_NAME, TABLE_OWNER, TABLE_NAME, DB_LINK
+FROM ALL_SYNONYMS]]></body>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</db_body>

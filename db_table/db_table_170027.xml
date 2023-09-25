@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">170027</id_table>
+  <table_name data_type="character varying" is_pk="false">TB_REGRA_GRUPO_ITEM</table_name>
+  <commet data_type="character varying" is_pk="false">Cruzamento de regras de imposto com os grupos de itens permitidos. Nem todos grupos de itens podem ser liberados automaticamente para todas regras sem antes passar pelo analista fiscal.</commet>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false"/>
+  <usuario_locked data_type="character varying" is_pk="false"/>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

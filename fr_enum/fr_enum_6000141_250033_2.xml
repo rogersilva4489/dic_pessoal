@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">6000141</id_table>
+  <id_cols data_type="integer" is_pk="true">250033</id_cols>
+  <id_enum data_type="character" is_pk="true">2</id_enum>
+  <descricao data_type="character varying" is_pk="false">CT-e Emitido em Hipótese de Anulação</descricao>
+  <comentario data_type="character varying" is_pk="false">CT-e Emitido em Hipótese de Anulação</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</fr_enum>

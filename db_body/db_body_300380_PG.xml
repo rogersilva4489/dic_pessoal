@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">300380</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_campanha,
+       a1.descricao,
+       a1.data as data_inicio,
+       a1.data_termino,
+       (a1.data_termino - a1.data)/30 as qtde_mes,
+       a.qtde_matriz,
+       b.qtde_prenha,
+       c.qtde_vazia,
+       d.qtde_nascido,       
+       e.qtde_desmamado,
+       g.peso_medio_desmama,
+       f.qtde_morte_bez,
+       b.qtde_prenha/a.qtde_matriz::float * 100 as Indice_fertilidade,
+       d.qtde_nascido/a.qtde_matriz::float * 100 as Indice_natalidade,
+       e.qtde_desmamado/a.qtde_matriz::float * 100 as tx_desmame,
+       (b.qtde_prenha - d.qtde_nascido)/b.qtde_prenha::float * 100 as indice_mortalidade, 
+       g.peso_medio_desmama/h.peso_medio_mae::float * 100 as relacao_desmame,
+       g.peso_medio_desmama * d.qtde_nascido / a.qtde_matriz as kg_desmama_vc_exposta
+from xgp_campanha a1
+
+    left join 
+    (select a.id_campanha, count(distinct id_animal) as qtde_matriz
+    from VW_XGP_ESTACAO_MONTA a
+    group by a.id_campanha) a on 
+       a1.id_campanha = a.id_campanha
+
+    left join 
+    (select a.id_campanha, count(distinct id_animal) as qtde_prenha
+    from VW_XGP_ESTACAO_MONTA a
+    where a.prenha = 'S'
+    group by a.id_campanha) b on
+       a1.id_campanha = b.id_campanha
+
+    left join 
+    (select a.id_campanha, count(distinct id_animal) as qtde_vazia
+    from VW_XGP_ESTACAO_MONTA a
+    where a.prenha = 'N'
+    group by a.id_campanha) c on
+        a1.id_campanha = c.id_campanha
+      
+    left join 
+    (select a.id_campanha, count(*) as qtde_nascido
+    from VW_XGP_ESTACAO_MONTA a
+    where a.data_nascimento is not null
+    group by a.id_campanha) d on
+       a1.id_campanha = d.id_campanha
+      
+    left join 
+    (select a.id_campanha, count(*) as qtde_desmamado
+    from VW_XGP_ESTACAO_MONTA a
+    where a.data_desmama is not null
+    group by a.id_campanha) e on 
+       a1.id_campanha = e.id_campanha
+
+    left join 
+    (select a.id_campanha, count(*) as qtde_morte_bez
+    from VW_XGP_ESTACAO_MONTA a
+    where a.Data_morte_bezerro is not null
+    group by a.id_campanha) f on 
+       a1.id_campanha = f.id_campanha
+
+    left join 
+    (select a.id_campanha, avg(a.peso_desmama) as peso_medio_desmama
+    from VW_XGP_ESTACAO_MONTA a
+    where a.peso_desmama is not null
+    group by a.id_campanha) g on
+       a1.id_campanha = g.id_campanha
+
+    left join 
+    (select a.id_campanha, avg(a.peso_mae) as peso_medio_mae
+    from VW_XGP_ESTACAO_MONTA a
+    where a.peso_desmama is not null
+    group by a.id_campanha) h on
+       a1.id_campanha = h.id_campanha
+   
+where a1.tipo_campanha = 'E' 
+order by a1.data desc  ]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

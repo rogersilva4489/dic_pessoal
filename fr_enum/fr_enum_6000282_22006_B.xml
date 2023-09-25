@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">6000282</id_table>
+  <id_cols data_type="integer" is_pk="true">22006</id_cols>
+  <id_enum data_type="character" is_pk="true">B</id_enum>
+  <descricao data_type="character varying" is_pk="false">Registrar</descricao>
+  <comentario data_type="character varying" is_pk="false">Tipo de Ação que é utilizado para registro de informações no evento e tambem para alterar  o grupo, andamento, etc de um evento</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</fr_enum>

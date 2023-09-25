@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13065</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[CREATE OR REPLACE FUNCTION Dia_Semana(dia_inicial varchar, dia_final varchar) RETURNS varchar AS $$
+        BEGIN
+           if  dia_inicial = '1' and dia_final = '7' then
+               return 'Todos os Dias';
+           elsif  dia_inicial = dia_final then
+               return dia_semana(dia_inicial);
+           else 
+               return dia_semana(dia_inicial)||' a '||dia_semana(dia_final) ;
+           end if;
+        END;
+$$ LANGUAGE plpgsql;]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

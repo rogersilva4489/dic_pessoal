@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">3200166</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">PESSOA_ENDERECO_CONSULTA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[SELECT CASE WHEN C.ID_ENDERECO_COBRANCA IS NULL THEN 'N' ELSE 'S'  END   AS END_COBRANCA,
+       CASE WHEN D.ID_ENDERECO_FATURAMENTO IS NULL THEN 'N' ELSE 'S' END AS END_FATURAMENTO,
+       E.DESCRICAO 														 AS TIPO_ENDERECO,
+       A.ATIVO, 
+       F.DESCRICAO AS TIPO_LOGRADOURO,
+       A.RUA,
+       A.BAIRRO, 
+       A.FACHADA, 
+       A.COMPLEMENTO, 
+       A.CEP, 
+       G.DESCRICAO AS CIDADE, 
+       H.UF,
+       A.INSCRICAO_ESTADUAL, 
+       A.INSCRICAO_MUNICIPAL, 
+       A.ID_ENDERECO, 
+       A.ID_PESSOA, 
+       A.ID_CIDADE, 
+       A.ID_UF, 
+       A.ID_TIPO_LOGRADOURO
+  FROM PESSOA_ENDERECO A
+ INNER JOIN PESSOA B
+         ON (A.ID_PESSOA = B.ID_PESSOA)
+ LEFT JOIN PESSOA_DIVERSOS C
+        ON (A.ID_PESSOA = C.ID_PESSOA AND
+            A.ID_ENDERECO = C.ID_ENDERECO_COBRANCA)
+ LEFT JOIN PESSOA_DIVERSOS D
+        ON (A.ID_PESSOA   = D.ID_PESSOA AND
+            A.ID_ENDERECO = D.ID_ENDERECO_FATURAMENTO)
+ LEFT JOIN VW_TIPO_ENDERECO E
+        ON (A.EN_TIPO_ENDERECO = E.EN_TIPO_ENDERECO)
+ LEFT JOIN TIPO_LOGRADOURO F
+        ON (A.ID_TIPO_LOGRADOURO = F.ID_TIPO_LOGRADOURO)        
+ LEFT JOIN CIDADE G
+        ON (A.ID_UF = G.ID_UF AND
+            A.ID_CIDADE = G.ID_CIDADE)
+ LEFT JOIN ESTADO H
+        ON (A.ID_UF = H.ID_UF)         
+ WHERE A.ATIVO = 'S']]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Endereços Ativos da Pessoa Selecionada]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

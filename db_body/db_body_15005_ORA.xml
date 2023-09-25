@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">15005</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[create or replace function date_add(exp date, value integer, unit varchar)
+  return date is
+  result date;
+BEGIN
+  EXECUTE immediate 'SELECT to_date(''' ||
+                    to_char(exp, 'dd/mm/yyyy hh24:mi:ss') ||
+                    ''', ''dd/mm/yyyy hh24:mi:ss'') + interval ''' ||
+                    to_char(value) || ''' ' || unit || ' FROM DUAL'
+    into result;
+
+  return result;
+
+end date_add;
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+</db_body>

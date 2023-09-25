@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jmanager_version_modules>
+  <id_jmanager_version_modules data_type="integer" is_pk="true">6</id_jmanager_version_modules>
+  <id_jmanager_version data_type="integer" is_pk="false">4</id_jmanager_version>
+  <id_projeto data_type="integer" is_pk="false">10044</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">13005</id_modulo>
+  <modulo_principal data_type="character" is_pk="false">S</modulo_principal>
+</jmanager_version_modules>

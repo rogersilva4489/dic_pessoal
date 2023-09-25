@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">300234</id_table>
+  <id_cols data_type="integer" is_pk="true">30011</id_cols>
+  <column_name data_type="character varying" is_pk="false">TIPO_VALOR</column_name>
+  <ordem data_type="integer" is_pk="false">7</ordem>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false"/>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Campo do Arquivo: Posição do arquivo que vai buscar o campo
+Valor Fixo: Campo vai receber um valor fixo
+ListOptions: Lista de opções ex: Valor1=1; Valor2=2, etc
+Sql Lookup: Faz um sql para buscar dados no banco de dados para carregar um campo. campo que retorna valor fazer apelido 'result' e o parametro tem que chamar param. Ex: select id_animal as result from xgp_animal where cod_animal = :param</commet>
+  <listoptions data_type="character varying" is_pk="false">Campo do Arquivo=C; Valor Fixo=F; ListOptions=L; SQL Lookup=S; SQL Exists=E; SQL Not Exists=N; Imput=I; Serial=R</listoptions>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">999</user_perfil>
+  <user_ie data_type="character" is_pk="false">E</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">1</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false">L</id_special_type>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

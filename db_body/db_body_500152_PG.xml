@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500152</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[-- Monitor do Sistema
+select a.ordem,
+       a.operacao,
+       a.status,
+       a.qtde
+from
+    ((select 1 as ordem,
+            'Fabricação de Ração' as operacao,
+            'Pendente' as status,
+            count(a.id_fabrica) as qtde 
+    from xgp_fabrica a
+    where status = 'P') 
+    union 
+    (select 2 as ordem,
+            'Distribuicao Ração' as operacao,
+            'Pendente' as status,
+            count(a.id_salgar) as qtde 
+    from xgp_salgar a
+    where status = 'P') 
+    union 
+    (select 3 as ordem,
+            'Lote Animais' as operacao,
+            'Pendente' as status,
+            count(a.id_lote) as qtde 
+    from xgp_lote a
+    where status = 'P')
+    union 
+    (select 4 as ordem,
+            'Lote Animais' as operacao,
+            'Aguardando Animais' as status,
+            count(a.id_lote) as qtde 
+    from xgp_lote a
+    where status = 'A')
+    union 
+    (select 5 as ordem,
+            'Entrada de Animais' as operacao,
+            'Pendente' as status,
+            count(a.id_entrada) as qtde 
+    from xgp_entrada a
+    where status = 'P')
+    union 
+    (select 6 as ordem,
+            'Saida de Animais' as operacao,
+            'Pendente' as status,
+            count(a.id_saida) as qtde 
+    from xgp_saida a
+    where status = 'P')
+    union 
+    (select 7 as ordem,
+            'Manejo de Animais' as operacao,
+            'Pendente' as status, 
+            count(a.id_manejo) as qtde 
+    from xgp_manejo a
+    where status = 'P')
+    union 
+    (select 8 as ordem,
+            'Compra de Produtos' as operacao,
+            'Pendente' as status, 
+            count(a.id_compra) as qtde 
+    from xgp_compra a
+    where status = 'P')
+    union 
+    (select 9 as ordem,
+            'Venda de Produtos' as operacao,
+            'Pendente' as status, 
+            count(a.id_venda) as qtde 
+    from xgp_venda a
+    where status = 'P')) a
+
+where a.qtde > 0
+order by ordem]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

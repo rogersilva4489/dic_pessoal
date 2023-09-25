@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300341</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ESTACAO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_ESTACAO, 
+     A.DESCRICAO, 
+     A.DATA_INICIO, 
+     A.DATA_TERMINO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.ID_REGIAO_CLIMA, 
+     A.CICLO_PASTEJO, 
+     A.EFICIENCIA_PASTEJO, 
+     A.CONSUMO_FORRAGEM, 
+     B.DESCRICAO as DESCR_REGIAO_CLIMA, 
+     A.PERIDO_ESTACAO, 
+     A.CICLO_REBORTA, 
+     A.GMD_ESTIMADO 
+from XGP_ESTACAO A 
+     inner join XGP_REGIAO_CLIMA B on 
+           B.ID_REGIAO_CLIMA = A.ID_REGIAO_CLIMA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300373</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

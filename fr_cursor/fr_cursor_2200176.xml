@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200176</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_SAIDA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_SAIDA, 
+     A.DATA_SAIDA, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.ID_LOTE, 
+     A.VALOR_TOTAL, 
+     A.TIPO_SAIDA, 
+     A.STATUS, 
+     A.USUARIO_BAIXA, 
+     A.DATA_BAIXA, 
+     A.TIPO_VALOR, 
+     A.ID_TAREFA, 
+     A.DESCRICAO, 
+     A.VALOR_CUSTO, 
+     A.ID_EMPRESA, 
+     A.ID_EMPRESA_TRANSF, 
+     A.ID_OPERACAO, 
+     A.VALOR_DESCONTO, 
+     A.VALOR_ANIMAL, 
+     A.RENDIMENTO_CARCACA, 
+     A.PESO_CARCACA, 
+     A.VALOR_ARROBA, 
+     A.VALOR_ABATE, 
+     A.VALOR_FUNRURAL, 
+     A.VALOR_RECEBER, 
+     A.DATA_VENCIMENTO, 
+     A.OBS_FECHAMENTO, 
+     A.VALOR_DIARIA, 
+     A.VALOR_OUTRAS_DESPESAS, 
+     A.VALOR_TOTAL_LIQUIDO, 
+     A.OBS_ABATE, 
+     A.VALOR_DESPESAS_LOTE, 
+     A.VALOR_IMPOSTOS, 
+     A.ARQUIVO, 
+     A.VALOR_BONIFICACAO 
+from XGP_SAIDA A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200187</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">190072</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">FR_FORM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_FORM, 
+      A.ID_PROJETO, 
+      A.ID_MODULO, 
+      A.TITLE, 
+      E.DESCRICAO as DESCR_MODULO, 
+      F.DESCRICAO as DESCR_PROJETO, 
+      A.NAME 
+from FR_FORM A 
+     inner join FR_MODULO E on 
+           E.ID_PROJETO = A.ID_PROJETO and 
+           E.ID_MODULO = A.ID_MODULO
+     inner join FR_PROJETO F on 
+           F.ID_PROJETO = E.ID_PROJETO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">21001718</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">130109</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_mov,
+       case when b.tem_aparte_animais is null or b.tem_aparte_animais = 'N' then b.id_fracao else d.id_fracao end id_fracao,
+       a.id_categoria,
+       a.id_raca, 
+       e.sexo,
+       e.idade_entrada,
+       count(a.id_mov_animal) as qtde_animais_individual,
+       sum(a.qtde_animal) as qtde_animais_lote,
+       avg(a.peso) as peso_medio_animais,
+       to_timestamp(avg(extract(epoch from a.data_nascimento)))::date as data_media_animais
+from xgp_mov_animal a
+left join xgp_mov b on
+    b.id_mov = a.id_mov
+left join xgp_mov_aparte d ON
+    d.id_mov = a.id_mov and
+    d.id_mov_aparte = a.id_mov_aparte
+left join xgp_categoria e on
+    e.id_categoria = a.id_categoria
+group by a.id_mov, 
+         case when b.tem_aparte_animais is null or b.tem_aparte_animais = 'N' then b.id_fracao else d.id_fracao end,
+         a.id_categoria, 
+         a.id_raca,
+         e.sexo,
+         e.idade_entrada
+order by e.sexo, e.idade_entrada desc]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

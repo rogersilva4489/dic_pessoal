@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">300209</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">50017</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">COD_FRACAO</column_cursor>
+  <alias data_type="character varying" is_pk="false">E</alias>
+  <ordem data_type="integer" is_pk="false">13</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Cód. de identificação do piquete</help>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false">5916373EB43BF020C197C445E5DB0433</md5>
+  <id_table data_type="integer" is_pk="false">2200160</id_table>
+  <id_cols data_type="integer" is_pk="false">220010</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

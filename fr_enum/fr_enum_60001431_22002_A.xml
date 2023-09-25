@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">60001431</id_table>
+  <id_cols data_type="integer" is_pk="true">22002</id_cols>
+  <id_enum data_type="character" is_pk="true">A</id_enum>
+  <descricao data_type="character varying" is_pk="false">Recebimento</descricao>
+  <comentario data_type="character varying" is_pk="false">Identivica que a origem do lançamento na tesouraria foi uma baixa de recebimento
+(Duplicata, cheque, cartão, etc)</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</fr_enum>

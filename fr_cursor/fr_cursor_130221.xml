@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130221</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_MONTA_CAMPANHA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_campanha,
+       a.descricao,
+       a.data_inicio,
+       a.data_termino,  
+       a.status,
+       b.qtde_matriz,
+       b.qtde_servico,
+       b.qtde_vazia,
+       b.qtde_prenha,  
+       c.qtde_nascimento,
+       d.qtde_desmama,                                                                                                    
+       case when b.qtde_matriz > 0 then CAST(b.qtde_prenha as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_prenhez,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_vazia as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_vazia,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_touro as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_touro,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_ia as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_ia,
+       case when b.qtde_matriz > 0 then CAST(c.qtde_nascimento as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_nascimento,
+       case when b.qtde_matriz > 0 then CAST(d.qtde_desmama as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_desmama
+from xgp_campanha a      
+
+left join (select a.id_campanha,
+                 count(distinct c.id_animal) as qtde_matriz,
+                 sum(c.qtde_servico) as qtde_servico,
+                 sum(case when c.diagnostico_prenhez in ('P', 'L') then 1 else 0 end) as qtde_prenha,
+                 sum(case when c.diagnostico_prenhez = 'V' then 1 else 0 end) as qtde_vazia,
+                 sum(case when c.id_tipo_prenhez = 1 then 1 else 0 end) as qtde_touro,
+                 sum(case when c.id_tipo_prenhez = 2 then 1 else 0 end) as qtde_ia
+          from xgp_campanha a
+          inner join xgp_aparte b on
+             b.id_campanha = a.id_campanha
+          left join xgp_aparte_animal c ON
+             c.id_aparte = b.id_aparte
+          where a.tipo_campanha = 'E'
+          group by a.id_campanha) b on
+    b.id_campanha = a.id_campanha
+     
+left join (select a.id_campanha,
+                  count(a.id_animal) as qtde_nascimento
+            from xgp_nascimento a, xgp_aparte b, xgp_aparte_animal c
+            where a.id_campanha = b.id_campanha 
+              and b.id_aparte = c.id_aparte
+              and a.id_animal_mae = c.id_animal
+            group by a.id_campanha) c on
+          c.id_campanha = a.id_campanha 
+
+left join (select a.id_campanha,
+                  count(a.id_animal) as qtde_desmama
+            from xgp_nascimento a, xgp_aparte b, xgp_aparte_animal c, xgp_animal d
+            where a.id_campanha = b.id_campanha 
+              and b.id_aparte = c.id_aparte
+              and a.id_animal_mae = c.id_animal
+              and a.id_animal = d.id_animal
+              and (d.data_desmama is not null or ((current_date - d.data_desmama)/30) > 10)
+            group by a.id_campanha) d on
+          d.id_campanha = a.id_campanha 
+
+where a.tipo_campanha = 'E'
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

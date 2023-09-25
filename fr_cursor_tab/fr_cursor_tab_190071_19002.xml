@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_tab>
+  <id_cursor data_type="integer" is_pk="true">190071</id_cursor>
+  <id_cursor_tab data_type="integer" is_pk="true">19002</id_cursor_tab>
+  <id_table data_type="integer" is_pk="false">21001718</id_table>
+  <alias data_type="character varying" is_pk="false">B</alias>
+  <ordem data_type="integer" is_pk="false">2</ordem>
+  <join_table data_type="character varying" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <join_fk data_type="character" is_pk="false">L</join_fk>
+  <usuario_join_fk data_type="character varying" is_pk="false">EMERSON</usuario_join_fk>
+  <data_join_fk data_type="timestamp without time zone" is_pk="false">2016-01-21T00:00:00.000</data_join_fk>
+  <usuario_join_table data_type="character varying" is_pk="false"/>
+  <data_join_table data_type="timestamp without time zone" is_pk="false"/>
+  <id_cursor_join data_type="integer" is_pk="false"/>
+</fr_cursor_tab>

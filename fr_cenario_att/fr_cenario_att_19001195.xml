@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cenario_att>
+  <id_cenario_att data_type="integer" is_pk="true">19001195</id_cenario_att>
+  <id_cenario data_type="integer" is_pk="false">190046</id_cenario>
+  <id_cenario_serial data_type="integer" is_pk="false">86</id_cenario_serial>
+  <ordem data_type="integer" is_pk="false">20</ordem>
+  <code_syntax data_type="character varying" is_pk="false">setValueDatetBox("edDataFundacao21003datebox_210013-real", "0101990");</code_syntax>
+  <code data_type="character varying" is_pk="false">setValueDatetBox</code>
+  <component_target data_type="character varying" is_pk="false">edDataFundacao21003datebox_210013-real</component_target>
+  <value data_type="character varying" is_pk="false">01011990</value>
+  <table_name data_type="character varying" is_pk="false">PESSOA_JURIDICA</table_name>
+  <field_name data_type="character varying" is_pk="false">DATA_FUNDACAO</field_name>
+  <anotacoes data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+</fr_cenario_att>

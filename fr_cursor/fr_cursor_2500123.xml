@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2500123</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">CP_PEDIDO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.CHAVE, 
+      A.CONHECIMENTO, 
+      A.DATA_BAIXA, 
+      A.DATA_CANCELOU, 
+      A.DATA_CHANGED, 
+      A.DATA_CONFIRMACAO, 
+      A.DATA_CREATED, 
+      A.DATA_EMAIL, 
+      A.DATA_PEDIDO, 
+      A.DATA_SAIDA, 
+      A.ENVIADO, 
+      A.FRETE_CONTA_FORN, 
+      A.ID_EMPRESA, 
+      A.ID_ORC_SOLICITACAO, 
+      A.ID_PEDIDO, 
+      A.ID_PEDIDO_AGRUPADOR, 
+      A.ID_PESSOA, 
+      A.ID_PESSOA_AGRUPA, 
+      A.ID_SITUACAO_PEDIDO, 
+      A.ID_STATUS_PEDIDO, 
+      A.ID_SUGESTAO, 
+      A.ID_TIPO_PEDIDO, 
+      A.ID_TRANSPORTADORA, 
+      A.NOTA_FISCAL, 
+      A.OBSERVACAO, 
+      A.PEDIDO_FORNECEDOR, 
+      A.PRE_PEDIDO, 
+      A.PREVISAO_CHEGADA, 
+      A.USUARIO_CANCELOU, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.VALOR_ARREDONDAMENTO, 
+      A.VALOR_BRUTO, 
+      A.VALOR_DESCONTO, 
+      A.VALOR_FRETE, 
+      A.VALOR_IPI, 
+      A.VALOR_LIQUIDO, 
+      A.VALOR_OUTRAS 
+from CP_PEDIDO A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000178</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

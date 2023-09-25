@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cenario_att>
+  <id_cenario_att data_type="integer" is_pk="true">19001185</id_cenario_att>
+  <id_cenario data_type="integer" is_pk="false">190046</id_cenario>
+  <id_cenario_serial data_type="integer" is_pk="false">77</id_cenario_serial>
+  <ordem data_type="integer" is_pk="false">11</ordem>
+  <code_syntax data_type="character varying" is_pk="false">setValueTextBox("edSite21001_210013", "www.nbsi.com.br");</code_syntax>
+  <code data_type="character varying" is_pk="false">setValueTextBox</code>
+  <component_target data_type="character varying" is_pk="false">edSite21001_210013</component_target>
+  <value data_type="character varying" is_pk="false">www.nbsi.com.br</value>
+  <table_name data_type="character varying" is_pk="false">PESSOA</table_name>
+  <field_name data_type="character varying" is_pk="false">SITE</field_name>
+  <anotacoes data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+</fr_cenario_att>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">60001521</id_table>
+  <id_cols data_type="integer" is_pk="true">25001</id_cols>
+  <id_enum data_type="character" is_pk="true">N</id_enum>
+  <descricao data_type="character varying" is_pk="false">GNV</descricao>
+  <comentario data_type="character varying" is_pk="false">Gas natural veicular
+   O código terceiro é usado para envio na Nfe</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false">15</cod_terceiro>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</fr_enum>

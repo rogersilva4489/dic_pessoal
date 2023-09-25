@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">60001420</id_table>
+  <table_name data_type="character varying" is_pk="false">TE_DETALHE_FORMA_RECTO</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela onde são registrados os detalhes do saldo do conta Caixa ou Caixa Operacional.
+
+Relacionamentos Forma Recebimento e Tabelas:
+* Dinheiro - te_LContas
+* Todos os Cheques (PR, AV,CO,DV) - te_Cheque_Entrada, te_Cheque_Evento
+* Cartão Crédito - te_CReceber_Cartao
+* Vales - te_Vales
+
+OBS: Devido a compensação de Baixa de Cheque com Entrada de Cheque (CCH) ter a mesma forma de Recebimento vai existir para o mesmo registro o valor de entrada e saida caso contrario viola a PK</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">7</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_events>
+  <id_form data_type="integer" is_pk="true">300250</id_form>
+  <event data_type="character varying" is_pk="true">menuItemExportExcel.OnClick</event>
+</fr_events>

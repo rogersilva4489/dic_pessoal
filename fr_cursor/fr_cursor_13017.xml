@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">13017</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_AVALIACAO_DETALHE</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_AVALIACAO, 
+     A.ID_AVALIACAO_DETALHE, 
+     A.ID_FRACAO, 
+     A.PERC_AEE, 
+     A.ALTURA, 
+     A.DENSIDADE, 
+     A.OBSERVACAO, 
+     A.AEE, 
+     A.UA_HA, 
+     A.LOTACAO_UA, 
+     A.KG_MS_HA, 
+     A.KG_MS_AEE, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.ID_CAPIM, 
+     A.TAMANHO, 
+     B.DESCRICAO as DESCR_CAPIM, 
+     D.COD_FRACAO as COD_FRACAO_MODULO, 
+     C.COD_FRACAO, 
+     C.ID_FRACAO_MODULO, 
+     A.TAMANHO_OLD, 
+     A.ID_CAPIM_OLD, 
+     A.LOTACAO_UA_OLD, 
+     A.AEE_OLD, 
+     A.ID_FRACAO_MODULO_OLD, 
+     A.ORDEM_MANEJO_OLD, 
+     A.QTDE_DIAS_OLD, 
+     A.EFICIENCIA_PASTEJO 
+from XGP_AVALIACAO_DETALHE A 
+     left join XGP_CAPIM B on 
+           B.ID_CAPIM = A.ID_CAPIM
+     inner join XGP_FRACAO C on 
+           C.ID_FRACAO = A.ID_FRACAO
+     left join XGP_AVALIACAO_MANEJO E on 
+           e.id_avaliacao = a.id_avaliacao
+           and e.id_fracao_pasto = a.id_fracao
+     left join XGP_FRACAO D on 
+           d.id_fracao = e.id_fracao_modulo
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">500145</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

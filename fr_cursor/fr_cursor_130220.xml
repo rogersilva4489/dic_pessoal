@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130220</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_MONTA_LOTE</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_campanha,
+       a.id_aparte,
+       a.descricao,          
+       c.cod_fracao,                      
+       f.descricao as descr_tipo_processo,
+       b.qtde_matriz,
+       b.qtde_servico,
+       b.qtde_vazia,
+       b.qtde_prenha,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_prenha as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_prenhez,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_vazia as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_vazia,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_touro as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_touro,
+       case when b.qtde_matriz > 0 then CAST(b.qtde_ia as numeric(10,2)) / b.qtde_matriz * 100 else 0 end as tx_ia
+from xgp_aparte a      
+inner join (select a.id_aparte,
+                 count(c.id_animal) as qtde_matriz,
+                 sum(c.qtde_servico) as qtde_servico,
+                 sum(case when c.diagnostico_prenhez in ('P', 'L') then 1 else 0 end) as qtde_prenha,
+                 sum(case when c.diagnostico_prenhez = 'V' then 1 else 0 end) as qtde_vazia,
+                 sum(case when c.id_tipo_prenhez = 1 then 1 else 0 end) as qtde_touro,
+                 sum(case when c.id_tipo_prenhez = 2 then 1 else 0 end) as qtde_ia
+          from xgp_aparte a
+          inner join xgp_campanha b on
+             b.id_campanha = a.id_campanha
+          left join xgp_aparte_animal c ON
+             c.id_aparte = a.id_aparte
+          where b.tipo_campanha = 'E'
+          group by a.id_aparte) b on
+    b.id_aparte = a.id_aparte
+
+left join xgp_fracao c on 
+    c.id_fracao = a.id_fracao
+    
+left join xgp_tipo_processo f on
+   f.id_tipo_processo = a.id_tipo_processo          
+          ]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

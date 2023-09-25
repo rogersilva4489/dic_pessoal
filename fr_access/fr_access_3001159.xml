@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_access>
+  <id_access data_type="integer" is_pk="true">3001159</id_access>
+  <descricao data_type="character varying" is_pk="false">Exportar PDF</descricao>
+  <perigoso data_type="character" is_pk="false"/>
+  <obj_name data_type="character varying" is_pk="false">menuItemExportPdf</obj_name>
+  <id_form data_type="integer" is_pk="false">300198</id_form>
+  <ordem data_type="integer" is_pk="false">15</ordem>
+</fr_access>

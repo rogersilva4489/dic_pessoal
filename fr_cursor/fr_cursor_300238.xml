@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300238</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ITEM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_ITEM, 
+     A.ID_TIPO_ITEM, 
+     A.DESCRICAO, 
+     A.COD_ITEM, 
+     A.ATIVO, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.DESCRICAO as DESCR_TIPO_ITEM, 
+     A.ID_MARCA, 
+     A.ID_UNIDADE, 
+     C.UN, 
+     A.ID_ANEXO, 
+     A.APLICACAO, 
+     A.NCM, 
+     D.DESCRICAO as DESCR_GRUPO, 
+     E.DESCRICAO as DESCR_SUB_GRUPO, 
+     A.ID_FAMILIA, 
+     A.ID_GRUPO, 
+     A.ID_SUB_GRUPO, 
+     E.DESCRICAO as DESCR_FAMILIA, 
+     A.ID_NCM, 
+     A.ID_NBS 
+from XGP_ITEM A 
+     inner join XGP_TIPO_ITEM B on 
+           B.ID_TIPO_ITEM = A.ID_TIPO_ITEM
+     left join XGP_UNIDADE C on 
+           C.ID_UNIDADE = A.ID_UNIDADE
+     left join XGP_GRUPO D on 
+           d.id_grupo = a.id_grupo
+     left join XGP_FAMILIA E on 
+           E.ID_FAMILIA = A.ID_FAMILIA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300257</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

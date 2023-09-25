@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_fk_cols>
+  <id_fk data_type="integer" is_pk="true">130497</id_fk>
+  <id_table data_type="integer" is_pk="true">2200174</id_table>
+  <id_cols data_type="integer" is_pk="true">22001</id_cols>
+  <id_table_fk data_type="integer" is_pk="true">130207</id_table_fk>
+  <id_cols_fk data_type="integer" is_pk="true">1308</id_cols_fk>
+  <col_rolename data_type="character varying" is_pk="false">ID_ANIMAL_PAI</col_rolename>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_ie data_type="character" is_pk="false">E</user_ie>
+  <user_perfil data_type="integer" is_pk="false">999</user_perfil>
+  <md5 data_type="character varying" is_pk="false"/>
+  <comment data_type="character varying" is_pk="false">Touro que forneceu o sêmen</comment>
+</db_fk_cols>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">300235</id_table>
+  <id_script data_type="integer" is_pk="true">3004</id_script>
+  <descricao data_type="character varying" is_pk="false">Saida Animal</descricao>
+  <script data_type="character varying" is_pk="false">insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('SAIDA', 'COD_ANIMAL', 'GERSON', '23/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'SAIDA' and campo = 'COD_ANIMAL';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('SAIDA', 'COD_BOTOM', 'GERSON', '23/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'SAIDA' and campo = 'COD_BOTOM';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('SAIDA', 'PESO_ATUAL', 'GERSON', '15/12/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'DECIMAL' where tabela = 'SAIDA' and campo = 'PESO_ATUAL';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('SAIDA', 'QTDE', 'GERSON', '23/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'SAIDA' and campo = 'QTDE';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('SAIDA', 'ID_UNIDADE', 'GERSON', '23/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'SAIDA' and campo = 'ID_UNIDADE';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('SAIDA', 'CAMPO IGNORADO', 'GERSON', '23/06/2017');
+
+</script>
+  <ordem data_type="integer" is_pk="false">3</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

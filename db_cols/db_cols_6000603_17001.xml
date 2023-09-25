@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">6000603</id_table>
+  <id_cols data_type="integer" is_pk="true">17001</id_cols>
+  <column_name data_type="character varying" is_pk="false">COD_UF_IBGE</column_name>
+  <ordem data_type="integer" is_pk="false">5</ordem>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false">S</not_null>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Tabela de código de UF do IBGE
+11	Rondônia		
+12	Acre			
+13	Amazonas		
+14	Roraima			
+15	Pará			
+16	Amapá			
+17	Tocantins		
+21	Maranhão		
+22	Piauí			
+23	Ceará			
+24	Rio Grande do Norte	
+25	Paraíba			
+26	Pernambuco		
+27	Alagoas			
+28	Sergipe			
+29	Bahia			
+31	Minas Gerais		
+32	Espírito Santo		
+33	Rio de Janeiro		
+35	São Paulo		
+41	Paraná			
+42	Santa Catarina		
+43	Rio Grande do Sul 	
+50	Mato Grosso do Sul	
+51	Mato Grosso		
+52	Goiás			
+53	Distrito Federal	
+</commet>
+  <listoptions data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">3</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false"/>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

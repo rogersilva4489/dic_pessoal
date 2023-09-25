@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">60001298</id_table>
+  <id_cols data_type="integer" is_pk="true">25001</id_cols>
+  <column_name data_type="character varying" is_pk="false">TIPO_ITEM</column_name>
+  <ordem data_type="integer" is_pk="false">7</ordem>
+  <length data_type="integer" is_pk="false">1</length>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false">N</primary_key>
+  <not_null data_type="character" is_pk="false">S</not_null>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Define o tipo da classe contábil. [E]stroque [C]onsumo [P]atrimonio. Itens de estoque só poderão ter classe contábil do tipo Estoque, itens de material de consumo somente poderão ter classe contábil do tipo Consumo e Itens de Patrimonio só poderão ter classe contábil do tipo Patrimônio. Se essa coluna estiver nula deverá ser considera como Estoque.</commet>
+  <listoptions data_type="character varying" is_pk="false">Material Consumo=C; Estoque=E; Patrimônio=P
+</listoptions>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">2</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false">L</id_special_type>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

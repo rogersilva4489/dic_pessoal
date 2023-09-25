@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">500129</id_table>
+  <id_script data_type="integer" is_pk="true">5001</id_script>
+  <descricao data_type="character varying" is_pk="false">XDE_ORIGEM_DRE</descricao>
+  <script data_type="character varying" is_pk="false">insert into xde_origem_dre (id_origem_dre, descricao) values (1, 'Baixa Titulos');
+insert into xde_origem_dre (id_origem_dre, descricao) values (2, 'Tesouraria');
+insert into xde_origem_dre (id_origem_dre, descricao) values (3, 'Saida de Animais');
+insert into xde_origem_dre (id_origem_dre, descricao) values (4, 'Distribuição Ração');
+insert into xde_origem_dre (id_origem_dre, descricao) values (5, 'Abastecimento');
+insert into xde_origem_dre (id_origem_dre, descricao) values (6, 'Almoxarifado');
+insert into xde_origem_dre (id_origem_dre, descricao) values (7, 'OS');</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

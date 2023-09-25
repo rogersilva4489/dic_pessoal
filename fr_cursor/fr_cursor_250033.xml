@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250033</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">TB_PRODUTO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_ITEM, 
+      A.ID_TIPO_EMBALAGEM_MU, 
+      A.ID_TIPO_EMBALAGEM_CX, 
+      A.ID_TIPO_EMBALAGEM_PA, 
+      A.ID_TIPO_EMBALAGEM_UN, 
+      A.ID_CLASSE_CONTABIL, 
+      A.ID_MARCA, 
+      A.ID_SITUACAO, 
+      A.ID_COTACAO, 
+      A.ID_NCM, 
+      A.ID_PRODUTOS_ANP, 
+      A.GERAR_PRECO_VENDA, 
+      A.EMBALAGEM, 
+      A.PART_NUMBER, 
+      A.COD_GTIN, 
+      A.JOB_TRANSF_ESTOQUE, 
+      A.APLICACAO, 
+      A.ESTOQUE_FRACIONADO, 
+      A.TIPO_ITEM, 
+      A.BLOQUEADO, 
+      A.EH_SOFTWARE, 
+      A.USUARIO_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      A.PESO, 
+      A.PESO_BRUTO, 
+      A.PESO_LIQUIDO, 
+      A.COMPRIMENTO, 
+      A.ALTURA, 
+      A.LARGURA, 
+      A.PESO_MU, 
+      A.COMPRIMENTO_MU, 
+      A.ALTURA_MU, 
+      A.LARGURA_MU, 
+      A.PESO_CX, 
+      A.COMPRIMENTO_CX, 
+      A.ALTURA_CX, 
+      A.LARGURA_CX, 
+      A.PESO_PA, 
+      A.COMPRIMENTO_PA, 
+      A.ALTURA_PA, 
+      A.LARGURA_PA, 
+      A.QTDE_PA, 
+      A.QTDE_CX, 
+      A.QTDE_MU, 
+      A.ID_GRUPO, 
+      A.ID_ORIGEM, 
+      B.COD_ORIGEM 
+from TB_PRODUTO A 
+     inner join TB_ORIGEM B on 
+           B.ID_ORIGEM = A.ID_ORIGEM
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Tabela de cadastro dos produtos com movimentação de estoque.]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">60001333</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false">Combo</obj_type_fk>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

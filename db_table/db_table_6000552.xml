@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000552</id_table>
+  <table_name data_type="character varying" is_pk="false">DIEF_PA_SUBTIPO_13</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela de dados de despesa do ano anterior
+Registro Tipo 88, Subtipo 13
+
+Despesas do Ano de 2009
+
+O  quadro  ¿Despesas  do  Ano  de  2009¿  estará  disponível  para  preenchimento obrigatório  na  declaração  referente  ao  período  02/2010  e  na DIEF  de Baixa,  em  qualquer período.
+Este  quadro  deverá  ser  preenchido  pelo  contribuinte  que  tenha  iniciado  suas  atividades antes do exercício de 2009,  tomando por base os valores das despesas  incorridos no exercício de 2008. No caso da empresa ter iniciado suas atividades em 2010, os campos desse formulário deverão ser preenchidos com os valores iguais a zero (0,00). </commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">12</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

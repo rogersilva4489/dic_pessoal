@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">500107</id_table>
+  <id_script data_type="integer" is_pk="true">5001</id_script>
+  <descricao data_type="character varying" is_pk="false">XGP_TIPO_HIST</descricao>
+  <script data_type="character varying" is_pk="false">insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(1, 'Brinco', 'GERSON', '10/02/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(2, 'Botom', 'GERSON', '10/02/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(3, 'Data de Nascimento', 'GERSON', '10/02/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(4, 'Sexo', 'GERSON', '10/02/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(5, 'Nr Registro', 'GERSON', '22/07/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(6, 'Incice Qualitas', 'GERSON', '22/07/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(7, 'Circunferencia Escrotal (CE)', 'GERSON', '22/07/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(8, 'Programa Melhoramento', 'GERSON', '22/07/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(9, 'Especie', 'GERSON', '22/07/2020');
+
+insert into xgp_tipo_hist
+(id_tipo_hist, descricao, usuario_created, data_created) values
+(10, 'Raça', 'GERSON', '22/07/2020');
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

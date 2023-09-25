@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250089</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">TB_TRIBUTACAO_SERV</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_TRIBUTACAO_SERV, 
+      A.ID_CST_COFINS, 
+      A.ID_CST_PIS, 
+      A.DESCRICAO, 
+      A.MOD_BC_ISS, 
+      A.ALIQ_ISS, 
+      A.ALIQ_RED_BC_ISS, 
+      A.ALIQ_PIS, 
+      A.ALIQ_COFINS, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      C.EN_TIPO_COFINS, 
+      B.EN_TIPO_PIS, 
+      B.ID_CST_PIS as CST_PIS_ID_CST_PIS, 
+      B.COD_CST as CST_PIS_COD_CST, 
+      B.TIPO_MOV as CST_PIS_TIPO_MOV, 
+      C.ID_CST_COFINS as CST_COFINS_ID_CST_COFINS, 
+      C.COD_CST as CST_COFINS_COD_CST, 
+      C.TIPO_MOV as CST_COFINS_TIPO_MOV, 
+      A.TIPO_MOV 
+from TB_TRIBUTACAO_SERV A 
+     inner join TB_CST_PIS B on 
+           B.ID_CST_PIS = A.ID_CST_PIS
+     inner join TB_CST_COFINS C on 
+           C.ID_CST_COFINS = A.ID_CST_COFINS
+
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">230073</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

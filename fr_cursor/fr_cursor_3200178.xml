@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">3200178</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">ITEM_ULTIMA_COMPRA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[SELECT A.ID_ITEM,
+       A.ID_COMPRA,
+       A.ID_COMPRA_ITEM, 
+       A.ID_EMPRESA, 
+       A.DATA_ENTRADA,
+       A.QTDE,
+       C.ID_TIPO_OPERACAO,
+       D.AJUSTE_PRECO_ICMS_ST,
+       D.ALIQ_COFINS,
+       D.ALIQ_COFINS_OUTROS,
+       D.ALIQ_COFINS_ST,
+       D.ALIQ_DESC_SUFRAMA_COFINS,
+       D.ALIQ_DESC_SUFRAMA_ICMS,
+       D.ALIQ_DESC_SUFRAMA_PIS,
+       D.ALIQ_DIF_ALIQUOTA, 
+       D.ALIQ_ICMS,
+       D.ALIQ_ICMS_ANTE_PARC,
+       D.ALIQ_ICMS_ANTEC,
+       D.ALIQ_ICMS_NF,
+       D.ALIQ_ICMS_SUBST,
+       D.ALIQ_IPI,
+       D.ALIQ_IPI_OUTROS,
+       D.ALIQ_ISS,
+       D.ALIQ_ISS_RETIDO,
+       D.ALIQ_PIS,
+       D.ALIQ_PIS_OUTROS,
+       D.ALIQ_PIS_ST,
+       D.ALIQ_RED_BC_ANTEC,
+       D.ALIQ_RED_BC_ICMS_NF,
+       D.ALIQ_RED_BC_IPI,
+       D.ALIQ_RED_BC_ISS,
+       D.ALIQ_RED_BC_SUBST,
+       D.BASE_COFINS,
+       D.BASE_COFINS_OUTROS,
+       D.BASE_COFINS_ST,
+       D.BASE_DESC_SUFRAMA_ICMS,
+       D.BASE_DIF_ALIQUOTA,
+       D.BASE_ICMS,
+       D.BASE_ICMS_ANTE_PARC,
+       D.BASE_ICMS_ANTEC,
+       D.BASE_ICMS_NF,
+       D.BASE_ICMS_SUBST,
+       D.BASE_IPI,
+       D.BASE_IPI_OUTROS,
+       D.BASE_ISS,
+       D.BASE_ISS_RETIDO,
+       D.BASE_PIS,
+       D.BASE_PIS_OUTROS,
+       D.BASE_PIS_ST,
+       D.CALC_ICMS_ANTEC_PARCIAL,
+       D.COD_CST_ICMS,
+       D.COD_CST_COFINS,
+       D.COD_CST_IPI,
+       D.COD_CST_PIS,
+       D.COD_ORIGEM,
+       D.DATA_CHANGED,
+       D.DATA_CREATED,
+       D.DESC_REDUZ_BC_ICMS,
+       D.DESC_REDUZ_BC_ICMS_ANTEC,
+       D.DESC_REDUZ_BC_ICMS_ST,
+       D.DESC_SUFRAMA_DESP_ACESS,
+       D.DESCONTO_NO_IPI,
+       D.DSCNT_SUFRAMA_PISCOFINS_ST,
+       D.ID_CFOP_ICMS,
+       D.ID_CFOP_ISS,
+       D.ID_COMPRA,
+       D.ID_COMPRA_ITEM,
+       D.ID_CST_COFINS,
+       D.ID_CST_ICMS,
+       D.ID_CST_IPI,
+       D.ID_CST_PIS,
+       D.ID_TRIBUTACAO,
+       D.ID_TRIBUTACAO_SERV,
+       D.IPI_PISCOFINS_ST,
+       D.IVA_ICMS_ANTEC,
+       D.IVA_ICMS_SUBST,
+       D.MOD_BC_ICMS,
+       D.MOD_BC_ICMS_ANTEC,
+       D.MOD_BC_ICMS_ST,
+       D.PRECO_UNIT_LIQ_SUFRAMA,
+       D.RED_BC_ST_DESP_ACESS,
+       D.SERVICO_NAO_TRIBUTADO,
+       D.SOMAR_IPI_BC_ICMS,
+       D.USUARIO_CHANGED,
+       D.USUARIO_CREATED,
+       D.VALOR_COFINS,
+       D.VALOR_COFINS_OUTROS,
+       D.VALOR_COFINS_ST, 
+       D.VALOR_DESC_SUFRAMA_COFINS,
+       D.VALOR_DESC_SUFRAMA_ICMS,
+       D.VALOR_DESC_SUFRAMA_PIS,
+       D.VALOR_DESCONTO_ISS,
+       D.VALOR_DIF_ALIQUOTA,
+       D.VALOR_ICMS,
+       D.VALOR_ICMS_ANTE_PARC,
+       D.VALOR_ICMS_ANTEC,
+       D.VALOR_ICMS_ISENTO,
+       D.VALOR_ICMS_NF,
+       D.VALOR_ICMS_OUTROS,
+       D.VALOR_ICMS_SUBST,
+       D.VALOR_IPI,
+       D.VALOR_IPI_OUTROS,
+       D.VALOR_ISS,
+       D.VALOR_ISS_RETIDO,
+       D.VALOR_PIS,
+       D.VALOR_PIS_OUTROS,
+       D.VALOR_PIS_ST,
+       D.VALOR_RED_BC_ANTEC,
+       D.VALOR_RED_BC_ICMS_NF,
+       D.VALOR_RED_BC_IPI,
+       D.VALOR_RED_BC_ISS,
+       D.VALOR_RED_BC_SUBST, 
+       D.BASE_ICMSST_RET, 
+       D.VALR_ICMSST_RET,
+       D.VLR_RAT_FRETE_NF, 
+       D.VLR_RAT_FRETE_ICMS,
+       D.VLR_RAT_FRETE_ICMS_TRIB
+FROM CP_COMPRA_ITEM A
+     INNER JOIN TB_OPERACAO_SISTEMA B 
+       ON A.ID_OPERACAO = B.ID_OPERACAO
+     INNER JOIN MS_TIPO_OPERACAO C 
+       ON B.ID_TIPO_OPERACAO = C.ID_TIPO_OPERACAO
+     INNER JOIN CP_COMPRA_ITEM_IMPOSTO D 
+       ON A.ID_COMPRA = D.ID_COMPRA AND A.ID_COMPRA_ITEM = D.ID_COMPRA_ITEM
+  WHERE C.APLICACAO  = 'E' 
+    AND A.ID_ITEM    = :ID_ITEM
+    AND A.ID_EMPRESA = :ID_EMPRESA       
+    AND A.DATA_ENTRADA = (SELECT MAX(E.DATA_ENTRADA) 
+                            FROM CP_COMPRA_ITEM E
+                           WHERE E.ID_ITEM    = A.ID_ITEM
+                             AND E.ID_EMPRESA = A.ID_EMPRESA
+                             AND E.DATA_ENTRADA < :DATA_ENTRADA)  
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

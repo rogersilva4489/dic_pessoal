@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500150</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_fracao,
+       a.cod_fracao,
+       a.capacidade,
+       b.categoria,
+       c.descricao as forrageira,
+       b.raca,
+       b.estrategia,
+       b.qtde_animal,
+       b.peso_medio,
+       b.dias_pesagem,
+       b.gmd
+from xgp_fracao a
+left join (select 
+            c.id_fracao,
+            d.descricao as categoria,
+            e.descricao as estrategia,
+            f.descricao as raca,
+            count(distinct a.id_animal) as qtde_animal,
+      		avg(b.peso) as peso_medio, 
+      		avg(b.dias_pesagem) as dias_pesagem,
+            avg(b.gmd) as gmd
+			from XGP_ANIMAL A 
+     		left join (select a1.id_animal,
+            		           a2.data as data_peso,
+                               a1.data_peso_anterior,
+                    		   a1.peso,
+                               a1.dias_pesagem,
+                               a1.gmd
+                		from xgp_manejo_detalhe a1, xgp_manejo a2
+                		where a1.id_manejo = a2.id_manejo
+                  		  and a1.peso is not null
+                  		  and a2.data = (select max(b2.data)
+                                 		from xgp_manejo_detalhe b1, xgp_manejo b2
+                                 		where b1.id_manejo = b2.id_manejo
+                                   		  and b1.peso is not null
+                                          and b1.id_animal = a1.id_animal)) B on
+                b.id_animal = a.id_animal
+            left join xgp_aparte c on
+                c.id_aparte = a.id_aparte
+            left join xgp_tipo_aparte d on
+                d.id_tipo_aparte = c.id_tipo_aparte
+            left join xgp_estrategia e on
+                e.id_estrategia = c.id_estrategia
+            left join xgp_raca f on
+                f.id_raca = c.id_raca                
+            where a.status = 'E'
+            group by c.id_fracao, d.descricao, e.descricao, f.descricao) B on                                          
+   b.id_fracao = a.id_fracao
+   
+   left join xgp_capim c on
+      c.id_capim = a.id_capim
+                  
+where a.id_fracao_modulo is null 
+  and a.ativo = 'S'
+order by cod_fracao]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

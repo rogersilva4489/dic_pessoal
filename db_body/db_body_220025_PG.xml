@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">220025</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_GRUPO,
+      A.ID_CATEGORIA, 
+      CRM_PATH_CATEGORIA(A.ID_CATEGORIA) as CATEGORIA_PATH 
+from CRM_GRUPO_CATEGORIA A ]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

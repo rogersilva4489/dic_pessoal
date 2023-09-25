@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_test_suite_att>
+  <id_test_suite_att data_type="integer" is_pk="true">190097</id_test_suite_att>
+  <ordem data_type="integer" is_pk="false">2</ordem>
+  <id_test_suite data_type="integer" is_pk="false">190022</id_test_suite>
+  <id_test_suite_serial data_type="integer" is_pk="false">1</id_test_suite_serial>
+  <id_cenario data_type="integer" is_pk="false">190041</id_cenario>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <extended data_type="character" is_pk="false">N</extended>
+</fr_test_suite_att>

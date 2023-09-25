@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">130108</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_mov,
+       a.id_aparte,
+       a.qtde_animais,
+       a.peso_medio_animais, 
+       a.data_media_animais,  
+       b.qtde_cria,
+       b.peso_medio_cria, 
+       b.data_media_cria  
+
+from (select a.id_mov,
+             a.id_aparte,
+             sum(COALESCE(a.qtde_animal, 1)) as qtde_animais,
+             avg(a.peso) as peso_medio_animais,
+             to_timestamp(avg(extract(epoch from a.data_nascimento)))::date as data_media_animais
+      from xgp_mov_animal a
+      left join xgp_aparte b ON
+          b.id_aparte = a.id_aparte
+      left join xgp_estrategia c ON
+          c.id_estrategia = b.id_estrategia
+      left join xgp_fases d on
+          d.id_fases = b.id_fases
+      where d.tipo = 'A'
+         or (d.tipo = 'C' and ((CURRENT_DATE - a.data_nascimento)/30 > 10))      -- maior que 10 meses adulto
+      group by a.id_mov, a.id_aparte) a
+
+left join (select a.id_mov, 
+                  a.id_aparte,
+                  sum(COALESCE(a.qtde_animal, 1)) as qtde_cria,
+                  avg(a.peso) as peso_medio_cria,
+                  to_timestamp(avg(extract(epoch from a.data_nascimento)))::date as data_media_cria
+          from xgp_mov_animal a
+          left join xgp_aparte b ON
+               b.id_aparte = a.id_aparte
+          left join xgp_fases c on
+              c.id_fases = b.id_fases
+          where c.tipo = 'C'                                   -- fase do lote é cria
+            and (CURRENT_DATE - a.data_nascimento)/30 <= 10    -- menor que dez meses é cria
+          group by a.id_mov,  a.id_aparte) b on
+          
+   b.id_mov = a.id_mov 
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

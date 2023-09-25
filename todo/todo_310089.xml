@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">310089</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110046</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">O analista Luis me passou uma situação que esta ocorrendo no cursor. Se criarmos um cursor do tipo SQL. E se colocarmos um SQL que faça UNION ALL o freedom não mapeia os campos na aba attributos. E as tabelas utilizadas estão no MER e todos os campos também. Fiz um teste aqui e coloquei duas tabelas com poucos campos. E fiz um union all nelas e realmente isso ocorre.</solicitacao>
+  <solucao data_type="character varying" is_pk="false"/>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">N</status>
+  <percentual_concluido data_type="numeric" is_pk="false">0</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">210010</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">14001</id_categoria>
+</todo>

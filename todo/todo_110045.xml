@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110045</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110036</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Ao Definar no ER que o campo é UpperCase o Wizard não está mantendo o campo como Upper sempre vem com a informação Normal. Realizado o teste sobre a questão de alterar a propriedade de um componente. E vi que para a propriedade CharCase do componente TFString não esta permanecendo a alteração, mesmo eu modificando por exemplo para ccUpper quando gero o Wizard ele volta para ccNormal. Porém foi no ER e coloquei o campo CharCase para ser Upper e mesmo assim gera com ccNormal.</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Gerson Resolveu Situação</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-09-18T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">21008</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">11004</id_categoria>
+</todo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">3400232</id_table>
+  <id_script data_type="integer" is_pk="true">34003</id_script>
+  <descricao data_type="character varying" is_pk="false">Crm</descricao>
+  <script data_type="character varying" is_pk="false">Insert into (id_acao, descricao, usuario_created) value (34004, 'Analise de Negocio', 'GERSON');
+Insert into (id_acao, descricao, usuario_created) value (34005, 'Teste', 'GERSON');
+Insert into (id_acao, descricao, usuario_created) value (34006, 'Teste1', 'GERSON');
+Insert into (id_acao, descricao, usuario_created) value (34007, 'Teste2', 'GERSON');
+Insert into (id_acao, descricao, usuario_created) value (34008, 'Teste3', 'GERSON');
+Insert into (id_acao, descricao, usuario_created) value (34009, 'Teste3', 'GERSON');
+
+
+
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

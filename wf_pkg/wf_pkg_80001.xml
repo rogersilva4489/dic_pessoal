@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wf_pkg>
+  <id_pkg data_type="integer" is_pk="true">80001</id_pkg>
+  <id_pkg_super data_type="integer" is_pk="false"/>
+  <name data_type="character varying" is_pk="false">Venda</name>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <md5 data_type="character varying" is_pk="false"/>
+</wf_pkg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">170015</id_table>
+  <id_cols data_type="integer" is_pk="true">17007</id_cols>
+  <id_enum data_type="character" is_pk="true">P</id_enum>
+  <descricao data_type="character varying" is_pk="false">Com Protocolo</descricao>
+  <comentario data_type="character varying" is_pk="false">Deve ser usado para compras ou vendas interestaduais de itens tributados (CT=1) ou fonte (CT=3) quando há protocolo entre as UF's.</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</fr_enum>

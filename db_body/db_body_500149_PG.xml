@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500149</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[-- foi feito assim para poder ordenar cod_fracao
+select a.id_fracao_modulo,
+       string_agg(a.cod_fracao, ', ') as pastos_do_modulo
+from (select a.id_fracao_modulo,
+             a.cod_fracao
+      from xgp_fracao a
+      order by a.cod_fracao) a
+group by a.id_fracao_modulo]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

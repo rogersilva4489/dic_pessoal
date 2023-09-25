@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">130135</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">1308</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">LOG_APP</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false"><![CDATA[a.id_lote_animal in (select a1.id
+                     from lg_lkp_table a1                    
+                     where table_name = upper('xgp_lote_animal') 
+                       and a1.dml in ('I', 'U') 
+                       and data_dml >= :data_ult_sinc)
+                 ]]></sql>
+  <param_name data_type="character varying" is_pk="false">DATA_ULT_SINC</param_name>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

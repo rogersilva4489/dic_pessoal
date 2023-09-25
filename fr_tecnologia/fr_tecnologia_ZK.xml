@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_tecnologia>
+  <id_tecnologia data_type="character" is_pk="true">ZK</id_tecnologia>
+  <descricao data_type="character varying" is_pk="false">ZK</descricao>
+</fr_tecnologia>

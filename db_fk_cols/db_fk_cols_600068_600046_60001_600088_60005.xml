@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_fk_cols>
+  <id_fk data_type="integer" is_pk="true">600068</id_fk>
+  <id_table data_type="integer" is_pk="true">600046</id_table>
+  <id_cols data_type="integer" is_pk="true">60001</id_cols>
+  <id_table_fk data_type="integer" is_pk="true">600088</id_table_fk>
+  <id_cols_fk data_type="integer" is_pk="true">60005</id_cols_fk>
+  <col_rolename data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <md5 data_type="character varying" is_pk="false"/>
+  <comment data_type="character varying" is_pk="false"/>
+</db_fk_cols>

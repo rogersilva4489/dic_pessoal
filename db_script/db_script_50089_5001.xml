@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">50089</id_table>
+  <id_script data_type="integer" is_pk="true">5001</id_script>
+  <descricao data_type="character varying" is_pk="false">XGP_TIPO_CLASSE</descricao>
+  <script data_type="character varying" is_pk="false">insert into xgp_tipo_classe
+(id_tipo_classe, descricao, usuario_created, data_created) values
+(1, 'Venda Bruta', 'GERSON', '23/01/2020');
+update xgp_tipo_classe set descricao = 'Venda Bruta' where id_tipo_classe = 1;
+
+insert into xgp_tipo_classe
+(id_tipo_classe, descricao, usuario_created, data_created) values
+(2, 'Venda - Bonificação Abate', 'GERSON', '23/01/2020');
+update xgp_tipo_classe set descricao = 'Venda - Bonificação Abate' where id_tipo_classe = 2;
+
+insert into xgp_tipo_classe
+(id_tipo_classe, descricao, usuario_created, data_created) values
+(3, 'Venda - Desconto Abate', 'GERSON', '23/01/2020');
+update xgp_tipo_classe set descricao = 'Venda - Desconto Abate' where id_tipo_classe = 3;
+
+insert into xgp_tipo_classe
+(id_tipo_classe, descricao, usuario_created, data_created) values
+(4, 'Venda - Desconto FunRural', 'GERSON', '23/01/2020');
+update xgp_tipo_classe set descricao = 'Venda - Desconto FunRural' where id_tipo_classe = 4;
+
+insert into xgp_tipo_classe
+(id_tipo_classe, descricao, usuario_created, data_created) values
+(5, 'Venda - CMV', 'GERSON', '13/07/2020');
+update xgp_tipo_classe set descricao = 'Venda - CMV' where id_tipo_classe = 5;
+
+insert into xgp_tipo_classe
+(id_tipo_classe, descricao, usuario_created, data_created) values
+(6, 'Lote - Despesas', 'GERSON', '13/07/2020');
+update xgp_tipo_classe set descricao = 'Lote - Despesas' where id_tipo_classe = 6;</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

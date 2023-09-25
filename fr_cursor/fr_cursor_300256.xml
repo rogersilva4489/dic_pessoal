@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300256</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_OS_ITEM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_OS_ITEM, 
+     A.ID_ITEM, 
+     A.QTDE, 
+     A.VALOR_UNITARIO, 
+     A.VALOR_TOTAL, 
+     A.CORTADO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.ID_TIPO_ITEM, 
+     A.ID_CARDEX, 
+     A.TIPO_PRECO, 
+     A.OBSERVACAO, 
+     B.DESCRICAO as DESCR_ITEM, 
+     A.ID_RESERVA_ESTOQUE, 
+     A.QTDE_COMPRA, 
+     (select a1.qtde from xgp_estoque a1 
+where a1.id_empresa = 3 
+    and a1.id_item = a.id_item) as QTDE_ESTOQUE, 
+     (select a1.qtde from xgp_reserva_estoque a1 where a1.id_reserva_estoque = a.id_reserva_estoque) as QTDE_RESERVA, 
+     A.ID_TAREFA_COMPRA, 
+     D.APELIDO, 
+     A.ID_PESSOA, 
+     E.NOME as NOME_PESSOA, 
+     D.DESCRICAO as DESCR_ANDAMENTO, 
+     B.PRECO_SERVICO, 
+     A.ID_OS, 
+     A.ID_OS_SUB, 
+     A.ID_UNIDADE, 
+     F.UN, 
+     A.VALOR_DESCONTO, 
+     A.DATA_COMPRA 
+from XGP_OS_ITEM A 
+     left join XGP_ITEM B on 
+           B.ID_ITEM = A.ID_ITEM
+     left join XTD_TAREFA C on 
+           C.ID_TAREFA = A.ID_TAREFA_COMPRA
+     left join XTD_ANDAMENTO D on 
+           D.ID_ANDAMENTO = C.ID_ANDAMENTO
+     left join XGP_PESSOA E on 
+           E.ID_PESSOA = A.ID_PESSOA
+     left join XGP_UNIDADE F on 
+           F.ID_UNIDADE = A.ID_UNIDADE
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300279</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

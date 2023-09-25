@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jmanager_version>
+  <id_jmanager_version data_type="integer" is_pk="true">3</id_jmanager_version>
+  <major_version data_type="integer" is_pk="false">1</major_version>
+  <minor_version data_type="integer" is_pk="false">0</minor_version>
+  <release data_type="integer" is_pk="false">0</release>
+  <build data_type="integer" is_pk="false">0</build>
+  <name_zip_file data_type="character varying" is_pk="false">nbsutil</name_zip_file>
+  <name_war_file data_type="character varying" is_pk="false">util</name_war_file>
+  <generate_version_dictionary data_type="character" is_pk="false">N</generate_version_dictionary>
+  <generate_version_reports data_type="character" is_pk="false">N</generate_version_reports>
+  <generate_version_scripts data_type="character" is_pk="false">N</generate_version_scripts>
+  <global_ignore_pattern data_type="character varying" is_pk="false"/>
+  <description data_type="character varying" is_pk="false">Projeto Util</description>
+  <generate_version_params data_type="character" is_pk="false">N</generate_version_params>
+  <generate_version_enum data_type="character" is_pk="false">N</generate_version_enum>
+  <generate_version_acesso data_type="character" is_pk="false">N</generate_version_acesso>
+  <generate_version_menu data_type="character" is_pk="false">N</generate_version_menu>
+  <sequence_version_script data_type="integer" is_pk="false"/>
+</jmanager_version>

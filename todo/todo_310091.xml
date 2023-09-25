@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">310091</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false"/>
+  <solicitacao data_type="character varying" is_pk="false">Tem um situação que esta ocorrendo no Wizard. Por exemplo: Vou no Wizard e defino uma mascara(Format) para um campo telefone. O Wizard gera certinho a mascara. Inclui a propriedade Masks. Inclui o novo item nessa Masks. Ai vou na propriedade PadLength e PadDirection e altero de 0 para um numero 9 e padDirection para pdLeft. E salvo. Ele guarda certinho a alteração no ChangeProp do Form: gridDetalhe21006.Columns[210013;21006;21005].Masks[210013;21006;21005].PadLength; gridDetalhe21006.Columns[210013;21006;21005].Masks[210013;21006;21005].PadDirection; Porém quando mando gerar novamente ele perde a alteração que fiz.</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Gerson Realizou a correção</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2017-08-01T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">21008</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">14001</id_categoria>
+</todo>

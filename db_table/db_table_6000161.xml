@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000161</id_table>
+  <table_name data_type="character varying" is_pk="false">CP_FATURA</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela onde são definidas as faturas do contas a pagar. Todo contas a pagar eh composto por uma fatura mesmo que nao exista uma Fatura correspondente a Nota Fiscal
+
+As possiveis origens de uma fatura são:
+* Nota Fiscal de Compra
+* Compromisso
+* Nota Fiscal de Venda</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">27</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

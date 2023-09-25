@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">130141</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">13055</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">QTDE_ANIMAIS_MOV</column_cursor>
+  <alias data_type="character varying" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">16</ordem>
+  <expressao data_type="character varying" is_pk="false">case when b.tipo = 'E' then
+                   a.QTDE_ANIMAIS
+        when b.tipo = 'S' then
+                   a.QTDE_ANIMAIS * (-1)
+end</expressao>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false">15</length>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table data_type="integer" is_pk="false"/>
+  <id_cols data_type="integer" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">3</id_type>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

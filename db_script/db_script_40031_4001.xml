@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">40031</id_table>
+  <id_script data_type="integer" is_pk="true">4001</id_script>
+  <descricao data_type="character varying" is_pk="false">Xtd_Processo</descricao>
+  <script data_type="character varying" is_pk="false">insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(1, 'Interface Rest Entrada de Animais', 2, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(2, 'Interface Rest Saida de Animais', 3, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(3, 'Manutenção de Maquinas/Implementos', 5, 'GERSON', '24/08/2019');
+update xtd_processo set descricao = 'Manutenção de Maquinas/Implementos' where id_processo = 3;
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(5, 'Lote Aniamis', 1, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(6, 'Entrada de Aniamis', 2, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(7, 'Saida de Aniamis', 3, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(8, 'Interface Rest', 6, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(9, 'Interface Rest Baixa Morte', 3, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(10, 'Interface Rest Nascimento', 2, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(11, 'Lanç. Gerencial Ref. Baixa de Titulos', 9, 'GERSON', '02/01/2020');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(12, 'Compra de Produto para Estoque', 10, 'GERSON', '03/03/2020');
+update xtd_processo set descricao = 'Compra de Produto para Estoque' where id_processo = 12;
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(14, 'Compra de Kit para Estoque', 10, 'GERSON', '03/03/2020');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(15, 'Compra de Produtos p/ OS', 11, 'GERSON', '15/05/2020');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(16, 'Revisão de Maquinas Programada', 11, 'GERSON', '21/01/2021');
+update xtd_processo set 
+   id_origem = 5,
+   descricao = 'Revisão de Maquinas Programada' 
+where id_processo = 16;
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(17, 'Interface Rest Morte', 2, 'GERSON', '24/08/2019');
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(18, 'Ent/Sai de Aniamis - GTA', 12, 'GERSON', '31/01/2022');
+
+update xtd_processo set descricao = 'Entrada/Saida de Aniamis - GTA' where id_processo = 18;
+
+insert into xtd_processo (id_processo, descricao, id_origem, usuario_created, data_created) values
+(19, 'Ent/Sai de Aniamis - Aviso Equipe', 12, 'GERSON', '31/01/2022');
+
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

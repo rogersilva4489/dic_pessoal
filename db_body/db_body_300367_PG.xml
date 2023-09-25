@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">300367</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[  SELECT a.id_manejo,
+         a.id_animal,
+         a.id_categoria,
+         (b.data - c.data_nascimento)/30 idade_mes,
+         a.data_peso_anterior,
+         a.peso_anterior,
+         b.data AS data_pesagem,
+         a.peso,         
+         a.peso - a.peso_anterior AS ganho_peso,
+         b.data - a.data_peso_anterior AS qtde_dias_pesagem
+  FROM xgp_manejo_detalhe a,
+       xgp_manejo b,
+       xgp_animal c
+  WHERE a.id_manejo = b.id_manejo
+    and a.id_animal = c.id_animal]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

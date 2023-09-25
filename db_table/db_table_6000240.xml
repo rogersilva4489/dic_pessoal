@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000240</id_table>
+  <table_name data_type="character varying" is_pk="false">CRM_BMW_PIX</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela que será registrado o movimento dos dias do processo da BMW PIX para cada cnpj deverá ter 3 registro a cada dia, um para cada operação existente.
+Esta tabela inicialmente será cadastrada pelo novo porcesso de login que comunicará o cliente com o sistema nbs. Caso não tenha registro no dia será gerado pelo crm. E desta forma gerado eventos para que o suporte da nbs entre em contato com o cliente para verificar o motivo de não ter encontrado o arquivo, no processo que comunica com a nbs.
+</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">10</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">250033</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">250029</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">EH_SOFTWARE</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">21</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">S/N  Este campo foi criado para definir se o item é software, caso seja e no cadastro da aliq de icms da uf-de e uf-para seja marcado para dobrar a Base de icms na compra(Entrada de nota operação 1-Compra de Estoque,16-Entrada de Item em Bonificação,29-Entrada de Material de Consumo), a base de icms na compra será o valor total do item dobrado.
+Este campo foi necessario com fundamento no artigo 112 da Lei  nº 6.374, de 1º março de 1989, que autoriza o Poder Executivo a tomar providências fiscais que resguardem a competi tividade da economia paulista, a medida, nos termos propostos, considera  como  base  de  cálculo  do  ICMS  incidente  sobre  a  operação  realizada  com  programa  para computador ("software"),  personalizado ou não,  o valor equivalente a  200% (duzentos  por cento) do suporte informático, o que atende  à sugestão do setor, preocupado com o estabelecimento  de critério objetivo na sua adoção.</help>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <md5 data_type="character varying" is_pk="false">169CB84A0902C90B5E79987E9B3D6D1A</md5>
+  <id_table data_type="integer" is_pk="false">60001333</id_table>
+  <id_cols data_type="integer" is_pk="false">210013</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

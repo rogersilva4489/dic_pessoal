@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">LOOKUP_COLS</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select  a.id_form,
+	a.id_dataset,
+	a.id_dataset_att,
+	a.id_form_rel,
+	a.id_dataset_lkp,
+	a.id_attribute_lkpkey,
+	a.id_attribute_lkpdesc,
+	a.id_cursor,
+	a.id_cursor_att,
+	a.att_name,
+	a.title,
+	a.width,
+	a.height,
+	a.show_grid,
+	a.title_grid,
+	a.order_grid,
+	a.width_grid,
+	a.flex_grid,
+	a.compute_grid,
+	a.title_compute_grid,
+	a.addmsg,
+	a.serial,
+	a.format,
+	a.default_value,
+	a.pwd,
+	a.required,
+	a.taborder,
+	a.updatable,
+	a.readonly,
+	a.show_form,
+	a.newline,
+	a.full_size,
+	a.orderby,
+	a.usuario_created,
+	a.data_created,
+	a.usuario_changed,
+	a.data_changed,
+	a.id_conteiner,
+	a.obj_type,
+	a.id_charcase, 
+       c.column_cursor , 
+       d.cursor_name, 
+       e.descricao as desc_type,
+       c.length,
+       c.dec,
+       g.id_table, 
+       g.id_cols,
+       g.Column_Name as db_Column_Name,
+       g.Length as db_Length,
+       g.dec as db_dec,       
+       g.primary_key as db_primary_key,
+       g.id_special_type as db_id_special_type,
+       i.descricao as desc_special_type, 
+       g.Not_Null as db_Not_Null,
+       g.ListOptions as db_ListOptions,
+       g.id_charcase as db_id_charcase,
+       h.id_type as db_id_Type,
+       h.descricao as desc_db_type,
+       j.table_name,
+       b.datatable,
+       l.name as form_rel_name
+from fr_dataset_att a
+   inner join fr_dataset b on
+      b.id_form = a.id_form and 
+      b.id_dataset = a.id_dataset
+   left join fr_cursor_att c on
+      c.id_cursor = a.id_cursor and
+      c.id_cursor_att   = a.id_cursor_att 
+   left join db_type e on 
+      e.id_type = c.id_type
+   left join fr_cursor d on
+      d.id_cursor = a.id_cursor
+   left join fr_cursor_att f on
+      f.id_cursor = a.id_cursor and
+      f.id_cursor_att = a.id_cursor_att
+   left join db_cols g on
+      g.id_table = f.id_table and
+      g.id_cols = f.id_cols
+   left join db_type h on
+      h.id_type = g.id_type
+   left join db_special_type i on
+      i.id_special_type = g.id_special_type
+   left join db_table j on
+      j.id_table = f.id_table 
+   left join fr_form l on
+      l.id_form = a.id_form_rel]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

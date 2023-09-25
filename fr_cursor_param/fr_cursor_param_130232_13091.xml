@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_param>
+  <id_cursor data_type="integer" is_pk="true">130232</id_cursor>
+  <id_cursor_param data_type="integer" is_pk="true">13091</id_cursor_param>
+  <param_name data_type="character varying" is_pk="false">data_referencia</param_name>
+</fr_cursor_param>

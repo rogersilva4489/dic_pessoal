@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110028</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110015</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Analisando uma situação na rotina do update(SVN) do Freedom com o Daniel. Por exemplo eu e o Andreas criamos o projeto Cargas e o módulo Citroen, fiz as minhas implementações e fiz o commit no servidor, ai quando o Daniel fez o update deu exceção de FK, pois a tabela de projeto e módulo dele local não tinha sido atualizada quando ele logou. Ai logei com meu usuário ai criou o projeto e módulo e passou. Teria que ver como iriamos proceder na criação de novos módulos/projeto caso o usuário não seja vinculado ao projeto/módulo</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Gerson Corrigiu Situação</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-11-27T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60006</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">600010</id_categoria>
+</todo>

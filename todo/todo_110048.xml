@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110048</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110036</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Corrigir Validação [dmAll] fica sempre pegando o primeiro registro para validar - Ou troca para dmChange no Wizard ou faz um while no para percorrer os registros que foram modificados ou incluidos.</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Andreas corrigiu situação</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2016-04-25T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">21008</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">11004</id_categoria>
+</todo>

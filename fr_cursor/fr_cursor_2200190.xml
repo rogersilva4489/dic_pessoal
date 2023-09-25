@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200190</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_MANEJO_DETALHE</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.CE, 
+     A.COD_ANIMAL, 
+     A.COD_ANIMAL_ANTERIOR, 
+     A.COD_ANIMAL_PARA, 
+     A.COD_BOTOM_ANTERIOR, 
+     A.COD_BOTOM_PARA, 
+     B.DATA, 
+     A.DATA_CARENCIA, 
+     A.DATA_CHANGED, 
+     A.DATA_CREATED, 
+     D.DATA_NASCIMENTO, 
+     A.DATA_PESO_ANTERIOR, 
+     A.DATA_PRENHEZ, 
+     A.DESCARTE, 
+     F.DESCRICAO as DESCR_APARTE, 
+     E.DESCRICAO as DESCR_CATEGORIA, 
+     B.DESCRICAO as DESCR_MANEJO, 
+     G.DESCRICAO as DESCR_TIPO_MANEJO, 
+     A.DIAGNOSTICO_PRENHEZ, 
+     A.DIAS_GESTACAO, 
+     A.DIAS_PESAGEM, 
+     A.GMD, 
+     A.ID_ANIMAL, 
+     A.ID_APARTE, 
+     A.ID_CATEGORIA, 
+     A.ID_DESCARTE, 
+     B.ID_EMPRESA, 
+     A.ID_MANEJO, 
+     A.ID_MANEJO_DETALHE, 
+     A.ID_TOURO, 
+     A.INDICE_QUALITAS, 
+     A.OBS_INVENTARIO, 
+     A.OBSERVACAO, 
+     A.PERCENTIL_QUALITAS, 
+     A.PESO, 
+     A.PESO_ANTERIOR, 
+     A.USUARIO_CHANGED, 
+     A.USUARIO_CREATED, 
+     H.ID_CAMPANHA, 
+     A.SCORE, 
+     A.COD_BOTOM, 
+     A.SEXO, 
+     A.COD_ANIMAL_OLD, 
+     I.RESUMO, 
+     I.ID_MANEJO as ID_MANEJO_I, 
+     I.ID_MANEJO_DETALHE as ID_MANEJO_DETALHE_I, 
+     G.ID_MANEJO_OPERACAO, 
+     A.ID_TIPO_PRENHEZ, 
+     A.DATA_PARTO, 
+     A.ID_TECNICO, 
+     A.GNRH, 
+     A.PARTIDA, 
+     case when OBS_INVENTARIO IS NOT NULL then
+                   'S'
+         else 
+                  'N'
+end as TEM_CRITICA, 
+     A.ID_EMBRIAO, 
+     A.ID_ANIMAL_TOURO, 
+     A.ID_FRACAO 
+from XGP_MANEJO_DETALHE A 
+     inner join XGP_MANEJO B on 
+           B.ID_MANEJO = A.ID_MANEJO
+     left join XGP_ANIMAL D on 
+           D.ID_ANIMAL = A.ID_ANIMAL_TOURO
+     left join XGP_CATEGORIA E on 
+           E.ID_CATEGORIA = A.ID_CATEGORIA
+     left join XGP_APARTE F on 
+           F.ID_APARTE = A.ID_APARTE
+     left join XGP_TIPO_MANEJO G on 
+           G.ID_TIPO_MANEJO = B.ID_TIPO_MANEJO
+     left join XGP_CAMPANHA H on 
+           H.ID_CAMPANHA = B.ID_CAMPANHA
+     left join VW_XGP_MANEJO_HISTORICO I on 
+           i.id_manejo = a.id_manejo and
+           i.id_manejo_detalhe = a.id_manejo_detalhe
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200206</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

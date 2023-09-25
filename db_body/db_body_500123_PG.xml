@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500123</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[-- Baixa de Titulos
+-- DETALHE POR CONTA E CENTRO DE CUSTO DO RELATORIO GERENCIAL
+-- Considra somente movimentação de caixa pagto e recebimento
+-- -----------------------------------------------------------
+-- Baixa de Titulos
+select c.id_empresa,
+       c.id_depto,
+       c.id_ccusto,
+       c.id_conta,
+       a.data_baixa as data,
+       1 as id_origem_dre,
+       a.id_titulo||'-'||a.id_parcela as Id,
+       round(a.valor_baixado * (c.valor/b.valor),2) as total,
+       f.descricao||' '||COALESCE(d.nome_fantasia, d.nome)||COALESCE(' - '||g.observacao, '') as historico
+from xgp_baixa a, 
+     xgp_titulos b, 
+     xgp_titulo_dre c, 
+     xgp_pessoa d, 
+     xgp_carteira f,
+     vw_xgp_titulos_observacao g
+where a.id_titulo = b.id_titulo
+  and a.id_titulo = c.id_titulo
+  and b.id_carteira = f.id_carteira
+  and b.id_pessoa = d.id_pessoa
+  and a.id_titulo = g.id_titulo
+-- and b.id_carteira not in (6, 7) -- adto
+  
+union all
+
+-- Tesouraria
+select b.id_empresa,
+       b.id_depto,
+       b.id_ccusto,
+       b.id_conta,
+       a.data,
+       2 as id_origem_dre,
+       a.id_lcontas||'' as Id,
+       b.valor as total,
+       c.descricao||' - '||a.historico
+from xgp_lcontas a, xgp_lcontas_dre b, xgp_conta c
+where a.id_lcontas = b.id_lcontas
+  and a.id_conta = c.id_conta  
+  ]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

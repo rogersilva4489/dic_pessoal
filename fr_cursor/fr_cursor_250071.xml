@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250071</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">TB_TRIBUTACAO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.CALC_DIF_ALIQUOTA, 
+      A.ALIQ_ICMS_INTERNA, 
+      A.CREDITAR_ICMS, 
+      A.ALIQ_CRED_ICMS, 
+      C.COD_CST as COD_CST_IPI, 
+      C.DESCRICAO as DESCR_CST_IPI, 
+      C.CALC_IPI as CST_IPI_CALC_IPI, 
+      A.ID_TRIBUTACAO, 
+      A.ID_CST_COFINS, 
+      A.ID_CST_PIS, 
+      A.ID_CST_IPI, 
+      A.MOD_BC_ICMS_ANTEC, 
+      A.MOD_BC_ICMS_ST, 
+      A.MOD_BC_ICMS, 
+      A.ID_CST_ICMS, 
+      A.ID_CSON, 
+      B.COD_CST as COD_CST_ICMS, 
+      F.VALOR_PARAM as MOD_ICMS_VALOR_PARAM, 
+      F.TIPO_MOV as MOD_ICMS_TIPO_MOV, 
+      A.ALIQ_ICMS, 
+      A.RED_BC_ICMS, 
+      A.TIPO_RED_ICMS, 
+      A.SOMAR_IPI_BC_ICMS, 
+      A.ALIQ_ICMS_ST, 
+      A.RED_BC_ICMS_ST, 
+      A.MVA_ICMS_ST, 
+      A.ALIQ_ICMS_ANTEC, 
+      A.RED_BC_ICMS_ANTEC, 
+      A.MVA_ICMS_ANTEC, 
+      A.ALIQ_IPI, 
+      A.ALIQ_COFINS, 
+      A.ALIQ_PIS, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      A.DESCRICAO, 
+      A.TIPO_MOV, 
+      A.ALIQ_ICMS_CSON, 
+      B.CALC_ICMS as CST_ICMS_CALC_ICMS, 
+      B.CALC_ICMS_ST as CST_ICMS_CALC_ICMS_ST, 
+      B.RED_BC_ICMS as CST_ICMS_RED_BC_ICMS, 
+      B.CALC_ICMS_ANTEC as CST_ICMS_CALC_ICMS_ANTEC, 
+      A.CALC_ICMS_ANTEC_PARCIAL, 
+      A.DESC_SUFRAMA_DESP_ACESS, 
+      A.RED_BC_ST_DESP_ACESS, 
+      A.DESC_REDUZ_BC_ICMS_ANTEC, 
+      A.RED_BC_IPI, 
+      A.ALIQ_ICMS_UF_DEST, 
+      A.ALIQ_RED_BC_UF_DEST, 
+      A.ALIQ_FCP_UF_DEST, 
+      A.ALIQ_IPI_OUTROS, 
+      G.VALOR_PARAM as MOD_ICMS_ANTEC_VALOR_PARAM, 
+      G.TIPO_MOV as MOD_ICMS_ANTEC_TIPO_MOV, 
+      H.TIPO_MOV as MOD_ICMS_ST_TIPO_MOV, 
+      H.VALOR_PARAM as MOD_ICMS_ST_VALOR_PARAM, 
+      E.COD_CST as COD_CST_PIS, 
+      E.TIPO_MOV as TIPO_MOV_PIS, 
+      D.COD_CST as COD_CST_COFINS, 
+      D.TIPO_MOV as TIPO_MOV_COFINS, 
+      A.TIPO_BASE_ICMS, 
+      A.CALC_MVA_AJUSTADO, 
+      A.TIPO_BASE_ICMS_ST, 
+      D.EN_TIPO_COFINS, 
+      E.EN_TIPO_PIS, 
+      A.TIPO_BASE_ICMS_SN, 
+      A.SOMAR_IPI_BC_ICMS_SN, 
+      F.ID_MOD_ICMS as MOD_ICMS_ID_MOD_ICMS, 
+      F.EN_TIPO_IMPOSTO as MOD_ICMS_EN_TIPO_IMPOSTO, 
+      G.ID_MOD_ICMS as MOD_ICMS_ANTEC_ID_MOD_ICMS, 
+      G.EN_TIPO_IMPOSTO as MOD_ICMS_ANTEC_EN_TIPO_IMPOSTO, 
+      H.ID_MOD_ICMS as MOD_ICMS_ST_ID_MOD_ICMS, 
+      H.EN_TIPO_IMPOSTO as MOD_ICMS_ST_EN_TIPO_IMPOSTO, 
+      B.ID_CST_ICMS as CST_ICMS_ID_CST_ICMS, 
+      C.ID_CST_IPI as CST_IPI_ID_CST_IPI, 
+      C.TIPO_MOV as CST_IPI_TIPO_MOV, 
+      D.ID_CST_COFINS as CST_COFINS_ID_CST_COFINS, 
+      E.ID_CST_PIS as CST_PIS_ID_CST_PIS, 
+      I.ID_CSON as CSON_ID_CSON, 
+      I.COD_CSON as CSON_COD_CSON, 
+      I.CALC_ICMS as CSON_CALC_ICMS, 
+      A.ID_MSG_FISCAL 
+from TB_TRIBUTACAO A 
+     left join TB_CST_ICMS B on 
+           B.ID_CST_ICMS = A.ID_CST_ICMS
+     left join TB_CST_IPI C on 
+           C.ID_CST_IPI = A.ID_CST_IPI
+     left join TB_CST_COFINS D on 
+           D.ID_CST_COFINS = A.ID_CST_COFINS
+     left join TB_CST_PIS E on 
+           E.ID_CST_PIS = A.ID_CST_PIS
+     left join TB_MOD_ICMS F on 
+           F.ID_MOD_ICMS = A.MOD_BC_ICMS
+     left join TB_MOD_ICMS G on 
+           G.ID_MOD_ICMS = A.MOD_BC_ICMS_ANTEC
+     left join TB_MOD_ICMS H on 
+           H.ID_MOD_ICMS = A.MOD_BC_ICMS_ST
+     left join TB_CSON I on 
+           I.ID_CSON = A.ID_CSON
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">250042</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">300276</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">3004</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">EXISTS_TAREFA_PENDENTE_FRACAO</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false">A.TIPO_TAREFA = 'T'
+AND EXISTS (SELECT 1 
+        FROM XGP_FRACAO_MANEJO A1, XGP_FRACAO_DETALHE B1, XGP_FRACAO_TAREFA C1
+        WHERE A1.ID_FRACAO_MANEJO = B1.ID_FRACAO_MANEJO 
+          AND B1.ID_FRACAO_ITEM = C1.ID_FRACAO_ITEM
+          AND B1.DATA_BAIXA IS NULL
+          AND A1.ID_FRACAO = :ID_FRACAO)</sql>
+  <param_name data_type="character varying" is_pk="false">ID_FRACAO</param_name>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

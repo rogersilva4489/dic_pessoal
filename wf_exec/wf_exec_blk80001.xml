@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wf_exec>
+  <id_block data_type="character varying" is_pk="true">blk80001</id_block>
+  <objtype data_type="character varying" is_pk="false">Start</objtype>
+  <script data_type="text" is_pk="false"><![CDATA[// -0-0-0-0-0-0-0-0-0-0-0-0-0-0-0
+// Projeto Freedom - Work Flow 
+// id.Diagrama.: 80001
+// Name........: Fisica
+// Data Created: 02/03/2015 11:36:11
+// -0-0-0-0-0-0-0-0-0-0-0-0-0-0-0
+
+
+// Start
+// blk80001
+function blk80001() { 
+   blk80003();
+
+
+   // Action
+   // blk80003
+   function blk80003() { 
+      var t = '';
+      blk80002();
+   }
+
+
+   // End
+   // blk80002
+   function blk80002() { 
+   }
+}
+]]></script>
+  <id_diagram data_type="integer" is_pk="false">80001</id_diagram>
+  <comment data_type="character varying" is_pk="false">Start
+blk80001
+</comment>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+</wf_exec>

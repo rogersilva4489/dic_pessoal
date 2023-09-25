@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">60001117</id_table>
+  <id_cols data_type="integer" is_pk="true">60007</id_cols>
+  <column_name data_type="character varying" is_pk="false">VALOR_ADICIONADO</column_name>
+  <ordem data_type="integer" is_pk="false">7</ordem>
+  <length data_type="integer" is_pk="false">38</length>
+  <dec data_type="integer" is_pk="false">2</dec>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false"/>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false"><![CDATA[Valor calculado
+Valor Adicionado - Será informado o valor calculado segundo a seguinte regra:
+26.2.1 - Se o arquivo do SEF possuir informações no registro 88-20-00 (Detalhamento Por Município
+Das Operações e Prestações), com o indicador 1(prestação de serviço) ou 3(inscrição centralizada),
+este campo será preenchido com a seqüência 9999999999999. 26.2.2 - Não ocorrendo a situação indicada no item 26.2.1, proceder-se-á da seguinte forma:
+26.2.2.1 - Informar com o resultado da seguinte operação matemática:
+VA = TS ¿ TE, onde VA = valor adicionado; TS = total de saídas; TE=total de entradas.
+TS = (total geral das saídas) ¿ (valor dos totais sob os CFOPs *)
+TE = (total geral das entradas) ¿ (valor dos totais sob os CFOPs **)
+* CFOPs de saídas excluídos: 5.111, 6.111, 5.112, 6.112, 5.113, 6.113, 5.114, 6.114, 5.122, 6.122,
+5.123, 6.123, 5.412, 6.412, 5.551, 6.551, 7.551, 5.552, 6.552, 5.553, 6.553, 7.553, 5.554, 6.554,
+5.555, 6.555, 5.601, 5.602, 5.603, 6.603, 5.919, 6.919, 5.922, 6.922, 5.923, 6.923, 5.924, 6.924,
+5.929, 6.929, 5.932, 6.932 e 5.933.
+** CFOPs de entradas excluídos: 1.111, 2.111, 1.113, 2.113, 1.406, 2.406, 1.551, 2.551, 3.551,
+1.552, 2.552, 1.553, 2.553, 3.553, 1.554, 2.554, 1.555, 2.555, 1.601, 1.602, 1.603, 2.603, 1.604,
+1.919, 2.919, 1.923, 2.923, 1.924, 2.924 e 1.933.
+26.2.2.2 - Se VA<0, será informada a seqüência 8888888888888. 26.2.2.3 - O cálculo do valor adicionado deve ser feito pelo campo do valor contábil (saídas ¿
+entradas), devendo-se subtrair, do valor contábil correspondente ao valor total da Nota Fiscal, o
+ICMS-fonte e os descontos incondicionais.]]></commet>
+  <listoptions data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">5</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false"/>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

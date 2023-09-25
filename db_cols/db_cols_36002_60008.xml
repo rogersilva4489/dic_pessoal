@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">36002</id_table>
+  <id_cols data_type="integer" is_pk="true">60008</id_cols>
+  <column_name data_type="character varying" is_pk="false">DATA_VENC_CADASTRO</column_name>
+  <ordem data_type="integer" is_pk="false">16</ordem>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false"/>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Data de Vencimento do Cadastro da Pessoa. Depois deste vencimento será permitido venda somente com autorização de atendimento, pois o cliente deve atualizar o cadastro em nosso sistema.
+E uma Forma de ter seus cadastros atualizados sempre.
+
+ Na Inclusão do Cadastro do Cliente:
+Esta data é calculada da seguinte forma é pego a data do cadastro e adicionado a qtde de dias informado no parâmetro DIAS_VENC_CADASTRO que é por empresa e é considerada a empresa que esta cadastrando o Cliente.
+
+Para alteração do Cadastro do Cliente:
+É necessario que o usuário informe que foi atualizado o Cadastro alterando para um data que deseja que seja feito a proxima atualização de Cadastro. Sendo que ao ser Alterado será gravado log de alteração no cliente para informar que o fez e a Data que foi feita a Atualização.</commet>
+  <listoptions data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ELIAS</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">200</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">6</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false"/>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

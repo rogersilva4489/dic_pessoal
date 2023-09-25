@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">110052</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">USUARIO_EMPRESA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_USUARIO, 
+      A.ID_EMPRESA, 
+      A.ID_SETOR, 
+      C.DESCRICAO as DESCRICAO_SETOR, 
+      D.NOME as NOME_USUARIO, 
+      E.NOME as NOME_EMPRESA, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED 
+from USUARIO_EMPRESA A 
+     left join SETOR C on 
+           C.ID_SETOR = A.ID_SETOR
+     left join USUARIO D on 
+           D.ID_USUARIO = A.ID_USUARIO
+     left join EMPRESA E on 
+           E.ID_EMPRESA = A.ID_EMPRESA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">60001493</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false">Combo</obj_type_fk>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300269</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_RESUMO_CATEGORIA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select b.descricao, 
+       count(a.id_animal) as qtde, 
+       sum(a.peso_atual) as peso_atual, 
+       sum(a.peso_atual/30) as peso_arroba, 
+       sum(a.valor_compra) as total, 
+       avg(a.valor_compra) as media, 
+       avg(CURRENT_DATE - a.data_entrada) as media_dias_fazenda
+from xgp_animal a, xgp_categoria b
+where a.id_categoria = b.id_categoria
+  and a.id_especie = 1
+  and a.status = 'E'
+]]></sql>
+  <group_by data_type="character varying" is_pk="false">b.descricao, b.sexo, b.idade_entrada</group_by>
+  <order_by data_type="character varying" is_pk="false">b.sexo, b.idade_entrada</order_by>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Resumo de animais no estoque por categoria]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

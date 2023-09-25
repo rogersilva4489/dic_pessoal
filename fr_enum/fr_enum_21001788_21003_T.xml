@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">21001788</id_table>
+  <id_cols data_type="integer" is_pk="true">21003</id_cols>
+  <id_enum data_type="character" is_pk="true">T</id_enum>
+  <descricao data_type="character varying" is_pk="false">Analista de Teste</descricao>
+  <comentario data_type="character varying" is_pk="false">Define que o Usuairo pode ser responsavel por fazer teste no sistema  para o grupo e categoria correspondente</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</fr_enum>

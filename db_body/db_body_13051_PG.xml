@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13051</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_titulo,
+       COALESCE(a.observacao, b.descricao, d.descricao, 'Frete Ref. '||f.descricao) as observacao
+from xgp_titulos a
+left join xtd_tarefa b on
+   b.id_tarefa = a.id_tarefa
+left join xgp_compra c on
+   c.id_titulo = a.id_titulo
+left join xtd_tarefa d on
+   d.id_tarefa = c.id_tarefa
+left join xgp_compra e on
+   e.id_titulos_frete_fob = a.id_titulo
+left join xtd_tarefa f on
+   f.id_tarefa = e.id_tarefa]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

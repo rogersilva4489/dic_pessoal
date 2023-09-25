@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">230072</id_table>
+  <id_cols data_type="integer" is_pk="true">32008</id_cols>
+  <id_enum data_type="character" is_pk="true">D</id_enum>
+  <descricao data_type="character varying" is_pk="false">Calcular Desconto Suframa</descricao>
+  <comentario data_type="character varying" is_pk="false">O valor do PIS deve ser tratado como Desconto na Compra ou Venda de mercardorias.</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false">DESC_SUFRAMA</cod_terceiro>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</fr_enum>

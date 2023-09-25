@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_dataset>
+  <id_form data_type="integer" is_pk="true">37003</id_form>
+  <id_dataset data_type="integer" is_pk="true">370015</id_dataset>
+  <id_form_tmp data_type="integer" is_pk="false"/>
+  <id_cursor data_type="integer" is_pk="false">360029</id_cursor>
+  <datatable data_type="character varying" is_pk="false">tbAgdonlineTipologradouro</datatable>
+  <updating data_type="character" is_pk="false"/>
+  <md5 data_type="character" is_pk="false"/>
+  <help data_type="character varying" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">12</ordem>
+  <alias data_type="integer" is_pk="false">370015</alias>
+  <linhas_pagina data_type="integer" is_pk="false">20</linhas_pagina>
+  <pagina data_type="character" is_pk="false">S</pagina>
+  <style data_type="character" is_pk="false"/>
+  <nr_col_edition data_type="integer" is_pk="false"/>
+  <nr_col_filter data_type="integer" is_pk="false"/>
+  <perc_regiao_lbl data_type="integer" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EDUARDO</usuario_created>
+  <id_conteiner data_type="integer" is_pk="false"/>
+  <id_cardinalidade data_type="character" is_pk="false">5</id_cardinalidade>
+  <title data_type="character varying" is_pk="false">Agdonline Tipologradouro</title>
+  <cardinalidade_minima data_type="integer" is_pk="false"/>
+  <reset_rowcol data_type="character" is_pk="false"/>
+  <max_row_count data_type="integer" is_pk="false"/>
+  <object_list data_type="character varying" is_pk="false"/>
+  <id_form_objtoolbar data_type="integer" is_pk="false"/>
+  <id_form_objlist data_type="integer" is_pk="false"/>
+  <edit_grid data_type="character" is_pk="false"/>
+  <id_conteiner1 data_type="integer" is_pk="false"/>
+  <id_dataset_grid data_type="integer" is_pk="false"/>
+  <id_container_selector data_type="integer" is_pk="false"/>
+  <id_form_selector data_type="integer" is_pk="false"/>
+</fr_dataset>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">130197</id_table>
+  <id_script data_type="integer" is_pk="true">1301</id_script>
+  <descricao data_type="character varying" is_pk="false">XGP_TIPO_MOTORES</descricao>
+  <script data_type="character varying" is_pk="false">insert into xgp_tipo_motores 
+(id_tipo_motores, descricao, usuario_created, data_created) values
+(1, 'Veiculos', 'GERSON', '08/04/2023');
+
+insert into xgp_tipo_motores 
+(id_tipo_motores, descricao, usuario_created, data_created) values
+(2, 'Moto', 'GERSON', '08/04/2023');
+
+insert into xgp_tipo_motores 
+(id_tipo_motores, descricao, usuario_created, data_created) values
+(3, 'Trator', 'GERSON', '08/04/2023');
+
+insert into xgp_tipo_motores 
+(id_tipo_motores, descricao, usuario_created, data_created) values
+(5, 'Implemento', 'GERSON', '08/04/2023');</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000644</id_table>
+  <table_name data_type="character varying" is_pk="false">FILA_ENVIO_EMAIL</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela de fila para envio de emails. Inicialmente utilizada para enviar email de boletos de cobran¿a.
+OBS: O m¿dulo NFSE ¿ quem vai enviar os emails, ent¿o, somente empresas que utilizam a NFSE podem
+utilizar esse recurso.</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">10</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

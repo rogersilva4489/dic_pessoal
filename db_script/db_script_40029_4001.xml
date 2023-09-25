@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">40029</id_table>
+  <id_script data_type="integer" is_pk="true">4001</id_script>
+  <descricao data_type="character varying" is_pk="false">XTD_ORIGEM</descricao>
+  <script data_type="character varying" is_pk="false">insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(1, 'Lote de Animais', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(2, 'Entrada de Animais', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(3, 'Saida de Animais', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(5, 'Abastecimento', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(6, 'Sistema', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(7, 'Animais', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(8, 'ToDo List', 'GERSON', '15/07/2019');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(9, 'Baixa de Titulos', 'GERSON', '02/01/2020');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(10, 'Item do Estoque', 'GERSON', '03/03/2020');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(11, 'OS', 'GERSON', '15/05/2020');
+
+insert into xtd_origem (id_origem, descricao, usuario_created, data_created) values
+(12, 'Lote Compra/Venda de Animais', 'GERSON', '31/01/2022');
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

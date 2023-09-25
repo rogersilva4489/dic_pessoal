@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">27045</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGF_TRIBUTACAO_SEL</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+	a.id_tributacao, 
+	a.descricao , 
+	case a.local_operacao 
+		when 'D' then 'Dentro do Estado'
+		when 'F' then 'Fora do Estado'
+	end as local_operacao_desc, 
+	case a.tipo_movimento
+	    when 'S' then 'Saida'
+	    when 'E' then 'Entrada'
+	end as tipo_movimento_desc, 
+	c.descricao  as cidade,
+	b.cod_item,
+	d.cod_cliente,
+	e.nome as empresa, 
+	f.codigo as cod_ncm, 
+	g.codigo as cod_nbs
+from xgf_tributacao a
+left join xgp_item b on (a.id_item = b.id_item)
+left join cidade c on (a.id_uf = c.id_uf and a.id_cidade = c.id_cidade)
+left join xgp_pessoa d on (a.id_pessoa = d.id_pessoa)
+left join empresa e on (a.id_empresa = e.id_empresa)
+left join xgp_ncm f on (a.id_ncm = f.id_ncm)
+left join xgp_nbs g on (a.id_nbs = g.id_nbs)]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">999</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

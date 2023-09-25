@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">2500129</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">250010</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">KEY_ORIGEM</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">10</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Campo que identifica o documento que deu origem a reserva. Não usaremos relacionamento entre tabelas porque pode vir de diversas origens e o usuario pode querer derrubar as reservas
+
+- Compra com Reserva de Pedido:
+  * 'COMPRA',ID_Compra,id_Sequencia_Item
+
+- Reserva Temporaria de Balcao
+  * 'TMP',id_Atendimento,id_Seq_Item
+
+- Pré-Nota
+* 'PRE_NF',id_Orc_Mapa,id_Seq_Item
+
+- Reserva para Transferência Entre Empresas
+* 'TRAN',id_Empresa (Empresa para onde será transferido)</help>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <md5 data_type="character varying" is_pk="false">29D3ECB7799DA9CB7B107E71D6E0639B</md5>
+  <id_table data_type="integer" is_pk="false">6000718</id_table>
+  <id_cols data_type="integer" is_pk="false">600011</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

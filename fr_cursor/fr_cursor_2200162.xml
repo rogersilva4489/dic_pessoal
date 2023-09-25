@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200162</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_LOTE</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_LOTE, 
+     A.ID_PESSOA, 
+     A.ID_PESSOA_RESPONSAVEL, 
+     A.ID_PESSOA_CORRETOR, 
+     A.TIPO_LOTE, 
+     A.DESCRICAO, 
+     A.DATA_LOTE, 
+     A.DATA_MOVIMENTO, 
+     A.VALOR_LOTE, 
+     A.VALOR_TRANSPORTE, 
+     A.VALOR_COMISSAO, 
+     A.VALOR_TOTAL, 
+     A.QTDE_ANIMAIS, 
+     A.VALOR_MEDIO, 
+     A.OBSERVACAO, 
+     A.STATUS, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.TIPO_VALOR, 
+     A.VALOR_KG, 
+     A.PRAZO_PAGTO, 
+     A.ID_OPERACAO, 
+     A.ID_EMPRESA, 
+     A.ID_EMPRESA_TRANSF, 
+     A.PESO_CARCACA, 
+     A.ID_PESSOA_TRANSPORTE, 
+     A.VALOR_DESCONTO, 
+     A.VALOR_IMPOSTO, 
+     D.NOME as NOME_PESSOA, 
+     A.ID_ANEXO, 
+     A.PAGTO_ANTECIPADO, 
+     A.VALOR_ARROBA, 
+     A.RENDIMENTO_CARCACA, 
+     A.ID_TITULO, 
+     A.VALOR_ADTO, 
+     A.DATA_ABATE, 
+     A.ID_CATEGORIA_LOTE, 
+     E.TIPO, 
+     A.VALOR_DESPESA, 
+     A.LIBERAR_CONFERENCIA, 
+     F.APELIDO, 
+     A.ID_TAREFA 
+from XGP_LOTE A 
+     left join XGP_PESSOA D on 
+           a.id_pessoa = d.id_pessoa
+     left join XGP_OPERACAO E on 
+           E.ID_OPERACAO = A.ID_OPERACAO
+     left join EMPRESA F on 
+           f.id_empresa = a.id_empresa
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200171</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

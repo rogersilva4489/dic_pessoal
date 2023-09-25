@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500155</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select c.id_aparte,
+       a.data as data_pesagem,
+       count(b.id_animal) as qtde_animal_amostra,
+       avg(b.peso) as peso_medio_amostra,
+       avg(b.gmd) as gmd_medio_amostra
+from xgp_manejo a, xgp_manejo_detalhe b, xgp_animal c,
+    (select c1.id_aparte, 
+            max(a1.data) as data
+     from xgp_manejo a1, xgp_manejo_detalhe b1, xgp_animal c1
+     where a1.id_manejo = b1.id_manejo
+       and b1.id_animal = c1.id_animal
+       and b1.peso is not NULL
+    group by c1.id_aparte) d
+where a.id_manejo = b.id_manejo
+  and b.id_animal = c.id_animal
+  and b.peso is not null
+  and c.status = 'E'
+  and c.id_aparte is not null 
+  and c.id_aparte = d.id_aparte
+  and a.data = d.data
+group by c.id_aparte, a.data
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

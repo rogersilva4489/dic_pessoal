@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130226</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_MONTA_REPASSE</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select b.id_aparte, c.cod_animal, c.cod_botom_manejo, d.descricao as descr_categoria, a.usuario_created, a.data_created
+from xgp_manejo_detalhe a, xgp_manejo b, xgp_animal c, xgp_categoria d
+where a.id_manejo = b.id_manejo
+  and a.id_animal = c.id_animal
+  and c.id_categoria = d.id_categoria
+  and b.id_aparte = :id_aparte
+  and B.ID_TIPO_MANEJO in (select a1.id_tipo_manejo from xgp_tipo_manejo a1 where a1.id_manejo_operacao = 14)
+  and B.STATUS = 'F']]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

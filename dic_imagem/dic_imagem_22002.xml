@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dic_imagem>
+  <id_imagem data_type="integer" is_pk="true">22002</id_imagem>
+  <descricao_imagem data_type="character varying" is_pk="false">More Options</descricao_imagem>
+  <valor_imagem data_type="bytea" is_pk="false">89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000444944415478DA6364A031601C161684D3DA82FF508CCCC7C5461623463D983199D63EA02918B5607058F07EC85B4053306AC1E0B080E6851DCD8B6B9A5738340543DF020000C715C7D877D4660000000049454E44AE426082</valor_imagem>
+  <nivel_acesso data_type="integer" is_pk="false"/>
+</dic_imagem>

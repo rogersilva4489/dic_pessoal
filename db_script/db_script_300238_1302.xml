@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">300238</id_table>
+  <id_script data_type="integer" is_pk="true">1302</id_script>
+  <descricao data_type="character varying" is_pk="false">Trigger Log</descricao>
+  <script data_type="character varying" is_pk="false">DROP TRIGGER trigger_log_xgp_touro on xgp_touro;
+
+CREATE TRIGGER trigger_log_xgp_touro
+AFTER INSERT OR UPDATE OR DELETE ON xgp_touro
+FOR EACH ROW
+EXECUTE PROCEDURE xgp_touro_log_function();</script>
+  <ordem data_type="integer" is_pk="false">2</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_form>
+  <id_form data_type="integer" is_pk="true">13046</id_form>
+  <title data_type="character varying" is_pk="false">RN para Entrada de Animais</title>
+  <name data_type="character varying" is_pk="false">XGPMovEntrada</name>
+  <help data_type="character varying" is_pk="false">Classe reponsavel por fazer o tratamento de entrada e concelamento de entrada de animais</help>
+  <readonly data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_form_type data_type="character" is_pk="false">N</id_form_type>
+  <id_cardinalidade data_type="character" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false">22003</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">22001</id_modulo>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <id_form_tmp data_type="integer" is_pk="false">300039</id_form_tmp>
+  <id_form_function data_type="character" is_pk="false">3</id_form_function>
+  <changed_prop data_type="character" is_pk="false"/>
+  <id_form_ref data_type="integer" is_pk="false"/>
+  <id_imagem data_type="integer" is_pk="false">19001</id_imagem>
+  <eh_template data_type="character" is_pk="false">N</eh_template>
+  <id_tecnologia data_type="character varying" is_pk="false">ZK</id_tecnologia>
+</fr_form>

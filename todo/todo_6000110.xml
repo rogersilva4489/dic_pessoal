@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">6000110</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">6000108</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Criar Coluna com RoleName Simples para uma tabela, apos isso excluir a coluna e ver o resultado</solicitacao>
+  <solucao data_type="character varying" is_pk="false">ok</solucao>
+  <responsavel data_type="character varying" is_pk="false">GERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-06-13T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60005</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">600012</id_categoria>
+</todo>

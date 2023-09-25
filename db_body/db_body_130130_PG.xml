@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">130130</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[(select a.id_empresa,
+       c.nome as nome_empresa,
+       a.id_fracao  as id, 
+       0 as id_pai,
+       a.cod_fracao as descricao, 
+       a.capacidade,
+       cast(d.peso_total /450 as integer) as lotacao_ua,
+       d.qtde_animais,
+       case when d.qtde_animais is not null and d.qtde_animais > 0 then
+           CAST(d.peso_total/d.qtde_animais as Integer) 
+       else 
+           null
+       end as peso_medio_animais,
+       d.data_media_nasc,
+       a.id_estrategia,
+       e.descricao as descr_estrategia,
+       f.descricao as descr_tipo_aparte,
+       a.data_inicio,
+       'F' as Tipo_Registro  -- lote fracao
+from xgp_fracao a
+
+left join empresa c on
+   c.id_empresa = a.id_empresa
+
+left join (select a1.id_fracao,
+             sum(a1.qtde_animais) as qtde_animais,
+             sum(a1.peso_medio_animais * a1.qtde_animais) as peso_total,
+             CAST(to_timestamp(avg(extract(epoch from a1.data_media_nasc))) as date) as data_media_nasc
+           from xgp_lote_animal a1
+           group by a1.id_fracao) d on
+   d.id_fracao = a.id_fracao
+
+left join xgp_estrategia e on
+   e.id_estrategia = a.id_estrategia      
+
+left join xgp_tipo_aparte f on
+   f.id_tipo_aparte = a.id_tipo_aparte
+
+order by a.cod_fracao)
+  
+union all
+
+(select b.id_empresa,
+       null as nome_empresa,
+       a.id_lote_animal as id,  
+       a.id_fracao as id_pai,
+       c.descricao || ' - ' || coalesce(f.descricao,'') as descricao,
+       null as capacidade,
+       (a.qtde_animais * a.peso_medio_animais /450) as lotacao_ua,
+       a.qtde_animais,
+       a.peso_medio_animais,
+       a.data_media_nasc,
+       0 as id_estrategia,   
+       '' as descr_estrategia,
+       f.descricao as descr_tipo_aparte,
+       null as data_inicio,
+       'L' as tipo_registro  -- lote animal
+from xgp_lote_animal a
+
+left join xgp_fracao b on
+    b.id_fracao = a.id_fracao
+
+left join xgp_categoria c on
+    c.id_categoria = a.id_categoria
+
+left join xgp_fracao e on
+  e.id_fracao = b.id_fracao
+  
+left join xgp_grupo_animal f on
+  f.id_grupo_animal = c.id_grupo_animal
+
+where a.qtde_animais > 0
+order by c.sexo, c.idade_entrada desc)        
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

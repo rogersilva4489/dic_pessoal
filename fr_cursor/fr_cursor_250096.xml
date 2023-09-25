@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250096</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">CP_COMPRA_IMPOSTO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_COMPRA, 
+      A.BASE_ISS, 
+      A.VALOR_ISS, 
+      A.BASE_ISS_RETIDO, 
+      A.VALOR_ISS_RETIDO, 
+      A.SERVICO_NAO_TRIBUTADO, 
+      A.VALOR_DESCONTO_ISS, 
+      A.BASE_IPI, 
+      A.VALOR_IPI, 
+      A.BASE_IPI_OUTROS, 
+      A.VALOR_IPI_OUTROS, 
+      A.BASE_ICMS_NF, 
+      A.VALOR_RED_BC_ICMS_NF, 
+      A.VALOR_ICMS_NF, 
+      A.BASE_ICMS_SUBST, 
+      A.VALOR_RED_BC_SUBST, 
+      A.VALOR_ICMS_SUBST, 
+      A.BASE_ICMS_ANTEC, 
+      A.VALOR_RED_BC_ANTEC, 
+      A.VALOR_ICMS_ANTEC, 
+      A.VALOR_DESC_SUFRAMA_PIS, 
+      A.BASE_PIS, 
+      A.VALOR_PIS, 
+      A.BASE_PIS_OUTROS, 
+      A.VALOR_PIS_OUTROS, 
+      A.BASE_PIS_ST, 
+      A.VALOR_PIS_ST, 
+      A.VALOR_DESC_SUFRAMA_COFINS, 
+      A.BASE_COFINS, 
+      A.BASE_COFINS_OUTROS, 
+      A.VALOR_COFINS, 
+      A.VALOR_COFINS_OUTROS, 
+      A.BASE_COFINS_ST, 
+      A.VALOR_COFINS_ST, 
+      A.BASE_ICMS, 
+      A.VALOR_ICMS, 
+      A.VALOR_ICMS_ISENTO, 
+      A.VALOR_ICMS_OUTROS, 
+      A.BASE_DIF_ALIQUOTA, 
+      A.VALOR_DIF_ALIQUOTA, 
+      A.VALOR_DESC_SUFRAMA_ICMS, 
+      A.VALOR_RATEIO_FRETE, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      A.BASE_ICMS_ANTE_PARC, 
+      A.VALOR_ICMS_ANTE_PARC, 
+      A.VALOR_RED_BC_IPI, 
+      A.BASE_DESC_SUFRAMA_ICMS, 
+      A.BASE_PIS_RETIDO, 
+      A.VALOR_PIS_RETIDO, 
+      A.BASE_COFINS_RETIDO, 
+      A.VALOR_COFINS_RETIDO, 
+      A.BASE_IRRF, 
+      A.VALOR_IRRF, 
+      A.BASE_CSLL, 
+      A.VALOR_CSLL, 
+      A.BASE_INSS_RETIDO, 
+      A.VALOR_INSS_RETIDO 
+from CP_COMPRA_IMPOSTO A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">250059</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

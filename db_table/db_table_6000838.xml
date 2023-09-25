@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000838</id_table>
+  <table_name data_type="character varying" is_pk="false">NC_COMISSAO_EMPRESA_PARC</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela que Define as Regras para a Definição das Comissoes que a Empresa tem Direito quando vende uma cota.
+Comissoes paga Pela honda:
+1a - 1% na Venda do Contrato
+2a - 1% no Pagto da 3a. Parcela
+3a - 1% na 4a. Parcela
+4a - 1% na Entrega do Bem (No sistema ira gerar quando ocorre a aprovacao do Cadastro)</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">7</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

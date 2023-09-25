@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">40029</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XTD_PROCESSO_PARAM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_PROCESSO_PARAM, 
+     A.ID_RECURSO, 
+     A.ID_URGENCIA, 
+     A.ID_CATEGORIA, 
+     A.ID_PROCESSO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.DESCRICAO as DESCR_PROCESSO, 
+     A.ID_EMPRESA, 
+     A.DESCRICAO, 
+     C.APELIDO, 
+     A.ID_STATUS 
+from XTD_PROCESSO_PARAM A 
+     inner join XTD_PROCESSO B on 
+           B.ID_PROCESSO = A.ID_PROCESSO
+     left join EMPRESA C on 
+           C.ID_EMPRESA = A.ID_EMPRESA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">40032</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

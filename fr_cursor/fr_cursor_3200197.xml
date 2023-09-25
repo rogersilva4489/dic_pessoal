@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">3200197</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XML_TOTAL</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+  '' as icms_vBC, 
+  '' as icms_vICMS,
+  '' as icms_vICMSDeson,
+  '' as icms_vFCPUFDest,
+  '' as icms_vICMSUFDest,
+  '' as icms_vICMSUFRemet,
+  '' as icms_vFCP,
+  '' as icms_vBCST,
+  '' as icms_vST,
+  '' as icms_vFCPST,
+  '' as icms_vFCPSTRet,
+  '' as icms_vProd,
+  '' as icms_vFrete,
+  '' as icms_vSeg,
+  '' as icms_vDesc,
+  '' as icms_vII,
+  '' as icms_vIPI,
+  '' as icms_vIPIDevol,
+  '' as icms_vPIS,
+  '' as icms_vCOFINS,
+  '' as icms_vOutro,
+  '' as icms_vNF,
+  '' as icms_vTotTrib,  
+  '' as issqn_vServ,
+  '' as issqn_vBC,
+  '' as issqn_vISS,
+  '' as issqn_vPIS,
+  '' as issqn_vCOFINS,
+  '' as issqn_dCompet,
+  '' as issqn_vDeducao,
+  '' as issqn_vOutro,
+  '' as issqn_vDescIncond,
+  '' as issqn_vDescCond,
+  '' as issqn_vISSRet,
+  '' as issqn_cRegTrib,  
+  '' as rettrib_vRetPIS,
+  '' as rettrib_vRetCOFINS,
+  '' as rettrib_vRetCSLL,
+  '' as rettrib_vBCIRRF,
+  '' as rettrib_vIRRF,
+  '' as rettrib_vBCRetPrev,
+  '' as rettrib_vRetPrev, 
+  '' as vRec
+ From cp_compra 
+where id_compra = -1]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_master>
+  <id_form data_type="integer" is_pk="true">300239</id_form>
+  <id_dataset_master data_type="integer" is_pk="true">3001</id_dataset_master>
+  <id_dataset data_type="integer" is_pk="true">3002</id_dataset>
+  <id_att_master data_type="integer" is_pk="true">13014</id_att_master>
+  <id_dataset_att data_type="integer" is_pk="false">1309</id_dataset_att>
+  <id_dataset_filter data_type="integer" is_pk="false">1305</id_dataset_filter>
+  <filter_type data_type="character" is_pk="false">M</filter_type>
+</fr_master>

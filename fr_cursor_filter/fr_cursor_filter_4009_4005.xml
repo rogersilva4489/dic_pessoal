@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">4009</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">4005</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">USUARIO</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false">-- filtra todas as tarefas relacionadas ao recurso onde o usuario foi cruzado
+-- e todas as tarefas que foram criadas pelo usuario
+a.id_tarefa in (select id_tarefa 
+                from xtd_tarefa a1
+                where a1.id_recurso in (select a2.id_recurso 
+                                        from xtd_responsavel a2, xtd_recurso b2
+                                        where a2.id_recurso_resp = b2.id_recurso
+                                          and b2.ativo = 'S'
+                                          and b2.id_usuario = :id_usuario)
+                  or a1.id_recurso in (select id_recurso 
+                                       from xtd_recurso b1
+                                       where b1.id_usuario = :id_usuario)
+                  or a1.usuario_created = :id_usuario)</sql>
+  <param_name data_type="character varying" is_pk="false">ID_USUARIO</param_name>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

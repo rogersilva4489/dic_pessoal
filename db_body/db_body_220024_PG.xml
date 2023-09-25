@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">220024</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_pessoa,
+       a.nome,
+       i.nome as nome_grupo,
+       COALESCE(c.nome_fantasia, a.nome) as fantasia_ou_nome,
+       f.rua||COALESCE(', '||e.fachada,'')||' '||COALESCE(e.complemento, '') as rua_completa_fat,
+       g.uf as uf_fat,
+       h.descricao as cidade_fat,
+       COALESCE(j.ddd||'-', '')||j.telefone as fone_contato
+from pessoa a
+left join pessoa_fisica b on
+    b.id_pessoa = a.id_pessoa
+left join pessoa_juridica c on
+    c.id_pessoa = a.id_pessoa    
+left join pessoa_diversos d on 
+     d.id_pessoa = a.id_pessoa
+left join pessoa_endereco e on
+     e.id_pessoa = d.id_pessoa and
+     e.id_endereco = d.id_endereco_faturamento
+left join logradouro f on
+     f.id_logradouro = e.id_logradouro    
+left join estado g on
+    f.id_uf = g.id_uf
+left join cidade h on
+    f.id_uf = h.id_uf and
+    f.id_cidade = h.id_cidade
+left join pessoa_grupo i on
+    i.id_grupo = a.id_grupo   
+left join pessoa_telefone j on
+     j.id_pessoa = d.id_pessoa and
+     j.id_pessoa_telefone =  d.id_telefone_contato]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

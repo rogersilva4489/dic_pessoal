@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">3200154</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select id_enum as en_tipo_pis, descricao 
+from fr_enum a 
+where a.tabela = 'TB_CST_PIS'
+  and a.campo  = 'EN_TIPO_PIS'
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</db_body>

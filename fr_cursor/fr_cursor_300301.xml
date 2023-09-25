@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300301</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XAF_LISTA_ESTOQUE</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_ATIVO, 
+      A.QTDE, 
+      A.CUSTO_MEDIO, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      B.COD_ATIVO, 
+      B.ID_CLASSE,
+      A.TIPO_OPER, 
+      A.QTDE * A.CUSTO_MEDIO as CUSTO_TOTAL, 
+      A.QTDE * C.VALOR_FECHAMENTO as TOTAL_FECHAMENTO, 
+      (C.VALOR_FECHAMENTO - A.CUSTO_MEDIO) * A.QTDE AS VALOR_LIQUIDO,
+      CASE WHEN A.CUSTO_MEDIO <> 0 THEN
+         ((C.VALOR_FECHAMENTO -    A.CUSTO_MEDIO)/A.CUSTO_MEDIO) * 100
+      ELSE
+         0
+      END  as VARIACAO, 
+      C.DATA_COTACAO, 
+      C.VALOR_FECHAMENTO 
+from XAF_ESTOQUE A 
+     inner join XAF_ATIVO B on 
+           B.ID_ATIVO = A.ID_ATIVO
+     left join VW_XAF_ULTIMA_COTACAO C on 
+           a.id_ativo = c.id_ativo
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Lista o estoque para consulta]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

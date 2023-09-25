@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250085</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">SE_SERVICO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_ITEM, 
+      A.ID_GRUPO, 
+      A.ID_SETOR, 
+      A.ID_NBS, 
+      A.ID_SERV_LC, 
+      A.TEMPO_PADRAO, 
+      A.COMO_COBRAR, 
+      A.DATA_CREATED, 
+      A.USUARIO_CREATED, 
+      A.DATA_CHANGED, 
+      A.USUARIO_CHANGED, 
+      B.TIPO_IMPOSTO, 
+      C.ALIQ_INSS as TB_RET_INSS_ALIQ_INSS, 
+      C.CALC_RETENCAO as TB_RET_INSS_CALC_RETENCAO, 
+      D.ALIQ_IRRF as TB_RET_IRRF_ALIQ_IRRF, 
+      D.CALC_RETENCAO as TB_RET_IRRF_CALC_RETENCAO 
+from SE_SERVICO A 
+     left join SE_NBS B on 
+           B.ID_NBS = A.ID_NBS
+     left join TB_RETENCAO_INSS C on 
+           C.ID_RETENCAO_INSS = A.ID_RETENCAO_INSS
+     left join TB_RETENCAO_IRRF D on 
+           D.ID_RETENCAO_IRRF = A.ID_RETENCAO_IRRF
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">170040</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

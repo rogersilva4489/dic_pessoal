@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_modulo>
+  <id_projeto data_type="integer" is_pk="true">10044</id_projeto>
+  <id_modulo data_type="integer" is_pk="true">400013</id_modulo>
+  <descricao data_type="character varying" is_pk="false">GerEstoque</descricao>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <svn_source_url data_type="character varying" is_pk="false">https://nbs-svnfreedom.nbs.local:8443/svn/negocio/trunk/modulos/gerestoque</svn_source_url>
+  <eh_template data_type="character" is_pk="false">N</eh_template>
+  <dir_cursor data_type="character varying" is_pk="false"/>
+  <tipo_projeto_java data_type="character" is_pk="false"/>
+  <tipo_versionamento data_type="character" is_pk="false">B</tipo_versionamento>
+  <cod_acesso data_type="character varying" is_pk="false"/>
+  <show_home data_type="character varying" is_pk="false"/>
+  <context_path data_type="character varying" is_pk="false"/>
+</fr_modulo>

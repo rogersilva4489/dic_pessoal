@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130141</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_LOTE_CARDEX</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_LOTE_CARDEX, 
+     A.ID_LOTE_ANIMAL, 
+     A.ID_LOTE_OPERACAO, 
+     A.DATA, 
+     A.QTDE_ANIMAIS, 
+     A.PESO_MEDIO_ANIMAIS, 
+     A.DATA_MEDIA_NASC, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     B.DESCRICAO as DESCR_LOTE_OPERACAO, 
+     F.ID_EMPRESA, 
+     F.COD_FRACAO, 
+     A.DOC, 
+     B.TIPO, 
+     case when b.tipo = 'E' then
+                   'Entrada'
+        when b.tipo = 'S' then
+                   'Saida' 
+end as OPERACAO_TIPO, 
+     case when b.tipo = 'E' then
+                   a.QTDE_ANIMAIS
+        when b.tipo = 'S' then
+                   a.QTDE_ANIMAIS * (-1)
+end as QTDE_ANIMAIS_MOV, 
+     A.ID_FRACAO, 
+     A.ID_CATEGORIA, 
+     D.DESCRICAO as DESCR_CATEGORIA 
+from XGP_LOTE_CARDEX A 
+     inner join XGP_LOTE_OPERACAO B on 
+           B.ID_LOTE_OPERACAO = A.ID_LOTE_OPERACAO
+     inner join XGP_LOTE_ANIMAL C on 
+           C.ID_LOTE_ANIMAL = A.ID_LOTE_ANIMAL
+     inner join XGP_CATEGORIA D on 
+           D.ID_CATEGORIA = A.ID_CATEGORIA
+     inner join XGP_FRACAO F on 
+           F.ID_FRACAO = A.ID_FRACAO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">130127</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

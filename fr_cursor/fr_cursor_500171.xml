@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">500171</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_QUALITAS_CAD</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.cod_animal, 
+       a.id_animal, 
+       a.id_animal_pai,
+       c.cod_animal as nome_pai,
+       b.cod_animal as mae,
+       b.id_animal as id_animal_mae,  
+       b.cod_animal as cod_animal_mae, 
+       a.data_desmama,
+       a.data_nascimento as datanasc,
+       a.sexo,
+       a.tempo_gestacao,
+       a.intervalo_parto,
+       case when a.status = 'E' then
+                 'Ativo'
+            else 
+                 'Inativo'
+       end situacao,
+       a.cod_animal,
+       d.sigla_internacional as raca,
+       case when a.id_tipo_prenhez = 2 then
+                 'IA'
+            else
+                 'MC'
+       end situacao_reprodutiva,
+       a.id_campanha     
+from xgp_animal a 
+left join xgp_animal b on         
+    b.id_animal = a.id_animal_mae
+left join xgp_animal c on
+    c.id_animal = a.id_animal_pai 
+left join xgp_raca d on
+    d.id_raca = a.id_raca  
+       
+   ]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">220013</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[CREATE OR REPLACE FUNCTION crm_Path_Categoria (
+  pId_Categoria bigint
+)
+RETURNS varchar AS
+$body$
+DECLARE
+
+  result varchar(200);
+
+  c_categoria cursor FOR
+  WITH RECURSIVE Tree_Categoria(id_categoria, id_categoria_pai, nivel, descricao) AS (
+    SELECT a.id_categoria, a.id_categoria_pai, 1, a.descricao from crm_categoria a where id_categoria = pId_Categoria
+  UNION ALL
+    SELECT a.id_categoria, a.id_categoria_pai, b.nivel + 1,a.descricao from crm_categoria a, Tree_Categoria b
+    where a.id_categoria = b.id_categoria_pai
+)
+SELECT * FROM Tree_Categoria order by nivel desc;
+
+BEGIN
+
+   for r in c_categoria LOOP
+       if result is null then
+          result := r.descricao;
+       else
+          result := result || '/' || r.descricao;
+       end if;
+   end loop;
+   
+   return result;
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY INVOKER
+COST 100;
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

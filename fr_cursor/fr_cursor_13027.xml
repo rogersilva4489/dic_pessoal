@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">13027</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_AVALIACAO_AREA_REBANHO</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_avaliacao,
+       a.id_fracao, 
+       d.id_fases,
+       c.cod_fracao as pasto_modulo,            
+       e.descricao as fase_pasto,
+       a.aee,
+       b.categoria,       
+       b.qtde_animais,
+       b.peso_vivo,              
+       b.qtde_cria,
+       b.peso_cria,
+       b.peso_ua + COALESCE(peso_cria_ua,0) as Peso_animal_ua,
+       a.lotacao_ua as lotacao_area,
+       a.lotacao_ua - (COALESCE(b.peso_ua,0) + COALESCE(peso_cria_ua,0)) as diferenca       
+        
+from vw_xgp_avaliacao_area_manejo a
+
+left join (select a.id_avaliacao,
+                   coalesce(b.id_fracao_modulo, a.id_fracao) as id_fracao,
+                   string_agg(c.descricao, ', ') as categoria,
+                   sum(a.qtde_animais) as qtde_animais,
+                   avg(a.peso_vivo) as peso_vivo,
+                   sum(a.qtde_cria) as qtde_cria,
+                   avg(a.peso_cria) as peso_cria,
+                   sum(a.qtde_animais * a.peso_vivo/450) as peso_ua,
+                   sum(a.qtde_cria * a.peso_cria/450) as peso_cria_ua
+      from xgp_avaliacao_rebanho a
+      left join xgp_avaliacao_manejo b on
+         b.id_avaliacao = a.id_avaliacao and 
+         b.id_fracao_pasto = a.id_fracao
+      left join xgp_tipo_aparte c ON
+         c.id_tipo_aparte = a.id_tipo_aparte
+      group by a.id_avaliacao, coalesce(b.id_fracao_modulo, a.id_fracao)) b on
+    b.id_avaliacao = a.id_avaliacao
+    and b.id_fracao = a.id_fracao
+
+left join vw_xgp_avaliacao_fracao c on
+   c.id_fracao = a.id_fracao
+   
+left join xgp_fracao d on 
+   d.id_fracao = a.id_fracao
+   
+left join xgp_fases e on
+   e.id_fases = d.id_fases]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false">pasto_modulo, fase_pasto</order_by>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Query que lista todos os pastos/modulos com sua repectiva lotação]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">210037</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">210018</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">LIMITE_CREDITO</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">20</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Limite que a Pessoa tem para comprar na Empresa.
+Ou seja  o que ela tem a pagar mais o que ela esta comprando não pode ultrapassar este valor.
+Se ultrapassar somente através de atende-se conseguirá realizar a venda.
+
+Na inclusão do cadastro de Pessoa:
+Ao realizar o cadastro de pessoa será cadastrado um limite default caso tenha o parâmetro LIMITE_CREDITO para a empresa do Cadastro.
+
+Caso queirá alterar esta opção é necessario que entre na tela de informações de credito e que o usuário tenha acesso para realizar esta alteração. Caso seja feito alteração neste valor será gravado log da alteração.</help>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false">87C8B5CDC966D400E507A29E9405D5B0</md5>
+  <id_table data_type="integer" is_pk="false">6000991</id_table>
+  <id_cols data_type="integer" is_pk="false">600013</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

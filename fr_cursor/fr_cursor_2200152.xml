@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200152</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_FRACAO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_FRACAO, 
+     A.COD_FRACAO, 
+     A.TAMANHO, 
+     A.CAPACIDADE, 
+     A.TIPO_SOLO, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.FERTILIDADE, 
+     A.TOPOGRAFICA, 
+     A.ID_CAPIM, 
+     C.DESCRICAO as DESCR_CAPIM, 
+     A.ID_TIPO_AGUA, 
+     A.TAMANHO_COCHO, 
+     A.SCORE, 
+     A.DENSIDADE, 
+     A.DIAS_PASTEJO, 
+     A.DATA_INICIO, 
+     A.ID_FRACAO_MODULO, 
+     A.TIPO_FRACAO, 
+     A.TIPO_PASTEJO, 
+     A.ID_EMPRESA, 
+     D.APELIDO, 
+     A.AEE, 
+     A.GUID, 
+     F.PASTOS_DO_MODULO, 
+     G.DESCRICAO as DESCR_TIPO_AGUA, 
+     case when a.tipo_fracao = 'M' then
+                 'Modulo' 
+            when a.tipo_fracao = 'P' then
+                 'Pasto'
+            when a.tipo_fracao = 'A' then
+                 'Arrendamento'  
+            when a.tipo_fracao = 'C' then
+                 'Confinamento' 
+            end as DESCR_TIPO_FRACAO, 
+     A.ATIVO, 
+     A.ORDEM_MANEJO, 
+     A.ID_FASES, 
+     H.DESCRICAO as DESCR_FASES, 
+     i.cod_fracao as COD_MODULO, 
+     A.ID_ESTRATEGIA, 
+     A.ID_TIPO_APARTE, 
+     A.COORDENADAS_GOOGLE_MAPS, 
+     A.COR_PASTO, 
+     J.DESCRICAO as DESCR_TIPO_APARTE 
+from XGP_FRACAO A 
+     left join XGP_CAPIM C on 
+           C.ID_CAPIM = A.ID_CAPIM
+     left join EMPRESA D on 
+           D.ID_EMPRESA = A.ID_EMPRESA
+     left join XGP_FRACAO E on 
+           e.id_fracao = a.id_fracao_modulo
+     left join VW_XGP_PASTOS_MODULO F on 
+           f.id_fracao_modulo = a.id_fracao
+     left join XGP_TIPO_AGUA G on 
+           G.ID_TIPO_AGUA = A.ID_TIPO_AGUA
+     left join XGP_FASES H on 
+           H.ID_FASES = A.ID_FASES
+     left join XGP_FRACAO I on 
+           i.id_fracao = a.id_fracao_modulo
+     left join XGP_TIPO_APARTE J on 
+           J.ID_TIPO_APARTE = A.ID_TIPO_APARTE
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200160</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

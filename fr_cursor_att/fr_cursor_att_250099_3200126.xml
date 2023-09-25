@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">250099</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">3200126</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">TRIB_MVA_ICMS_ANTEC</column_cursor>
+  <alias data_type="character varying" is_pk="false">B</alias>
+  <ordem data_type="integer" is_pk="false">133</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Alíquota MVA p/ Cálculo do ICMS Antecipado. Específico para Entradas.</help>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <md5 data_type="character varying" is_pk="false">D8DA788DA09CD6C1C7E4FDB55B67787F</md5>
+  <id_table data_type="integer" is_pk="false">250042</id_table>
+  <id_cols data_type="integer" is_pk="false">250035</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

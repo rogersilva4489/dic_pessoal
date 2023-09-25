@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000791</id_table>
+  <table_name data_type="character varying" is_pk="false">MS_TIPO_IMPOSTO</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela FIXA onde são definidos os tipos de imposto, esta tabela serve para classificar os impostos que incidem na capa da tabela de venda.
+
+2 - ISS
+3 - PIS Produto
+4 - COFINS Produto
+5 - PIS Servico
+6 - COFINS Servico
+7 - PIS Retido
+8 - COFINS Retido
+9 - IRRF Retido
+10 - CSLL Retido
+11 - ISS Retido
+12 - Diferencial de Aliquota (Usodo na integração contabil)
+13 - ICMS (Usado na Integração Contabil para Definição de Contas)
+14 - INSS Retido</commet>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">3</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false"/>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

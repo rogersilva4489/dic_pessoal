@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">130123</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">13011</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">ULTIMA_ADAPTACAO</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false"><![CDATA[a.data_inicio = (select max(a1.data_inicio) 
+                   from xgp_agenda_adaptacao a1
+                   where a1.id_empresa = a.id_empresa
+                     and a1.id_lote_fracao = a.id_lote_fracao
+                     and a1.nr_trato = a.nr_trato
+                     and a1.data_inicio <= :DATA_REFERENCIA)]]></sql>
+  <param_name data_type="character varying" is_pk="false">DATA_REFERENCIA</param_name>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

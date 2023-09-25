@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13044</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_avaliacao,
+       a.id_fracao,
+       b.id_fases,
+       a.aee,
+       a.lotacao_ua
+from xgp_avaliacao_detalhe a 
+left join xgp_fracao b on
+  b.id_fracao = a.id_fracao
+where not exists (select 1 
+                  from xgp_avaliacao_manejo a1
+                  where a1.id_avaliacao = a.id_avaliacao
+                    and a1.id_fracao_pasto = a.id_fracao)   
+union all
+select a.id_avaliacao,
+       a.id_fracao_modulo as id_fracao,
+       c.id_fases,
+       sum(b.aee) as aee,
+       sum(b.lotacao_ua) as lotacao_ua
+from xgp_avaliacao_manejo a 
+left join xgp_avaliacao_detalhe b on
+   a.id_avaliacao = b.id_avaliacao
+   and a.id_fracao_pasto = b.id_fracao
+left join xgp_fracao c on
+  c.id_fracao = a.id_fracao_modulo
+group by a.id_avaliacao, a.id_fracao_modulo, c.id_fases  
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

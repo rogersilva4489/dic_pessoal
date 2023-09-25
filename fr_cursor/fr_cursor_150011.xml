@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">150011</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">REL_CONFIG</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      C.ID_PACOTE, 
+      C.ID_CONFIG, 
+      C.DESCRICAO, 
+      C.NOTA, 
+      C.QUERY, 
+      C.FONTE, 
+      C.TAMANHO, 
+      C.DATA_CREATED, 
+      C.USUARIO_CREATED, 
+      C.DATA_CHANGED, 
+      C.USUARIO_CHANGED, 
+      C.ORIENTACAO_PAPEL, 
+      C.TITULO, 
+      C.SUB_TITULO, 
+      C.PAPEL, 
+      C.QUERY_HTML, 
+      C.PRINT_GRID, 
+      C.COR_ALTERNADA, 
+      C.USAR_COR_ALTERNADA 
+from REL_CONFIG C 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">60001066</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

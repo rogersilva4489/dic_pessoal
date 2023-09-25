@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200168</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ANIMAL</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.COD_ANIMAL, 
+     A.COD_BOTOM, 
+     A.DATA_CHANGED, 
+     A.DATA_CREATED, 
+     A.DATA_ENTRADA, 
+     A.DATA_MORTE, 
+     A.DATA_NASCIMENTO, 
+     A.DATA_SAIDA, 
+     B.DESCRICAO as DESCR_CATEGORIA, 
+     D.DESCRICAO as DESCR_MOTIVO_MORTE, 
+     C.DESCRICAO as DESCR_RACA, 
+     A.FOTO, 
+     A.ID_ANIMAL, 
+     A.ID_ANIMAL_MAE, 
+     A.ID_CATEGORIA, 
+     A.ID_ESPECIE, 
+     A.ID_LOTE_COMPRA, 
+     A.ID_LOTE_VENDA, 
+     A.ID_MOTIVO_MORTE, 
+     A.ID_RACA, 
+     A.IDADE_ESTIMADA, 
+     A.OBS_MORTE, 
+     A.OBSERVACAO, 
+     A.PESO_ATUAL, 
+     A.PESO_INICIAL, 
+     A.PRAZO_ESTIMADO, 
+     A.SEXO, 
+     A.STATUS, 
+     A.USUARIO_CHANGED, 
+     A.USUARIO_CREATED, 
+     A.VALOR_COMPRA, 
+     A.VALOR_VENDA, 
+     A.ID_APARTE, 
+     A.DATA_DESMAMA, 
+     A.DATA_BRUCELOSE, 
+     A.ID_CATEGORIA_INDEA, 
+     A.DATA_PARTO, 
+     A.DATA_PESO, 
+     A.ID_DESCARTE, 
+     A.DATA_DESCARTE, 
+     A.ID_EMPRESA, 
+     K.NOME as NOME_EMPRESA, 
+     K.APELIDO, 
+      case when a.cod_animal is null THEN
+     a.cod_botom
+ else 
+    a.cod_animal
+ end
+ as COD_ANIMAL_BOTOM, 
+     A.COD_PERNA, 
+     CASE WHEN A.COD_PERNA IS NOT NULL AND A.COD_PERNA <> A.COD_ANIMAL THEN
+      A.COD_ANIMAL||' - '||A.COD_PERNA
+ELSE
+     A.COD_ANIMAL
+END as COD_ANIMAL_PERNA, 
+     A.INDICE_QUALITAS, 
+     A.PERCENTIL_QUALITAS, 
+     A.ID_PROGRAMA, 
+     A.ID_CAMPANHA, 
+     A.LA, 
+     A.DATA_CARENCIA, 
+     A.MOTIVO_CARENCIA, 
+     case when a.status = 'E' then
+                  'Estoque'
+        when a.status = 'B' then
+                  'Baixado'
+        when a.status = 'I' then
+                  'Indefinido'
+        else 
+               ''
+end 
+ as DESCR_STATUS, 
+     A.CE, 
+     A.NR_REGISTRO, 
+     A.COD_BOTOM_MANEJO, 
+     A.GMD, 
+     O.DESCRICAO as DESCR_APARTE, 
+     A.ID_TIPO_PRENHEZ, 
+     A.TEMPO_GESTACAO, 
+     A.INTERVALO_PARTO, 
+     A.FINALIDADE, 
+     A.ID_ANIMAL_PAI, 
+     A.ID_ITEM, 
+     A.ID_TOURO_LIXO, 
+     A.NOME 
+from XGP_ANIMAL A 
+     left join XGP_CATEGORIA B on 
+           B.ID_CATEGORIA = A.ID_CATEGORIA
+     inner join XGP_RACA C on 
+           C.ID_RACA = A.ID_RACA
+     left join XGP_MOTIVO_MORTE D on 
+           D.ID_MOTIVO_MORTE = A.ID_MOTIVO_MORTE
+     left join EMPRESA K on 
+           K.ID_EMPRESA = A.ID_EMPRESA
+     left join XGP_APARTE O on 
+           O.ID_APARTE = A.ID_APARTE
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200174</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

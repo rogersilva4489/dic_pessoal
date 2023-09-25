@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200177</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_SAIDA_DETALHE</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_SAIDA, 
+     A.ID_ANIMAL, 
+     A.QTDE, 
+     A.VALOR_UNITARIO, 
+     A.VALOR_VENDA, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     C.DESCRICAO as DESCR_CATEGORIA, 
+     A.OBSERVACAO, 
+     A.ID_UNIDADE, 
+     B.ID_ESPECIE, 
+     B.ID_CATEGORIA, 
+     A.ID_SAIDA_DETALHE, 
+     A.COD_ANIMAL, 
+     B.VALOR_COMPRA, 
+     D.DESCRICAO as DESCR_APARTE, 
+     A.PESO_ATUAL, 
+     B.DATA_NASCIMENTO, 
+     A.ID_CARDEX_ANIMAL, 
+     A.ID_MOTIVO_MORTE, 
+     A.ID_INVENTARIO, 
+     A.ID_INVENTARIO_DETALHE, 
+     E.ID_EMPRESA, 
+     E.DATA_SAIDA, 
+     A.GMD, 
+     A.DATA_PESO_ANTERIOR, 
+     A.DIAS_PESAGEM, 
+     A.GMD_ORIGEM, 
+     A.PESO_ANTERIOR, 
+     B.ID_RACA, 
+     B.SEXO, 
+     A.VALOR_ARROBA, 
+     A.VALOR_KG, 
+     A.VALOR_LIQUIDO, 
+     A.VALOR_DESCONTO, 
+     A.VALOR_FUNRURAL, 
+     A.VALOR_DIARIA, 
+     A.VALOR_OUTRAS_DESPESAS, 
+     A.VALOR_DESPESAS_LOTE, 
+     A.VALOR_IMPOSTO, 
+     F.DESCRICAO as DESCR_RACA 
+from XGP_SAIDA_DETALHE A 
+     left join XGP_ANIMAL B on 
+           B.ID_ANIMAL = A.ID_ANIMAL
+     left join XGP_CATEGORIA C on 
+           C.ID_CATEGORIA = B.ID_CATEGORIA
+     left join XGP_APARTE D on 
+           D.ID_APARTE = B.ID_APARTE
+     inner join XGP_SAIDA E on 
+           E.ID_SAIDA = A.ID_SAIDA
+     left join XGP_RACA F on 
+           f.id_raca = b.id_raca
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200188</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

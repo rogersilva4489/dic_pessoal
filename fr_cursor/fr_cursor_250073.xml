@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250073</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">TB_NCM_TRIB</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_NCM_TRIB, 
+      A.ID_NCM, 
+      A.ID_ORIGEM, 
+      A.ID_UF, 
+      A.ID_EMPRESA, 
+      A.ID_OPERACAO, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      A.ID_CFOP, 
+      A.ID_TRIBUTACAO, 
+      A.ID_PESSOA, 
+      K.UF, 
+      L.DESCRICAO as DESCR_CFOP, 
+      L.COD_CFOP, 
+      M.COD_NCM, 
+      N.COD_ORIGEM, 
+      N.DESCRICAO as DESCR_ORIGEM, 
+      O.ID_OPERACAO as ID_OPERACAO_O, 
+      O.DESCRICAO as DESCR_OPERACAO_SISTEMA, 
+      P.ID_EMPRESA as ID_EMPRESA_P, 
+      P.NOME as NOME_EMPRESA, 
+      L.COD_CFOP || ' - ' || L.DESCRICAO as CFOP_DESCRICAO, 
+      N.COD_ORIGEM || ' - '||N.DESCRICAO as ORIGEM_DESCRICAO, 
+      O.ID_OPERACAO || ' - ' ||O.DESCRICAO as OPERACAO_DESCRICAO, 
+      P.ID_EMPRESA || ' - '||P.NOME	 as EMPRESA_DESCRICAO, 
+      Q.COD_PESSOA, 
+      Q.NOME as NOME_PESSOA, 
+      Q.COD_PESSOA||' - '||Q.NOME as PESSOA_DESCRICAO, 
+      T.DESCRICAO as DESCR_TRIBUTACAO, 
+      A.TIPO_MOV 
+from TB_NCM_TRIB A 
+     left join ESTADO K on 
+           K.ID_UF = A.ID_UF
+     inner join CFOP L on 
+           L.ID_CFOP = A.ID_CFOP
+     left join TB_NCM M on 
+           M.ID_NCM = A.ID_NCM
+     left join TB_ORIGEM N on 
+           N.ID_ORIGEM = A.ID_ORIGEM
+     left join TB_OPERACAO_SISTEMA O on 
+           O.ID_OPERACAO = A.ID_OPERACAO
+     left join EMPRESA P on 
+           P.ID_EMPRESA = A.ID_EMPRESA
+     left join PESSOA Q on 
+           Q.ID_PESSOA = A.ID_PESSOA
+     inner join TB_TRIBUTACAO T on 
+           T.ID_TRIBUTACAO = A.ID_TRIBUTACAO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">230069</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

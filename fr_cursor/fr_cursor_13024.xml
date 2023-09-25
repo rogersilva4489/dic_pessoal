@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">13024</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_AVALIACAO_LOTACAO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_AVALIACAO, 
+     A.ID_AVALIACAO_LOTACAO, 
+     A.ID_TIPO_APARTE, 
+     A.QTDE_ANIMAIS, 
+     A.PESO_VIVO, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.ID_FRACAO_DE, 
+     A.ID_FRACAO_PARA, 
+     A.QTDE_CRIA, 
+     A.PESO_CRIA, 
+     B.COD_FRACAO as COD_FRACAO_DE, 
+     C.COD_FRACAO as COD_FRACAO_PARA, 
+     D.DESCRICAO as DESCR_TIPO_APARTE, 
+     ((a.qtde_animais * a.peso_vivo) +
+(COALESCE(a.qtde_cria,0) * COALESCE(a.peso_cria,0))) / 450 as PESO_UA 
+from XGP_AVALIACAO_LOTACAO A 
+     left join XGP_FRACAO B on 
+           b.id_fracao = a.id_fracao_de
+     left join XGP_FRACAO C on 
+           c.id_fracao = a.id_fracao_para
+     inner join XGP_TIPO_APARTE D on 
+           D.ID_TIPO_APARTE = A.ID_TIPO_APARTE
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">13043</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

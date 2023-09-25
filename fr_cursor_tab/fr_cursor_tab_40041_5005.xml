@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_tab>
+  <id_cursor data_type="integer" is_pk="true">40041</id_cursor>
+  <id_cursor_tab data_type="integer" is_pk="true">5005</id_cursor_tab>
+  <id_table data_type="integer" is_pk="false">40047</id_table>
+  <alias data_type="character varying" is_pk="false">E</alias>
+  <ordem data_type="integer" is_pk="false">6</ordem>
+  <join_table data_type="character varying" is_pk="false">e.id_conta = d.id_conta</join_table>
+  <md5 data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <join_fk data_type="character" is_pk="false">L</join_fk>
+  <usuario_join_fk data_type="character varying" is_pk="false">GERSON</usuario_join_fk>
+  <data_join_fk data_type="timestamp without time zone" is_pk="false">2020-09-14T00:00:00.000</data_join_fk>
+  <usuario_join_table data_type="character varying" is_pk="false"/>
+  <data_join_table data_type="timestamp without time zone" is_pk="false"/>
+  <id_cursor_join data_type="integer" is_pk="false">5004</id_cursor_join>
+</fr_cursor_tab>

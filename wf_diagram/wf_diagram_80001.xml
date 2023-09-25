@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wf_diagram>
+  <id_diagram data_type="integer" is_pk="true">80001</id_diagram>
+  <name data_type="character varying" is_pk="false">Fisica</name>
+  <descricao data_type="character varying" is_pk="false">Venda para pessoa fisica</descricao>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <md5 data_type="character varying" is_pk="false"/>
+  <dfm data_type="text" is_pk="false"><![CDATA[object TWFDiagram
+  NettoExportOffset = 3
+  AutomaticNodes = False
+  AutoScroll = True
+  AutoPage = False
+  Background.Scroll = True
+  Background.Style = biTile
+  Background.Visible = False
+  Background.Gradient.Direction = grTopBottom
+  Background.Gradient.StartColor = clWhite
+  Background.Gradient.EndColor = clYellow
+  Background.Gradient.Visible = False
+  Background.PrintGradient = False
+  SnapGrid.Active = False
+  SnapGrid.Force = False
+  SnapGrid.Visible = True
+  SnapGrid.SizeX = 7.559055118110240000
+  SnapGrid.SizeY = 7.559055118110240000
+  SnapGrid.Style = gsDots
+  SnapGrid.Pen.Color = clGray
+  SnapGrid.Pen.Style = psDot
+  SnapGrid.SnapToRuler = False
+  ShowLinkPoints = True
+  LeftRuler.Visible = True
+  LeftRuler.Divisions = 5
+  LeftRuler.Font.Charset = DEFAULT_CHARSET
+  LeftRuler.Font.Color = clWindowText
+  LeftRuler.Font.Height = -9
+  LeftRuler.Font.Name = 'Arial'
+  LeftRuler.Font.Style = []
+  LeftRuler.Units = unCenti
+  LeftRuler.MinorTickLength = 4
+  LeftRuler.MajorTickLength = 6
+  LeftRuler.Color = clWhite
+  LeftRuler.TickColor = clBlack
+  LeftRuler.Size = 16
+  LeftRuler.AutoFactor = True
+  LeftRuler.GridColor = clGray
+  TopRuler.Visible = True
+  TopRuler.Divisions = 5
+  TopRuler.Font.Charset = DEFAULT_CHARSET
+  TopRuler.Font.Color = clWindowText
+  TopRuler.Font.Height = -9
+  TopRuler.Font.Name = 'Arial'
+  TopRuler.Font.Style = []
+  TopRuler.Units = unCenti
+  TopRuler.MinorTickLength = 4
+  TopRuler.MajorTickLength = 6
+  TopRuler.Color = clWhite
+  TopRuler.TickColor = clBlack
+  TopRuler.Size = 16
+  TopRuler.AutoFactor = True
+  TopRuler.GridColor = clGray
+  Zoom = 100
+  BorderColor = clGray
+  MouseWheelMode = mwOff
+  Layers = <>
+  LinkCursor = crHandPoint
+  PanCursor = crHandPoint
+  ZoomCursor = crDefault
+  IgnoreScreenDPI = False
+  ShowCrossIndicators = False
+  PageLines.Visible = False
+  PageLines.Pen.Style = psDot
+  KeyActions = [kaEscape, kaMove, kaPage, kaResize, kaSelect]
+  HandlesStyle = hsClassic
+  SmoothMode = smAntiAlias
+  TextRenderingMode = tmAntiAlias
+  SelectionMode = slmMultiple
+  CanMoveOutOfBounds = True
+  PageSettings.PaperName = 'A4'
+  PageSettings.PaperId = 9
+  PageSettings.PaperWidth = 209.973333333333000000
+  PageSettings.PaperHeight = 296.968333333333000000
+  PageSettings.Orientation = dpoPortrait
+  PageSettings.LeftMarginStr = '25.4'
+  PageSettings.TopMarginStr = '25.4'
+  PageSettings.RightMarginStr = '25.4'
+  PageSettings.BottomMarginStr = '25.4'
+  RulerAutoUnit = False
+  MeasUnit = duCenti
+  WheelZoom = False
+  WheelZoomIncrement = 10
+  WheelZoomMin = 10
+  WheelZoomMax = 500
+  BorderStyle = bsSingle
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Style = []
+  ParentColor = False
+  ParentFont = False
+  FrIdDiagram = 80001
+  FrStatus = True
+  FrName = 'Fisica'
+  object blk80001: TLiveStartBlock
+    Left = 350.000000000000000000
+    Top = 94.000000000000000000
+    Width = 100.000000000000000000
+    Height = 50.000000000000000000
+    RunColors.RunONColor = clLime
+    RunColors.RunOFFColor = clBtnFace
+    RunColors.RunERRColor = clRed
+    LinkPointStyle = ptCross
+    Color = clWhite
+    SelColor = clWhite
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Text = 'Start'#13#10'blk80001'#13#10
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        ReadOnly = False
+        Transparency = 0
+      end>
+    Restrictions = []
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 40
+    MinHeight = 40
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 2
+    Shadow.VOffset = 2
+    Shadow.Transparency = 0
+    ParentShowHint = True
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clYellow
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    Transparency = 0
+    Collapsed = False
+  end
+  object blk80002: TLiveEndBlock
+    Left = 347.000000000000000000
+    Top = 415.000000000000000000
+    Width = 100.000000000000000000
+    Height = 50.000000000000000000
+    RunColors.RunONColor = clLime
+    RunColors.RunOFFColor = clBtnFace
+    RunColors.RunERRColor = clRed
+    LinkPointStyle = ptCross
+    Color = clWhite
+    SelColor = clWhite
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Text = 'End'#13#10'blk80002'#13#10
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        ReadOnly = False
+        Transparency = 0
+      end>
+    Restrictions = []
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 40
+    MinHeight = 40
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 2
+    Shadow.VOffset = 2
+    Shadow.Transparency = 0
+    ParentShowHint = True
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clYellow
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    Transparency = 0
+    Collapsed = False
+  end
+  object blk80003: TFlowActionBlock
+    Left = 348.000000000000000000
+    Top = 252.000000000000000000
+    Width = 100.000000000000000000
+    Height = 50.000000000000000000
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    Color = 16777088
+    SelColor = clWhite
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Text = 'Action'#13#10'blk80003'#13#10
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        ReadOnly = False
+        Transparency = 0
+      end>
+    Restrictions = []
+    DiagramFont = True
+    MinWidth = 40
+    MinHeight = 40
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 2
+    Shadow.VOffset = 2
+    Shadow.Transparency = 0
+    ParentShowHint = True
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clYellow
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    MetaFile.Data = {04000000}
+    PictureMode = pmStretch
+    Transparent = False
+    Cursor = crDefault
+    StringData = 'var t = '#39#39';'
+    Visible = True
+    Layer = 0
+    Transparency = 0
+    Collapsed = False
+  end
+  object DiagramLine1: TDiagramLine
+    SourceArrow.Shape = asNone
+    SourceArrow.Width = 10
+    SourceArrow.Height = 10
+    SourceArrow.Brush.Color = clBlack
+    TargetArrow.Shape = asSolidArrow
+    TargetArrow.Width = 10
+    TargetArrow.Height = 10
+    TargetArrow.Brush.Color = clBlack
+    Cursor = crDefault
+    TextCells = <
+      item
+        DControlAngle = True
+        Left = 259.000000000000000000
+        Top = 148.000000000000000000
+        Width = 300.000000000000000000
+        Height = 100.000000000000000000
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        ReadOnly = False
+        Transparency = 0
+      end>
+    Visible = True
+    Layer = 0
+    Transparency = 0
+    LineStyle = lsLine
+    Collapsed = False
+    Handles = <
+      item
+        OrX = 400.000000000000000000
+        OrY = 144.000000000000000000
+        Style = hsSize
+      end
+      item
+        OrX = 398.000000000000000000
+        OrY = 252.000000000000000000
+        Style = hsSize
+      end>
+    LinkPoints = <
+      item
+        Anchor = __DSOwner___.blk80001
+        AnchorIndex = 0
+        Collapsable = False
+        Collapsed = False
+        LinkConstraint = lcAll
+        Visible = True
+      end
+      item
+        Anchor = __DSOwner___.blk80003
+        AnchorIndex = 0
+        Collapsable = False
+        Collapsed = False
+        LinkConstraint = lcAll
+        Visible = True
+      end>
+  end
+  object DiagramLine2: TDiagramLine
+    SourceArrow.Shape = asNone
+    SourceArrow.Width = 10
+    SourceArrow.Height = 10
+    SourceArrow.Brush.Color = clBlack
+    TargetArrow.Shape = asSolidArrow
+    TargetArrow.Width = 10
+    TargetArrow.Height = 10
+    TargetArrow.Brush.Color = clBlack
+    Cursor = crDefault
+    TextCells = <
+      item
+        DControlAngle = True
+        Left = 257.000000000000000000
+        Top = 309.000000000000000000
+        Width = 300.000000000000000000
+        Height = 100.000000000000000000
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        ReadOnly = False
+        Transparency = 0
+      end>
+    Visible = True
+    Layer = 0
+    Transparency = 0
+    LineStyle = lsLine
+    Collapsed = False
+    Handles = <
+      item
+        OrX = 398.000000000000000000
+        OrY = 302.000000000000000000
+        Style = hsSize
+      end
+      item
+        OrX = 397.000000000000000000
+        OrY = 415.000000000000000000
+        Style = hsSize
+      end>
+    LinkPoints = <
+      item
+        Anchor = __DSOwner___.blk80003
+        AnchorIndex = 1
+        Collapsable = False
+        Collapsed = False
+        LinkConstraint = lcAll
+        Visible = True
+      end
+      item
+        Anchor = __DSOwner___.blk80002
+        AnchorIndex = 0
+        Collapsable = False
+        Collapsed = False
+        LinkConstraint = lcAll
+        Visible = True
+      end>
+  end
+end
+]]></dfm>
+  <id_pkg data_type="integer" is_pk="false">80001</id_pkg>
+  <status data_type="character" is_pk="false">V</status>
+</wf_diagram>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500160</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select b.id_animal, 
+       b.id_aparte, 
+       min(a.data) data_entrada,
+       COALESCE(min(c.data-1), min(d.data_saida), CURRENT_DATE) data_saida
+from xgp_manejo a 
+
+inner join  xgp_manejo_detalhe b on
+     a.id_manejo = b.id_manejo
+
+left join (select b1.id_animal,
+                  b1.id_aparte,
+                  a1.data 
+           from xgp_manejo a1, xgp_manejo_detalhe b1
+           where a1.id_manejo = b1.id_manejo
+             and b1.id_aparte is not null) c on
+     c.id_animal = b.id_animal and
+     c.data > a.data and
+     c.id_aparte <> b.id_aparte   
+     
+left join xgp_animal d on
+     d.id_animal = b.id_animal     
+     
+where b.id_aparte is not null
+group by b.id_animal, b.id_aparte]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

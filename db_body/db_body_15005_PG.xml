@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">15005</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[CREATE OR REPLACE FUNCTION public.date_add (
+  exp timestamptz,
+  value integer,
+  unit varchar
+)
+RETURNS TIMESTAMP WITHOUT TIME ZONE AS
+$body$
+DECLARE
+  result TIMESTAMP;
+  i_unit VARCHAR(10);
+BEGIN
+  i_unit := value || ' ' || unit;
+  execute 'select timestamp ''' || exp || ''' + interval ''' || i_unit || ''' '
+  into result;
+
+  return result;
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY INVOKER
+COST 100;]]></body>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+</db_body>

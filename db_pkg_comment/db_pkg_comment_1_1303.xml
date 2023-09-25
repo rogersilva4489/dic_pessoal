@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_pkg_comment>
+  <id_pkg data_type="integer" is_pk="true">1303</id_pkg>
+  <id_pkg_comment data_type="integer" is_pk="true">1</id_pkg_comment>
+  <p_top data_type="integer" is_pk="false">463</p_top>
+  <p_left data_type="integer" is_pk="false">72</p_left>
+  <p_width data_type="integer" is_pk="false">130</p_width>
+  <p_height data_type="integer" is_pk="false">150</p_height>
+  <cor data_type="integer" is_pk="false">12639424</cor>
+  <comment data_type="text" is_pk="false"><![CDATA[A tabela Lg_Lkp_table trabalha de forma independente coletando log´s de todas as tabelas lkp. Para as tabelas com chave composta ou com grande movimento tem uma tabela expecifica de log]]></comment>
+</db_pkg_comment>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000719</id_table>
+  <table_name data_type="character varying" is_pk="false">ITEM_TIPO_RESERVA</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela Fixa onde são definidos os tipos da reserva
+  
+
+1 - Atendimento Balcão
+
+  2 - Orçamento Balcão
+  
+3 - Orçamento Oficina
+
+  4 - OS Avulsa
+
+  5 - Pré-Nota/Prego
+
+  6 - Contagem
+
+  7 - Litigio de Contagem
+
+  8 - Venda Perdida (Baixa do Pedido)
+  
+9 - Venda Pendente (Baixa do Pedido)
+
+ 10 - Avulsa (Usuario Entra e Reserva)
+ 
+11 - Requisição Oficina
+
+ 12 - Transferência para Filial
+
+ 13 - Entrada Estoque para Conferencia</commet>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">3</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false"/>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false">S</is_fix_table>
+</db_table>

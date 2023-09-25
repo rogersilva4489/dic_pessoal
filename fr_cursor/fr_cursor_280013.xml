@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">280013</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">BMW_OS_AGENDA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false">Lista de Agendamentos extraido dos dealers;</observacao>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.CHASSI, 
+      A.CLIENTE_DDD_CEL, 
+      A.CLIENTE_DDD_COM, 
+      A.CLIENTE_DDD_RES, 
+      A.CLIENTE_FONE_CEL, 
+      A.CLIENTE_FONE_COM, 
+      A.CLIENTE_FONE_RES, 
+      A.CLIENTE_NOME, 
+      A.CONSULTOR, 
+      A.CONSULTOR_ENTREGA, 
+      A.DATA_ABERTURA, 
+      A.DATA_AGENDAMENTO, 
+      A.DATA_CONFIRMADA, 
+      A.DATA_CONVERCAO, 
+      A.DATA_ENCERRAMENTO, 
+      A.DATA_PREVISAO_FIM, 
+      A.DATA_PROMETIDA, 
+      A.DATA_ULTIMA_ATUALIZACAO, 
+      A.EH_BLINDADO, 
+      A.EH_PASSANTE, 
+      A.EH_RETORNO, 
+      A.EMAIL, 
+      A.HORA_PROMETIDA, 
+      A.ID_AGENDA_CONCESSIONARIA, 
+      A.ID_AGENDA_MODELO, 
+      A.ID_OS_AGENDA, 
+      A.KM, 
+      A.LAVAR_VEICULO, 
+      A.NUMERO_OS, 
+      A.OBSERVACAO, 
+      A.OS_AGENDA_DEALER, 
+      A.PLACA, 
+      A.PRISMA, 
+      A.QUEM_ABRIU, 
+      A.QUEM_CONFIRMOU, 
+      A.QUEM_CONVERTEU, 
+      A.QUEM_ENCERROU, 
+      A.STATUS_AGENDA 
+from BMW_OS_AGENDA A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">LUIS</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">280017</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">200</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false">BandBox</obj_type_fk>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

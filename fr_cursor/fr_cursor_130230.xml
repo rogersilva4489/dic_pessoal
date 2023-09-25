@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130230</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ENGORDA_CONSUMO</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select distinct 
+      a.guid_aparte_fracao, 
+      a.data_trato, 
+      a.consumo_previsto, 
+      a.consumo_realizado,
+      c.descricao as leitura,
+      to_char(a.data_trato, 'dd/mm/yy') as data_formatada, 
+      e.descricao as desc_aparte      
+from xgp_aparte_consumo a 
+left join xgp_leitura c on
+    c.id_leitura = a.id_leitura  
+left join xgp_aparte_fracao d on
+    d.guid_aparte_fracao = a.guid_aparte_fracao 
+left join xgp_aparte e ON
+    e.id_aparte = d.id_aparte    
+    
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

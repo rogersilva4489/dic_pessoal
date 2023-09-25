@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130232</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_AGENDA_ENGORDA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.guid_aparte_fracao,
+       g.id_empresa,
+       g.cod_fracao,  
+       c.descricao as descr_aparte,      
+       e.id_estrategia, 
+       e.id_estrategia_trato,
+       e.nr_trato,
+       e.hora_inicial, 
+       e.hora_final,    
+       e.id_tipo_agenda,
+       f.id_formula,
+       COALESCE(e.perc_trato, 100) as perc_trato,
+       COALESCE(e.qtde_trato, 1) as qtde_trato,
+       e.dia_semana_ini,
+       e.dia_semana_fim,
+       e.id_forma_distr,
+       b.qtde_animais,
+       b.peso_medio  
+       
+from xgp_aparte_fracao a
+
+left join (select a1.guid_aparte_fracao,
+                  count(a1.id_animal) as qtde_animais,
+                  avg(a1.peso_entrada) as peso_medio
+           from xgp_aparte_engorda a1, xgp_animal a2
+           where a1.id_animal = a2.id_animal
+             and a2.status = 'E'
+             and a1.data_saida is null
+           group by a1.guid_aparte_fracao) b on
+     b.guid_aparte_fracao = a.guid_aparte_fracao
+
+inner join xgp_aparte c on 
+    c.id_aparte = a.id_aparte
+
+inner join xgp_estrategia d on 
+    d.id_estrategia = c.id_estrategia
+
+inner join xgp_estrategia_trato e on 
+    e.id_estrategia = c.id_estrategia
+    
+left join xgp_agenda_adaptacao f on
+     f.guid_aparte_fracao = a.guid_aparte_fracao and 
+     f.nr_trato = e.nr_trato and   
+     f.data_inicio = (select max(a2.data_inicio) 
+                      from xgp_agenda_adaptacao a2
+                      where a2.guid_aparte_fracao = b.guid_aparte_fracao
+                        and a2.nr_trato = e.nr_trato
+                        and a2.data_inicio <= :data_referencia) 
+
+left join xgp_fracao g on
+    g.id_fracao = a.id_fracao
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">999</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

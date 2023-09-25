@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">40041</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_BAIXA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_LCONTAS, 
+     A.DATA_BAIXA, 
+     A.VALOR_PRINCIPAL, 
+     A.VALOR_MULTA, 
+     A.VALOR_DESCONTO, 
+     A.VALOR_BAIXADO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     C.NOME as NOME_PESSOA, 
+     B.NR_DOCUMENTO, 
+     E.DESCRICAO as DESCR_CONTA, 
+     D.ID_CONTA, 
+     A.ID_BAIXA, 
+     A.ID_TITULO, 
+     A.ID_PARCELA, 
+     G.TIPO_TITULO, 
+     B.VALOR as VALOR_TITULO, 
+     B.ID_EMPRESA, 
+     B.ID_ORIGENS, 
+     B.ID_NATUREZA, 
+     B.ID_CARTEIRA, 
+     B.ID_LCONTAS as ID_LCONTAS_ADTO, 
+     A.ID_LOTE, 
+     G.DESCRICAO as DESCR_CARTEIRA, 
+     D.CHEQUE, 
+     A.ID_PROG, 
+     A.ENTRADA_ADTO, 
+     F.DATA_VENCIMENTO, 
+     D.HISTORICO 
+from XGP_BAIXA A 
+     inner join XGP_PARCELA F on 
+           F.ID_TITULO = A.ID_TITULO and
+           F.ID_PARCELA = A.ID_PARCELA
+     inner join XGP_TITULOS B on 
+           B.ID_TITULO = F.ID_TITULO
+     inner join XGP_PESSOA C on 
+           C.ID_PESSOA = B.ID_PESSOA
+     left join XGP_LCONTAS D on 
+           D.ID_LCONTAS = A.ID_LCONTAS
+     left join XGP_CONTA E on 
+           e.id_conta = d.id_conta
+     inner join XGP_CARTEIRA G on 
+           G.ID_CARTEIRA = B.ID_CARTEIRA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">40045</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250090</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">TB_NBS_TRIB</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_SERVICO_TRIB, 
+      A.ID_CFOP, 
+      A.ID_NBS, 
+      A.ID_TRIBUTACAO_SERV, 
+      A.ID_TRIBUTACAO, 
+      A.ID_CIDADE, 
+      A.ID_OPERACAO, 
+      A.ID_PESSOA, 
+      A.ID_EMPRESA, 
+      B.DESCRICAO as CFOP_DESCRICAO, 
+      B.COD_CFOP as CFOP_COD, 
+      D.COD_NBS as SE_NBS_COD_NBS, 
+      D.DESCRICAO as SE_NBS_DESCRICAO, 
+      L.DESCRICAO as OP_SIS_DESCRICAO, 
+      M.COD_PESSOA, 
+      M.NOME as PESSOA_NOME, 
+      O.NOME as EMPRESA_NOME, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      A.ID_UF, 
+      P.UF, 
+      D.TIPO_IMPOSTO as SE_NBS_TIPO_IMPOSTO, 
+      A.TIPO_MOV, 
+      J.DESCRICAO as DESCR_CIDADE 
+from TB_NBS_TRIB A 
+     inner join CFOP B on 
+           B.ID_CFOP = A.ID_CFOP
+     inner join SE_NBS D on 
+           D.ID_NBS = A.ID_NBS
+     left join CIDADE J on 
+           J.ID_UF = A.ID_UF and 
+           J.ID_CIDADE = A.ID_CIDADE
+     left join TB_OPERACAO_SISTEMA L on 
+           L.ID_OPERACAO = A.ID_OPERACAO
+     left join PESSOA M on 
+           M.ID_PESSOA = A.ID_PESSOA
+     left join EMPRESA O on 
+           O.ID_EMPRESA = A.ID_EMPRESA
+     left join ESTADO P on 
+           P.ID_UF = J.ID_UF
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">230074</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

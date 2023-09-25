@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_pkg>
+  <id_pkg data_type="integer" is_pk="true">27019</id_pkg>
+  <id_pkg_super data_type="integer" is_pk="false">27017</id_pkg_super>
+  <nome data_type="character varying" is_pk="false">2.Tributacao</nome>
+  <descricao data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">999</user_perfil>
+  <user_ie data_type="character" is_pk="false">E</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+</db_pkg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">250071</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">320065</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">CALC_MVA_AJUSTADO</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">62</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">S/N Utilizar Fórmula para Calcular MVA Ajustado - Específico p/ Saídas
+
+Fórmula
+    IVA ajustado = [(1+MVA ICMS ST) x (1 - Aliq. ICMS) / (1 - Aliq. ICMS Interna)] -1</help>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <md5 data_type="character varying" is_pk="false">AC14D4FC34FD8D0CF4B0AB1AECA915B8</md5>
+  <id_table data_type="integer" is_pk="false">250042</id_table>
+  <id_cols data_type="integer" is_pk="false">320073</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

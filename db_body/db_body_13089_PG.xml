@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13089</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[-- Função que analisa e retorna como foi o trato no dia
+CREATE OR REPLACE FUNCTION analise_pastagem_dia(pId_Empresa Integer, pData date) RETURNS varchar AS 
+$body$
+DECLARE
+
+  obs varchar;
+  qtdeManejoForaDia integer = 0;
+  qtdeManejoPrevisto integer = 0;
+  qtdeManejoRealizado integer = 0;
+  qtdeManejoProrrogado integer = 0;
+  qtdeRodeioPrevisto integer = 0;
+  qtdeRodeioRealizado integer = 0;
+  qtdeParaConferencia integer = 0;
+  qtdeNaoConferido integer = 0;
+  
+
+  c_pastagem cursor FOR
+  select a.*
+  from xgp_manejo_pastagem a 
+  where a.id_empresa = pid_empresa
+    and a.data_agenda = pdata;
+
+BEGIN
+   
+   for r in c_pastagem LOOP
+
+       if r.tipo = 'M' then  -- Manejo Pastagem
+          qtdeManejoPrevisto = qtdeManejoPrevisto + 1;
+
+          if r.Data_baixa is not null then
+             qtdeManejoRealizado = qtdeManejoRealizado + 1;
+          end if;       
+          
+          if r.data_agenda <> DATE_TRUNC('day',r.data_baixa) then
+             qtdeManejoForaDia = qtdeManejoForaDia + 1;
+          end if;
+
+          if r.dias_prorrogou is not null and r.dias_prorrogou > 0 then
+             qtdeManejoProrrogado = qtdeManejoProrrogado + 1;
+          end if;
+          
+       elsif r.tipo = 'R' then  -- Rodeio
+          qtdeRodeioPrevisto = qtdeRodeioPrevisto + 1;
+
+          if r.Data_baixa is not null then
+             qtdeRodeioRealizado = qtdeRodeioRealizado + 1;
+          end if;       
+       end if;
+       
+       if r.com_conferencia is not null and r.com_conferencia = 'S' then
+          qtdeParaConferencia = qtdeParaConferencia + 1;
+          if r.qtde_cabeca is null or r.qtde_cabeca = 0 then
+               qtdeNaoConferido = qtdeNaoConferido + 1;
+          end if;  
+       end if;
+       
+       
+   end loop;
+
+   obs = '';
+   if (qtdeManejoPrevisto > 0) THEN
+       if (qtdeManejoPrevisto > qtdeManejoRealizado) THEN
+          obs = 'Manejo Past. Parcial '||qtdeManejoRealizado||'/'||qtdeManejoPrevisto;
+       else 
+          obs = 'Manejo Past.: '||qtdeManejoRealizado||'/'||qtdeManejoPrevisto;
+       end if;
+       
+       if (qtdeManejoForaDia > 0) then
+          obs = obs || ', NÃO Cumpriu Agenda';
+       end if;
+
+       if (qtdeManejoProrrogado > 0) then
+          obs = obs || ', Manejo Progrorrogado '||qtdeManejoProrrogado;
+       end if;
+   end if;
+
+   if (qtdeRodeioPrevisto > 0) THEN
+      if (qtdeRodeioPrevisto > qtdeRodeioRealizado) THEN
+         obs = obs || ', Rodeio Parcial '||qtdeRodeioRealizado||'/'||qtdeRodeioPrevisto;
+      else 
+         obs = obs || ', Rodeio: '||qtdeRodeioRealizado||'/'||qtdeRodeioPrevisto;
+      end if;
+   end if;
+   
+   return obs;
+   
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY INVOKER
+COST 100;]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

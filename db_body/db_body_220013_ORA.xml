@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">220013</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[create or replace function crm_Path_Categoria(pid_Tipo in integer) return varchar2 is
+
+  Result varchar2(200);
+
+  Cursor c_Categoria is
+  select t.id_categoria, t.descricao
+  from crm_categoria t
+  start with id_categoria = pid_categoria connect by prior id_categoria_pai = id_categoria
+  order by Level desc;                  
+
+begin
+  for r_Categoria in c_Categoria loop
+      if result is null then
+         result := r_Categpria.descricao;
+      else
+         result := result || '/' ||r_Categoria.descricao;
+  end loop;
+  return Result;
+end crm_path_categoria;
+/
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

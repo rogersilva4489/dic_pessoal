@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110058</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110053</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Fiz as mudanças das teclas de atalho no template do CrudMaster. Porém para os forms pegarem a mudança das novas teclas tenho que mandar Descartar as modificações no freedom e mandar gerar novamente ou vou em cada form que gerei e modifico manualmente.</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Gerson Resolveu solicitação</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-11-05T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">21008</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">11004</id_categoria>
+</todo>

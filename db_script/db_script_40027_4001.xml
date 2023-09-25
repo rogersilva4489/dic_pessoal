@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">40027</id_table>
+  <id_script data_type="integer" is_pk="true">4001</id_script>
+  <descricao data_type="character varying" is_pk="false">Forma de Calculo</descricao>
+  <script data_type="character varying" is_pk="false">-- deprecated
+--insert into xgp_forma_calculo 
+--(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+--('M', 'Valor Medio do Lote', 'S', 'S', 'GERSON', '01/07/2019');
+delete from xgp_forma_calculo where id_forma_calculo = 'M';
+
+insert into xgp_forma_calculo 
+(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+('C', 'Valor Unitario', 'S', 'S', 'GERSON', '01/07/2019');
+update xgp_forma_calculo set descricao = 'Valor Unitario' where id_forma_calculo = 'C';
+
+insert into xgp_forma_calculo 
+(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+('R', 'Peso Carcaça por Kg', 'N', 'S', 'GERSON', '01/07/2019');
+update xgp_forma_calculo set descricao = 'Peso Carcaça por Kg' where id_forma_calculo = 'R';
+
+insert into xgp_forma_calculo 
+(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+('A', 'Peso Carcaça por @', 'N', 'S', 'GERSON', '01/07/2019');
+update xgp_forma_calculo set descricao = 'Peso Carcaça por @' where id_forma_calculo = 'A';
+
+insert into xgp_forma_calculo
+(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+('P', 'Peso Vivo por Kg', 'S', 'S', 'GERSON', '01/07/2019');
+update xgp_forma_calculo set descricao = 'Peso Vivo por Kg' where id_forma_calculo = 'P';
+
+insert into xgp_forma_calculo
+(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+('V', 'Peso Vivo por @', 'S', 'S', 'GERSON', '01/07/2019');
+update xgp_forma_calculo set descricao = 'Peso Vivo por @' where id_forma_calculo = 'V';
+
+insert into xgp_forma_calculo 
+(id_forma_calculo, descricao, compra, venda, usuario_created, data_created) values
+('D', 'Sem Valor', 'S', 'S', 'GERSON', '07/12/2019');
+update xgp_forma_calculo set descricao = 'Sem Valor', compra = 'S' where id_forma_calculo = 'D';
+
+
+
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

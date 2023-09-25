@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13047</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select b.id_animal,
+       a.data_entrada as data,
+       b.peso_inicial as peso
+from xgp_entrada a, xgp_entrada_detalhe b
+where a.id_entrada = b.id_entrada
+union all
+select b.id_animal,
+       a.data,
+       b.peso
+from xgp_manejo a, xgp_manejo_detalhe b
+where a.id_manejo = b.id_manejo
+  and b.peso is not null
+union all
+select b.id_animal,
+       a.data_saida as data,
+       b.peso_atual as peso
+from xgp_saida a, xgp_saida_detalhe b
+where a.id_saida = b.id_saida
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

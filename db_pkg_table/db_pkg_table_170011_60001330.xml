@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_pkg_table>
+  <id_pkg data_type="integer" is_pk="true">170011</id_pkg>
+  <id_table data_type="integer" is_pk="true">60001330</id_table>
+  <p_top data_type="integer" is_pk="false">197</p_top>
+  <p_left data_type="integer" is_pk="false">179</p_left>
+  <ativo data_type="character" is_pk="false">S</ativo>
+  <atributo data_type="character" is_pk="false">P</atributo>
+  <cor data_type="integer" is_pk="false">13041663</cor>
+</db_pkg_table>

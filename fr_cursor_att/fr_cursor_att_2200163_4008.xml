@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">2200163</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">4008</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">ARROBA_ESTIMADA</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">20</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">É o peso em @ que o comprador estimou na compra do animal (Kg), quando o animal é comprado para engorda o sistema compara o peso da entrada do animal com o peso estimado é quando ocorre divergencia comunica o reponsavel da fazenda</help>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false">CA6ADABB8D33E27F79750AF54E7B27A4</md5>
+  <id_table data_type="integer" is_pk="false">2200173</id_table>
+  <id_cols data_type="integer" is_pk="false">4006</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false">S</updatable>
+</fr_cursor_att>

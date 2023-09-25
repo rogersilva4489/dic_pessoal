@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">130132</id_table>
+  <id_script data_type="integer" is_pk="true">1301</id_script>
+  <descricao data_type="character varying" is_pk="false">XGP_CATEGORIA_GRUPO</descricao>
+  <script data_type="character varying" is_pk="false">Insert into xgp_tipo_categoria
+(id_tipo_categoria, descricao, usuario_created, data_created) values
+(1, 'Bezerro(a)', 'GERSON', '16/08/2022'),
+(2, 'Garrote', 'GERSON', '16/08/2022'),
+(3, 'Novilha', 'GERSON', '16/08/2022'),
+(4, 'Boi', 'GERSON', '16/08/2022'),
+(5, 'Vaca', 'GERSON', '16/08/2022'),
+(6, 'Touro', 'GERSON', '16/08/2022');</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

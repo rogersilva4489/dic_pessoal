@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">2200161</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">5006</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">DATA_VENC_CADASTRO</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">13</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Data de Vencimento do Cadastro da Pessoa. Depois deste vencimento será permitido venda somente com autorização de atendimento, pois o cliente deve atualizar o cadastro em nosso sistema.
+E uma Forma de ter seus cadastros atualizados sempre.
+
+ Na Inclusão do Cadastro do Cliente:
+Esta data é calculada da seguinte forma é pego a data do cadastro e adicionado a qtde de dias informado no parâmetro DIAS_VENC_CADASTRO que é por empresa e é considerada a empresa que esta cadastrando o Cliente.
+
+Para alteração do Cadastro do Cliente:
+É necessario que o usuário informe que foi atualizado o Cadastro alterando para um data que deseja que seja feito a proxima atualização de Cadastro. Sendo que ao ser Alterado será gravado log de alteração no cliente para informar que o fez e a Data que foi feita a Atualização.</help>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false">1ED21DFF82042F3A91A6E59F8BDE05F3</md5>
+  <id_table data_type="integer" is_pk="false">2200172</id_table>
+  <id_cols data_type="integer" is_pk="false">5005</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false">S</updatable>
+</fr_cursor_att>

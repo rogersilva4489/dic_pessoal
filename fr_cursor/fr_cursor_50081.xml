@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">50081</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XDE_TOTAL_LCONTAS_DRE</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select c.id_dre,
+        sum(b.valor) as total
+from xgp_lcontas a, xgp_lcontas_dre b, xde_ccusto_conta c
+where a.id_lcontas = b.id_lcontas
+  and b.id_ccusto = c.id_ccusto
+  and b.id_conta = c.id_conta
+]]></sql>
+  <group_by data_type="character varying" is_pk="false">c.id_dre</group_by>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Totaliza o total de contas para DRE]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">200</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

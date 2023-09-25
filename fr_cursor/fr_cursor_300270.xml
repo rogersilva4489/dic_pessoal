@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300270</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_RESUMO_DESMAMA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.sexo,
+       count(a.id_animal) as qtde
+from xgp_animal a, xgp_categoria b
+where a.id_categoria = b.id_categoria
+  and a.id_especie = 1
+  and a.status = 'E'  
+  and (CURRENT_DATE - a.data_nascimento)/30 > 8
+  and a.data_desmama is null
+  and a.id_animal = -1  -- vai ter que rever essa query 
+
+]]></sql>
+  <group_by data_type="character varying" is_pk="false">a.sexo</group_by>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Lista todos os animais que ja estão em condições de desmama]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_param>
+  <id_param data_type="character varying" is_pk="true">FORCAR_VENDA_RELACIONADA</id_param>
+  <finalidade data_type="character varying" is_pk="false">Mostrar os itens relacionado com um item que esta sendo vendido</finalidade>
+  <objeto data_type="character" is_pk="false">B</objeto>
+  <tipo_param data_type="character" is_pk="false">U</tipo_param>
+  <list_options data_type="character varying" is_pk="false"/>
+  <lookup_filter data_type="character varying" is_pk="false"/>
+  <valor_default data_type="character varying" is_pk="false"/>
+  <ativo data_type="character" is_pk="false">S</ativo>
+  <id_table_lkp data_type="integer" is_pk="false"/>
+  <id_cols_lkpkey data_type="integer" is_pk="false"/>
+  <id_cols_lkpdesc data_type="integer" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false">10044</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">10041</id_modulo>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</fr_param>

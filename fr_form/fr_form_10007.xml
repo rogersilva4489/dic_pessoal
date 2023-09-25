@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_form>
+  <id_form data_type="integer" is_pk="true">10007</id_form>
+  <title data_type="character varying" is_pk="false">CrudDetalheH</title>
+  <name data_type="character varying" is_pk="false">CrudDetalheH</name>
+  <help data_type="character varying" is_pk="false"><![CDATA[<NBSConteiner>grpBoxDetalhe</NBSConteiner>         // coteiner que envolve os objetos de edição, geralmente um groupbox<NBSGridPrincipal>gridDetalhe</NBSGridPrincipal><NBSFrm>FrmCrudDetalheH.frm</NBSFrm>                 // nome do form relacionado ao Wizard Main<NBSFrmPrg>FrmCrudDetalheHW.prg</NBSFrmPrg><NBSEditable.Layout>Horizontal</NBSEditable.LayOut><NBSEditable.Conteiner>GridPanelDetalhe</NBSEditable.Conteiner><NBSEditable.LeftStart>5</NBSEditable.LeftStart><NBSEditable.TopStart>40</NBSEditable.TopStart>]]></help>
+  <readonly data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">SUPER</usuario_created>
+  <id_form_type data_type="character" is_pk="false">D</id_form_type>
+  <id_cardinalidade data_type="character" is_pk="false">3</id_cardinalidade>
+  <id_projeto data_type="integer" is_pk="false"/>
+  <id_modulo data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <id_form_tmp data_type="integer" is_pk="false"/>
+  <id_form_function data_type="character" is_pk="false">1</id_form_function>
+  <changed_prop data_type="character" is_pk="false"/>
+  <id_form_ref data_type="integer" is_pk="false"/>
+  <id_imagem data_type="integer" is_pk="false">19001</id_imagem>
+  <eh_template data_type="character" is_pk="false">S</eh_template>
+  <id_tecnologia data_type="character varying" is_pk="false">ZK</id_tecnologia>
+</fr_form>

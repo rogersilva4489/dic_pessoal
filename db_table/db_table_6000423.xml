@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000423</id_table>
+  <table_name data_type="character varying" is_pk="false">CT_MODULO</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela Fixa onde são definidos os Modulos Macros dos Projetos da NBS. Exemplo:
+
+Projeto: WEB
+===========
+1 -Módulo Básico
+   - Tabelas
+   - Empresa/Usuário
+   - Pessoa
+   - GerRelatorios
+   - Utilitarios
+
+2 -Controle Estoque
+   - Balcao/Televendas
+   - Compras
+   - Devolucao
+   - GerEstoque
+   - Entregas
+   - NfVendas
+   - Cargas
+   - Pedidos
+
+3 -Sisfin/Contab
+   - Sisfin
+   - Contabil
+
+4 -Fiscal
+5 -Patrimônio
+6 -CRM
+7 -Cotas
+8 -Cilindro
+9 -Fabrica
+10-OS (Serviços)
+11-Veiculos
+12-Contratos
+13-NBS Atendimento
+14-Cobranca
+15-GerencialNBS
+16-NF Eletrônica
+
+Projeto: DELPHI
+==============
+1 -Módulo Básico
+   - Clientes
+   - Tabelas
+   - Nbs User
+
+2 -Controle Estoque   
+   - Compras
+   - Cupom
+   - Entregas
+   - Gerência
+   - NfVendas
+   - Pedidos
+
+3 -Sisfin/Contab
+   - Caixa Operacional
+   - Contab
+   - RelSisfin
+   - Sisfin
+
+4 -NbsFiscal
+5 -Patrimonio
+6 -Nbs CRM
+7 -OS (Serviços)
+   - Nbs OS
+   - Apontar
+   - Mecânico
+   - Oficina
+
+8 -Veículos
+   - Avalia
+   - Ger Veic
+   - Tab Veic
+   - Vend Veic
+
+9 -Almoxarifado
+10-Orçamento
+11-Consórcio
+12-BI Condominio
+13-Garantia GWM (Garantia GM Mundial)
+14-NF Eletrônica
+
+</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">10</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

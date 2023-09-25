@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_menu>
+  <id_menu data_type="integer" is_pk="true">220071</id_menu>
+  <id_menu_super data_type="integer" is_pk="false">300128</id_menu_super>
+  <descricao data_type="character varying" is_pk="false">Unidade de Medida</descricao>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_form data_type="integer" is_pk="false">2200145</id_form>
+  <id_imagem data_type="integer" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">24</ordem>
+  <cod_acesso data_type="character varying" is_pk="false"/>
+  <icon_class data_type="character varying" is_pk="false"/>
+  <path_route data_type="character varying" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false">22003</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">22001</id_modulo>
+</fr_menu>

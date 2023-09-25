@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">13072</id_table>
+  <id_script data_type="integer" is_pk="true">1301</id_script>
+  <descricao data_type="character varying" is_pk="false">Função que gera Log para APP</descricao>
+  <script data_type="character varying" is_pk="false">CREATE OR REPLACE FUNCTION xgp_aparte_log_function()
+RETURNS trigger AS 
+$body$
+BEGIN
+    IF (TG_OP = 'INSERT') THEN
+        INSERT INTO lg_xgp_aparte
+        (id_aparte, dml, data_dml) VALUES 
+        (new.id_aparte, 'I', current_timestamp);
+	    RETURN NEW;
+    ELSIF (TG_OP = 'UPDATE') THEN
+        INSERT INTO lg_xgp_aparte
+        (id_aparte, dml, data_dml) VALUES 
+        (new.id_aparte, 'U', current_timestamp);
+	    RETURN NEW;
+    ELSIF (TG_OP = 'DELETE') THEN
+        INSERT INTO lg_xgp_aparte
+        (id_aparte, dml, data_dml) VALUES 
+        (old.id_aparte, 'D', current_timestamp);
+        RETURN OLD;
+    END IF;
+RETURN NULL;
+END;
+$body$
+LANGUAGE plpgsql;</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

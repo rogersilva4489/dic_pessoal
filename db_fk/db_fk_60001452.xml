@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_fk>
+  <id_fk data_type="integer" is_pk="true">60001452</id_fk>
+  <fk_name data_type="character varying" is_pk="false">FKALIQ_ICMS60001452</fk_name>
+  <type data_type="character" is_pk="false">I</type>
+  <existence data_type="character" is_pk="false">O</existence>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <orm_generate_relation data_type="character" is_pk="false">N</orm_generate_relation>
+  <orm_parent_cardinality data_type="integer" is_pk="false"/>
+  <orm_child_cardinality data_type="integer" is_pk="false"/>
+  <orm_parent_relation_name data_type="character varying" is_pk="false"/>
+  <orm_child_relation_name data_type="character varying" is_pk="false"/>
+</db_fk>

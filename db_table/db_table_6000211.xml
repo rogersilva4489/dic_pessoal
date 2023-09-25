@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000211</id_table>
+  <table_name data_type="character varying" is_pk="false">CR_COMPL_REMESSA_BCO</table_name>
+  <commet data_type="character varying" is_pk="false">Table onde são definidos os Codigos de remessa que não seja 01 (Remessa). Para todos os demais tipos de remessa tem que ser registrado nesta tabela. Ver Manual do bco
+Ex: Codigo de Remssa do Bradesco
+01 - Remessa
+02 - Pedido de Baixa
+04 - Concessão de Abatimento...
+
+</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">11</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

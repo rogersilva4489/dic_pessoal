@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_tab>
+  <id_cursor data_type="integer" is_pk="true">300304</id_cursor>
+  <id_cursor_tab data_type="integer" is_pk="true">13010</id_cursor_tab>
+  <id_table data_type="integer" is_pk="false">13094</id_table>
+  <alias data_type="character varying" is_pk="false">J</alias>
+  <ordem data_type="integer" is_pk="false">6</ordem>
+  <join_table data_type="character varying" is_pk="false">j.id_cardex_animal = a.id_cardex_animal</join_table>
+  <md5 data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <join_fk data_type="character" is_pk="false">L</join_fk>
+  <usuario_join_fk data_type="character varying" is_pk="false">GERSON</usuario_join_fk>
+  <data_join_fk data_type="timestamp without time zone" is_pk="false">2023-08-02T00:00:00.000</data_join_fk>
+  <usuario_join_table data_type="character varying" is_pk="false"/>
+  <data_join_table data_type="timestamp without time zone" is_pk="false"/>
+  <id_cursor_join data_type="integer" is_pk="false">3001</id_cursor_join>
+</fr_cursor_tab>

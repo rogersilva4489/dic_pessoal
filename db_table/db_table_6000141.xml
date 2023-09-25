@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000141</id_table>
+  <table_name data_type="character varying" is_pk="false">CP_COMPRA</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela onde contem os dados das notas fiscais de compra estoque, despesa, nota fiscal de credito, devolução de venda, etc. Devido as grandes variações de calculo de impostos entre os estados resolvemos guardar todos os dados da NF de Compra como ela foi feita e criamos outros campos que representa os valores dentro do estado da empresa.</commet>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">122</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false"/>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

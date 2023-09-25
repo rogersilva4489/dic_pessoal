@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">300299</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select distinct 
+       a.id_campanha,
+       b.id_animal,
+       d.cod_animal, 
+       d.cod_botom,
+       d.status,
+
+      (select max(a1.data)
+        from xgp_manejo a1, xgp_manejo_detalhe b1, xgp_manejo_acao c1
+        where a1.id_manejo = b1.id_manejo
+          and a1.id_campanha = a.id_campanha
+          and b1.id_animal = b.id_animal
+          and a1.id_manejo = c1.id_manejo
+          and c1.id_acao = 14) as data_inseminacao,       
+       
+       (select count(*)
+        from xgp_manejo a1, xgp_manejo_detalhe b1, xgp_manejo_acao c1
+        where a1.id_manejo = b1.id_manejo
+          and a1.id_campanha = a.id_campanha
+          and b1.id_animal = b.id_animal
+          and a1.id_manejo = c1.id_manejo
+          and c1.id_acao = 14) as qtde_inseminacao,
+
+       (select avg(a1.peso)
+        from xgp_manejo_detalhe a1
+        where a1.id_animal = b.id_animal
+          and a1.id_manejo = a.id_manejo) as Peso_Mae,          
+
+       (select a1.peso_inicial
+        from xgp_entrada_detalhe a1, xgp_entrada a2, xgp_operacao a3
+        where a1.id_entrada = a2.id_entrada
+          and a2.id_operacao = a3.id_operacao
+          and a3.tipo = 'N'
+          and a1.id_animal = be.id_animal) as peso_nascimento,
+
+       (select avg(a1.peso)
+        from xgp_manejo_detalhe a1, xgp_manejo_acao b1
+        where a1.id_animal = be.id_animal
+          and b1.id_manejo = a1.id_manejo
+          and b1.id_acao = 5) as Peso_desmama,          
+          
+       'S' as Prenha,
+       b.data_parto,
+
+       be.id_animal as id_animal_bezerro,       
+       be.data_nascimento,
+       be.data_desmama,
+       case when be.id_motivo_morte is not null then
+                 be.data_saida
+            else 
+                 NULL
+       end data_morte_bezerro,
+
+       d.data_saida as data_baixa_mae
+  
+from xgp_manejo a
+     inner join xgp_manejo_detalhe b on
+         a.id_manejo = b.id_manejo
+     inner join xgp_campanha c on
+         a.id_campanha = c.id_campanha
+     left join xgp_animal d on
+         b.id_animal = d.id_animal
+     left join xgp_animal be on
+         be.id_animal_mae = b.id_animal and
+         be.id_campanha = a.id_campanha
+where b.diagnostico_prenhez = 'P'
+union all
+select distinct 
+       a.id_campanha,
+       b.id_animal, 
+       c.cod_animal,
+       c.cod_botom,        
+       c.status,
+       
+      (select max(a1.data)
+        from xgp_manejo a1, xgp_manejo_detalhe b1, xgp_manejo_acao c1
+        where a1.id_manejo = b1.id_manejo
+          and a1.id_campanha = a.id_campanha
+          and b1.id_animal = b.id_animal
+          and a1.id_manejo = c1.id_manejo
+          and c1.id_acao = 14) as data_inseminacao,       
+
+       (select count(*)
+        from xgp_manejo a1, xgp_manejo_detalhe b1, xgp_manejo_acao c1
+        where a1.id_manejo = b1.id_manejo
+          and a1.id_campanha = a.id_campanha
+          and b1.id_animal = b.id_animal
+          and a1.id_manejo = c1.id_manejo
+          and c1.id_acao = 14) as qtde_inseminacao,
+       
+       NULL::numeric as peso_mae,
+       NULL::numeric as peso_nascimento,
+       null::numeric as peso_desmama, 
+       'N' prenha,
+       date(null) as prev_parto,
+       NULL::INTEGER as id_animal_bezerro,
+       date(null) as data_nascimento,         
+       date(null) as data_desmama,
+       date(null) as data_morte_bezerro,       
+       c.data_saida as data_baixa_mae
+       
+from xgp_manejo a, xgp_manejo_detalhe b, xgp_animal c, xgp_campanha d
+where a.id_manejo = b.id_manejo
+  and b.id_animal = c.id_animal
+  and d.id_campanha = a.id_campanha
+  and d.tipo_campanha = 'E'
+  and not exists (select 1, b1.id_animal 
+                  from xgp_manejo a1, xgp_manejo_detalhe b1
+                  where a1.id_manejo = b1.id_manejo
+                    and a1.id_campanha = a.id_campanha
+                    and b1.id_animal = b.id_animal
+                    and b1.diagnostico_prenhez = 'P')]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

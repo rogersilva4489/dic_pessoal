@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">300244</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">50014</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">PEDIDO_ITEM_PENDENTE</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false"><![CDATA[not exists (select 1 from xgp_compra_item a1
+            where a1.id_compra = a.id_compra
+              and (a1.qtde_atendida is null
+                   or a1.qtde > a1.qtde_atendida)) ]]></sql>
+  <param_name data_type="character varying" is_pk="false"/>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

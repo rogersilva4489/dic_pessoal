@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">300238</id_table>
+  <id_cols data_type="integer" is_pk="true">1307</id_cols>
+  <column_name data_type="character varying" is_pk="false">TIPO</column_name>
+  <ordem data_type="integer" is_pk="false">6</ordem>
+  <length data_type="integer" is_pk="false">1</length>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false"/>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Touro Multiplo - é o touro que será selecionado no repasse
+Touro Fazenda - são touros da fazenda relacionados com a ficha do animal
+Semem - Semem dos touros que são comprados pela fazenda para inseminação</commet>
+  <listoptions data_type="character varying" is_pk="false">Touro Multiplo=M; Sêmen=S; Touro Fazenda=F</listoptions>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">999</user_perfil>
+  <user_ie data_type="character" is_pk="false">E</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">1</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false">L</id_special_type>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

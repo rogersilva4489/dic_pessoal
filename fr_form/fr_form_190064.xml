@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_form>
+  <id_form data_type="integer" is_pk="true">190064</id_form>
+  <title data_type="character varying" is_pk="false">Crud Ok Cancel</title>
+  <name data_type="character varying" is_pk="false">CrudOkCancel</name>
+  <help data_type="character varying" is_pk="false">Template utilizado para tabela detalhe onde o analista não deseja que a manutenção seja através do master, um aplicação é através de uma consulta alterar dados de uma tabela.Na logica do analista tem que considerar o tratamento da inclusão/alteração do registro, por exemplo, se não existe registro programaticamente o analista tem que incluir um registro.Este template funciona da seguinte forma o usuario ao informar um filtro e pesquisar se o sistema detectar que não tem regisro o sistema automaticamente inclui um registro na tabela master, quando ja existe ele chama o metodo para alterar o registro. Se for utilizado um componente duallist tem que ser programado no metodo onbeforeinsert os campos de pk utilizados no filtro, se forem campos normais (string, integer, etc) geralmente esta programação fica no Ok do form.Botões:* Pesquisar: Executa a pesquisa na tabela master e se não existir registro chama o metodo onIncluir(), caso contrari
+o chama o metodo onAlterar()* Ok: Salva os dados da tela (transação)* Cancelar: Cancela a transação* Aceitar: Retorna a PK da tabela master para o form que chamou* Help: Help da Tela</help>
+  <readonly data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_form_type data_type="character" is_pk="false">D</id_form_type>
+  <id_cardinalidade data_type="character" is_pk="false">1</id_cardinalidade>
+  <id_projeto data_type="integer" is_pk="false"/>
+  <id_modulo data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <id_form_tmp data_type="integer" is_pk="false"/>
+  <id_form_function data_type="character" is_pk="false">1</id_form_function>
+  <changed_prop data_type="character" is_pk="false"/>
+  <id_form_ref data_type="integer" is_pk="false"/>
+  <id_imagem data_type="integer" is_pk="false">19001</id_imagem>
+  <eh_template data_type="character" is_pk="false">S</eh_template>
+  <id_tecnologia data_type="character varying" is_pk="false">ZK</id_tecnologia>
+</fr_form>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">110020</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT S.INST_ID,
+  O.OWNER,
+  O.OBJECT_NAME,
+  O.OBJECT_TYPE,
+  S.SID,  
+  S.SERIAL# AS SERIAL,
+  S.STATUS,  
+  TRIM(TO_CHAR(TRUNC(S.SECONDS_IN_WAIT/60/60),'09')) || ':' ||
+  TRIM(TO_CHAR(TRUNC(MOD(S.SECONDS_IN_WAIT,3600)/60),'09')) || ':' ||
+  TRIM(TO_CHAR(MOD(MOD(S.SECONDS_IN_WAIT,3600),60),'09')) TIME_IN_WAIT,
+  S.OSUSER,
+  S.MACHINE,
+  S.PROGRAM
+FROM GV$LOCKED_OBJECT L, GV$SESSION S, DBA_OBJECTS O
+WHERE S.SID     = L.SESSION_ID
+ AND S.INST_ID   = L.INST_ID
+ AND L.OBJECT_ID = O.OBJECT_ID
+ORDER BY S.SECONDS_IN_WAIT DESC]]></body>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</db_body>

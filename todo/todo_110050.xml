@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110050</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110034</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Componente BandBox - Ao pressionar ENTER após uma consulta o mesmo seleciona no componente porém no banco não grava a informação selecionada. Ao utilizar as setas acima e abaixo no BandBox o mesmo esta disparando o filtro e não me permitindo selecionar o registro.</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Andreas Corrigiu situação</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-09-17T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">11006</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">600013</id_categoria>
+</todo>

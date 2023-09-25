@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">6000551</id_table>
+  <id_cols data_type="integer" is_pk="true">60003</id_cols>
+  <column_name data_type="character varying" is_pk="false">OUTRAS_RECEITAS</column_name>
+  <ordem data_type="integer" is_pk="false">3</ordem>
+  <length data_type="integer" is_pk="false">38</length>
+  <dec data_type="integer" is_pk="false">2</dec>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false"/>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false"> Outras Receitas do Mês
+é  destinado  a  informar  os  ingressos  de valores auferidos no mês, excluindo o  total das vendas de mercadorias e serviços  tributados pelo ICMS  e  ISS. Refere-se  às  receitas  financeiras  e outras  receitas geradas pelo  contribuinte que não façam  parte  de  sua  atividade  normal  (aluguel,  aplicação  financeira,  etc.).  Esse  campo  é  de preenchimento obrigatório,  sendo que, nos meses em que a empresa não  realize operações e/ou prestações, os campos desse formulário deverão ser preenchidos com os valores iguais a zero (0,00). </commet>
+  <listoptions data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">5</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false"/>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

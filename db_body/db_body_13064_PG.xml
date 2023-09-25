@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13064</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[CREATE OR REPLACE FUNCTION Dia_Semana(dia varchar) RETURNS varchar AS $$
+        BEGIN
+           if  dia = '1' then
+               return 'Domingo';
+           elsif  dia = '2' then
+               return 'Segunda';
+           elsif  dia = '3' then
+               return 'Terça';
+           elsif  dia = '4' then
+               return 'Quarta';
+           elsif  dia = '5' then
+               return 'Quita';
+           elsif  dia = '6' then
+               return 'Sexta';
+           elsif  dia = '7' then
+               return 'Sábado';
+           else 
+               return 'Indefinido';
+           end if;
+        END;
+$$ LANGUAGE plpgsql;]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

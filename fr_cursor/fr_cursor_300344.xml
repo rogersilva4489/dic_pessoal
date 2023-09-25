@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300344</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_IATF</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_manejo,
+       a.id_campanha,
+       b.id_animal,
+       a.data as data_manejo,
+       b.diagnostico_prenhez,
+       b.id_touro,
+       c.id_acao
+from xgp_manejo a, xgp_manejo_detalhe b, xgp_manejo_acao c
+where a.id_manejo = b.id_manejo 
+  and a.id_manejo = c.id_manejo 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false">a.data desc</order_by>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Na estação de monta o sistema precisa buscar a informações do ultimo manejo para definir a previsão de nascimento]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">999</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

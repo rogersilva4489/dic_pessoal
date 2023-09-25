@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">300360</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select distinct
+       b.id_animal,
+       c.cod_animal,
+       c.cod_botom,
+       a.id_manejo,
+       a.data as data_manejo,
+       a.id_campanha,
+       ((a.data - c.data_nascimento)/30/12) as idade_mae,
+       b.diagnostico_prenhez,
+       a.data + 283 as Previsao_parto,
+
+       case when c.status = 'E' THEN
+                'Sim'
+            when c.status = 'B' THEN
+                'Não'
+       end  Mae_Estoque,
+       
+       (select count(*)
+        from xgp_animal a1
+        where a1.id_animal_mae = b.id_animal
+          and a1.data_nascimento > a.data) qtde_nasceu, -- pode ser gemos
+       
+       (select 
+            case when a1.status = 'E' THEN
+                      'Sim'
+                 when a1.status = 'B' THEN
+                      'Não'
+                  end
+        from xgp_animal a1
+        where a1.id_animal_mae = b.id_animal
+          and a1.data_nascimento > a.data 
+          and a1.status = 'E') as filho_estoque,  -- pode ser gemeos
+          
+       (select c1.data
+        from xgp_animal a1, xgp_manejo_detalhe b1, xgp_manejo c1
+        where a1.id_animal_mae = b.id_animal
+          and a1.data_nascimento > a.data 
+          and a1.id_animal = b1.id_animal
+          and b1.id_manejo = c1.id_manejo
+          and b1.desmamou = 'S') as desmamou,
+          
+       a.observacao as obs_manejo,
+       b.observacao as obs_manejo_detalhe,
+
+       (select a3.descricao
+        from xgp_saida_detalhe a1, xgp_saida a2, xgp_operacao a3
+        where a1.id_saida = a2.id_saida
+          and a2.id_operacao = a3.id_operacao          
+          and a1.id_animal = b.id_animal) as Operacao_Baixa_Mae
+          
+from xgp_manejo a, xgp_manejo_detalhe b, xgp_animal c
+where a.id_manejo = b.id_manejo
+  and b.id_animal = c.id_animal
+  and b.diagnostico_prenhez in ('P', 'V')
+  and a.data = (select max(a1.data) 
+                from xgp_manejo a1, xgp_manejo_detalhe b1
+                where a1.id_manejo = b1.id_manejo
+                  and a1.id_campanha = a.id_campanha
+                  and b1.id_animal = b.id_animal)
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

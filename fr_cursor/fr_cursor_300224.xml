@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300224</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_RESUMO_SAIDA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select c.descricao as categoria,
+       d.descricao || 
+          case when d.sub_especie = 'Z' then 
+                  ' (Zebuino)'
+               when d.sub_especie = 'T' then
+                   ' (Tourino)'
+               when d.sub_especie = 'C' then
+                   ' (Cruzamento)'
+          end as raca,  
+       count(a.id_saida_detalhe) as qtde,  
+       min(CURRENT_DATE - b.data_nascimento)/30 as qtde_mes_min,
+       max(CURRENT_DATE - b.data_nascimento)/30 as qtde_mes_max,       
+       sum(a.valor_venda) as total,
+       sum(a.peso_atual) as peso_total, 
+       avg(a.peso_atual) as peso_medio,
+       sum(b.valor_compra) as total_compra
+from xgp_saida_detalhe a, xgp_animal b, xgp_categoria c, xgp_raca d
+where a.id_animal = b.id_animal
+  and b.id_categoria = c.id_categoria                              
+  and b.id_raca = d.id_raca
+]]></sql>
+  <group_by data_type="character varying" is_pk="false">c.descricao,d.descricao || 
+          case when d.sub_especie = 'Z' then 
+                  ' (Zebuino)'
+               when d.sub_especie = 'T' then
+                  ' (Tourino)'
+               when d.sub_especie = 'C' then
+                  ' (Cruzamento)'
+          end</group_by>
+  <order_by data_type="character varying" is_pk="false">categoria, raca</order_by>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Resumo a Saida por categoria]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

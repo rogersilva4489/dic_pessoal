@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_dataset_filter>
+  <id_form data_type="integer" is_pk="true">50086</id_form>
+  <id_dataset data_type="integer" is_pk="true">13014</id_dataset>
+  <id_dataset_filter data_type="integer" is_pk="true">1303</id_dataset_filter>
+  <title data_type="character varying" is_pk="false"/>
+  <show_form data_type="character" is_pk="false">N</show_form>
+  <width data_type="integer" is_pk="false"/>
+  <height data_type="integer" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">2</ordem>
+  <obrigatorio data_type="character" is_pk="false"/>
+  <filter_principal data_type="character" is_pk="false">N</filter_principal>
+  <worklist_var data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <obj_type data_type="character varying" is_pk="false"/>
+  <id_cursor data_type="integer" is_pk="false">2200152</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="false">30014</id_cursor_filter>
+  <id_cursor_filter_alt data_type="integer" is_pk="false"/>
+  <flex_grid_col_desktop data_type="integer" is_pk="false"/>
+  <flex_grid_col_tablet data_type="integer" is_pk="false"/>
+  <flex_grid_col_celular data_type="integer" is_pk="false"/>
+  <break_line data_type="character" is_pk="false"/>
+  <add_datatable data_type="character" is_pk="false"/>
+</fr_dataset_filter>

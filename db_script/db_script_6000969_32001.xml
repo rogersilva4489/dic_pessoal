@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">6000969</id_table>
+  <id_script data_type="integer" is_pk="true">32001</id_script>
+  <descricao data_type="character varying" is_pk="false">INSERT</descricao>
+  <script data_type="character varying" is_pk="false">INSERT INTO CARDEX_OPERACAO(ID_OPERACAO, DESCRICAO) VALUES (1, 'COMPRA');
+INSERT INTO CARDEX_OPERACAO(ID_OPERACAO, DESCRICAO) VALUES (2, 'VENDA');</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</db_script>

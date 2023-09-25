@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_index_cols>
+  <id_table data_type="integer" is_pk="true">2200174</id_table>
+  <id_index data_type="integer" is_pk="true">50011</id_index>
+  <id_cols data_type="integer" is_pk="true">22002</id_cols>
+  <ordem data_type="integer" is_pk="false">2</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false"/>
+</db_index_cols>

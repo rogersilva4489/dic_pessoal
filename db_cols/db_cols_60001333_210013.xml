@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">60001333</id_table>
+  <id_cols data_type="integer" is_pk="true">210013</id_cols>
+  <column_name data_type="character varying" is_pk="false">EH_SOFTWARE</column_name>
+  <ordem data_type="integer" is_pk="false">23</ordem>
+  <length data_type="integer" is_pk="false">1</length>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false">S</not_null>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">S/N  Este campo foi criado para definir se o item é software, caso seja e no cadastro da aliq de icms da uf-de e uf-para seja marcado para dobrar a Base de icms na compra(Entrada de nota operação 1-Compra de Estoque,16-Entrada de Item em Bonificação,29-Entrada de Material de Consumo), a base de icms na compra será o valor total do item dobrado.
+Este campo foi necessario com fundamento no artigo 112 da Lei  nº 6.374, de 1º março de 1989, que autoriza o Poder Executivo a tomar providências fiscais que resguardem a competi tividade da economia paulista, a medida, nos termos propostos, considera  como  base  de  cálculo  do  ICMS  incidente  sobre  a  operação  realizada  com  programa  para computador ("software"),  personalizado ou não,  o valor equivalente a  200% (duzentos  por cento) do suporte informático, o que atende  à sugestão do setor, preocupado com o estabelecimento  de critério objetivo na sua adoção.</commet>
+  <listoptions data_type="character varying" is_pk="false">Sim=S; Não=N</listoptions>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">1</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false">L</id_special_type>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

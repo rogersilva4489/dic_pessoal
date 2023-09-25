@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13032</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[CREATE OR REPLACE FUNCTION xgp_animal_log_func()
+RETURNS trigger AS $BODY$
+BEGIN
+   INSERT INTO xgp_app_log
+   (id_app_log, table_name, dml, usuario_created, data_created, pk_id)
+   VALUES
+   (nextval('SEQ_XGP_APP_LOG'), 'XGP_ANIMAL', 'D', null, current_timestamp, old.id_animal);
+   RETURN OLD;
+END;
+$BODY$
+LANGUAGE 'plpgsql';
+
+drop trigger trigger_log_delete on xgp_animal;
+
+CREATE TRIGGER trigger_log_delete
+AFTER DELETE ON xgp_animal
+FOR EACH ROW
+EXECUTE PROCEDURE xgp_animal_log_func();
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

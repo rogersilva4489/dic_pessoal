@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">300235</id_table>
+  <id_script data_type="integer" is_pk="true">3003</id_script>
+  <descricao data_type="character varying" is_pk="false">Manejo Animal</descricao>
+  <script data_type="character varying" is_pk="false">insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'COD_ANIMAL', 'GERSON', '05/06/2017');
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'COD_BOTOM', 'GERSON', '05/06/2017');
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'PESO', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'DECIMAL' where tabela = 'MANEJO' and campo = 'PESO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'OBSERVACAO', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'MANEJO' and campo = 'OBSERVACAO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'BRUCELOSE', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'MANEJO' and campo = 'BRUCELOSE';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'AFTOSA', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'MANEJO' and campo = 'AFTOSA';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'VERMIFUGO', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'MANEJO' and campo = 'VERMIFUGO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'CARBUNCO', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'STRING' where tabela = 'MANEJO' and campo = 'CARBUNCO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'DEMAMOU', 'GERSON', '05/06/2017');
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'DIAS_GESTACAO', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'MANEJO' and campo = 'DIAS_GESTACAO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'DIAGNOSTICO_PRENHEZ', 'GERSON', '05/06/2017');
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'ID_TOURO', 'GERSON', '05/06/2017');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'MANEJO' and campo = 'ID_TOURO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'CAMPO IGNORADO', 'GERSON', '05/06/2017');
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'MES_GESTACAO', 'GERSON', '26/05/2018');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'MANEJO' and campo = 'MES_GESTACAO';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'COD_ANIMAL_PARA', 'GERSON', '26/05/2018');
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'COD_BOTOM_PARA', 'GERSON', '26/05/2018');
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'ID_DESCARTE', 'GERSON', '26/05/2018');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'MANEJO' and campo = 'ID_DESCARTE';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'ID_TIPO_PRENHEZ', 'GERSON', '01/06/2018');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'INTEGER' where tabela = 'MANEJO' and campo = 'ID_TIPO_PRENHEZ';
+
+insert into XGP_IMPORT_CAMPOS 
+(tabela, campo, usuario_created, data_created) values ('MANEJO', 'ESCORE', 'GERSON', '01/06/2018');
+update XGP_IMPORT_CAMPOS set tipo_campo = 'DECIMAL' where tabela = 'MANEJO' and campo = 'ESCORE';
+</script>
+  <ordem data_type="integer" is_pk="false">2</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">3200188</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">VE_VENDAS_IMPOSTO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_VENDAS_IMPOSTO, 
+      A.ID_VENDAS, 
+      A.ID_VENDAS_ATENDIMENTO, 
+      A.BASE_PIS, 
+      A.VALOR_PIS, 
+      A.BASE_PIS_OUTROS, 
+      A.VALOR_PIS_OUTROS, 
+      A.BASE_PIS_ST, 
+      A.VALOR_PIS_ST, 
+      A.BASE_DESC_PIS_REIDI, 
+      A.VALOR_DESC_PIS_REIDI, 
+      A.BASE_DESC_PIS_SUFRAMA, 
+      A.VALOR_DESC_PIS_SUFRAMA, 
+      A.BASE_COFINS, 
+      A.VALOR_COFINS, 
+      A.BASE_COFINS_OUTROS, 
+      A.VALOR_COFINS_OUTROS, 
+      A.BASE_COFINS_ST, 
+      A.VALOR_COFINS_ST, 
+      A.BASE_DESC_COFINS_REIDI, 
+      A.VALOR_DESC_COFINS_REIDI, 
+      A.BASE_DESC_COFINS_SUFRAMA, 
+      A.VALOR_DESC_COFINS_SUFRAMA, 
+      A.BASE_IPI, 
+      A.VALOR_RED_BC_IPI, 
+      A.VALOR_IPI, 
+      A.BASE_IPI_OUTROS, 
+      A.VALOR_IPI_OUTROS, 
+      A.VALOR_ISENTO_IPI, 
+      A.VALOR_OUTROS_IPI, 
+      A.BASE_ICMS, 
+      A.VALOR_RED_BC_ICMS, 
+      A.VALOR_ICMS, 
+      A.BASE_ICMS_OUTROS, 
+      A.VALOR_ICMS_OUTROS, 
+      A.BASE_DESC_ICMS, 
+      A.VALOR_RED_BC_DESC_ICMS, 
+      A.VALOR_DESC_ICMS, 
+      A.VALOR_ISENTO, 
+      A.VALOR_OUTROS, 
+      A.BASE_ICMS_SUBST, 
+      A.VLR_RED_BC_ICMS_ST, 
+      A.VALOR_ICMS_SUBST, 
+      A.AJUSTE_PRECO_ICMS_ST, 
+      A.VALOR_ICMS_DESON, 
+      A.BASE_ICMS_SN, 
+      A.VALOR_ICMS_SN, 
+      A.BASE_ICMSST_RET, 
+      A.VALOR_ICMSST_RET, 
+      A.BASE_PIS_RETIDO, 
+      A.VALOR_PIS_RETIDO, 
+      A.BASE_COFINS_RETIDO, 
+      A.VALOR_COFINS_RETIDO, 
+      A.BASE_IRRF, 
+      A.VALOR_IRRF, 
+      A.BASE_CSLL, 
+      A.VALOR_CSLL, 
+      A.VALOR_ICMS_ESTORNADO, 
+      A.VALOR_PIS_ESTORNADO, 
+      A.VALOR_COFINS_ESTORNADO, 
+      A.VALOR_IPI_ESTORNADO, 
+      A.ICMS_SOBRE_IPI_TRANSPOS_ESTOQ, 
+      A.VLR_TOT_TRIB_FEDERAL, 
+      A.VLR_TOT_TRIB_ESTADUAL, 
+      A.BC_ICMS_UF_DEST, 
+      A.VALOR_RED_BC_ICMS_UF_DEST, 
+      A.BC_ICMS_INTER, 
+      A.VALOR_ICMS_INTER, 
+      A.VALOR_FCP_UF_DEST, 
+      A.VALOR_ICMS_DIFAL, 
+      A.VALOR_ICMS_PARTILHA_UF_DEST, 
+      A.VALOR_ICMS_PARTILHA_UF_REMET, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      A.BASE_ISS, 
+      A.VALOR_RED_BC_ISS, 
+      A.VALOR_ISS, 
+      A.BASE_ISS_RETIDO, 
+      A.VALOR_ISS_RETIDO, 
+      A.VALOR_DESCONTO_ISS, 
+      A.SERVICO_NAO_TRIBUTADO, 
+      A.VALOR_RED_BC_ICMS_INTER, 
+      A.BASE_INSS_RETIDO, 
+      A.VALOR_INSS_RETIDO 
+from VE_VENDAS_IMPOSTO A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2500101</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

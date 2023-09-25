@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">2200214</id_table>
+  <id_script data_type="integer" is_pk="true">3001</id_script>
+  <descricao data_type="character varying" is_pk="false">Correção da Chave Primaria da tabela para serial</descricao>
+  <script data_type="character varying" is_pk="false">alter table XGP_MANEJO_ACAO add ID_MANEJO_ACAO Integer;
+alter table xgp_manejo_acao drop constraint pkXGP_MANEJO_ACAO;
+
+update xgp_manejo_acao set 
+  id_manejo_acao = id_acao
+where id_manejo_acao is null;
+
+alter table XGP_MANEJO_ACAO alter column ID_MANEJO_ACAO set not null ;
+
+alter table add contraint pkXGP_MANEJO_ACAO primary key (ID_MANEJO, ID_MANEJO_ACAO);
+
+
+
+
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

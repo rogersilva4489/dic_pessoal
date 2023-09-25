@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">230072</id_table>
+  <id_script data_type="integer" is_pk="true">32001</id_script>
+  <descricao data_type="character varying" is_pk="false">Tabela CST PIS</descricao>
+  <script data_type="character varying" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</db_script>

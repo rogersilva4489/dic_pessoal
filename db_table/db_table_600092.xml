@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">600092</id_table>
+  <table_name data_type="character varying" is_pk="false">CO_LOTE</table_name>
+  <commet data_type="character varying" is_pk="false">Define o Lote Contabil, o lote contabil do sistema Mobile System não será apenas um grupo de documento em um periodo, mas um grupo de documentos de uma operação, não existindo mais o conceito de lote de vendas cotendo somente NF mas todas as operações inclusive financeira se existir, ou seja, a contabilização vai existir em função da origem do documento e o lote representa o grupo de lançamentos referente a uma operação. O lote pode conter lançamento para diferentes empresas</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">16</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

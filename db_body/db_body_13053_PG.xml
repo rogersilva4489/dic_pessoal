@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13053</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_manejo, 
+       a.id_manejo_detalhe,
+       regexp_replace(
+       COALESCE(a.dg_prenhez||'/ ', '') ||
+       COALESCE(a.tipo_prenhez||'/ ', '')||
+       COALESCE(a.touro||'/ ', '')||
+       COALESCE(a.carencia||'/ ', '')||
+       COALESCE(a.dias_entre_pesagem||'/ ', '')||
+       COALESCE(a.gmd||'/ ', '')||
+       COALESCE(a.tecnico||'/ ', ''), '/(?=[^/]*$)', '') as resumo
+       
+from (select a.id_manejo,
+             a.id_manejo_detalhe,
+
+               case when a.diagnostico_prenhez = 'V' THEN
+                         'Diag.Prenhez: Vazia'
+                    when a.diagnostico_prenhez = 'L' THEN
+                         'Diag.Prenhez: Corpo Lúteo'
+                    when a.diagnostico_prenhez = 'A' THEN
+                         'Diag.Prenhez: Anestro'
+                    when a.diagnostico_prenhez = 'P' THEN
+                         'Diag.Prenhez: PRENHA'
+               end as dg_prenhez,
+               
+               case when a.id_tipo_prenhez is not null THEN
+                   'Tipo Prenhez: '||h.descricao
+               end as tipo_prenhez,
+
+               case when a.id_animal_touro is not null THEN
+                   'Touro: '||coalesce(d.cod_animal, d.cod_botom_manejo) 
+               end as touro,
+
+               case when a.data_carencia is not null THEN
+                   'Carência Medicamento: '||a.data_carencia
+               end as carencia,
+               
+               case when a.dias_pesagem is not null and a.dias_pesagem > 0 THEN
+                   'Entre Pesagem: '||a.dias_pesagem||' dias'
+               end as dias_entre_pesagem,
+
+               case when a.gmd is not null THEN
+                   'GMD: '||a.gmd
+               end as gmd,
+
+               case when g.nome is not null THEN  -- manejo detalhe
+                        'Técnico: '||g.nome
+                    when f.nome is not null THEN  -- manejo
+                        'Técnico: '||f.nome
+               end as tecnico
+               
+        from xgp_manejo_detalhe a
+        left join xgp_aparte b on
+            b.id_aparte = a.id_aparte
+        left join xgp_descarte c on
+            c.id_descarte = a.id_descarte
+        left join xgp_animal d on
+            d.id_animal = a.id_animal_touro
+        left join xgp_manejo e on
+            e.id_manejo = a.id_manejo
+        left join xgp_tecnico f on
+            f.id_tecnico = e.id_tecnico    
+        left join xgp_tecnico g on
+            g.id_tecnico = a.id_tecnico    
+        left join xgp_tipo_prenhez h on
+            h.id_tipo_prenhez = a.id_tipo_prenhez) a
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

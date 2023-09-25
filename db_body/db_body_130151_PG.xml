@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">130151</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select b.id_animal,
+       a.id_manejo,
+       a.data, 
+       a.id_tipo_manejo,
+       a.id_aparte,
+       a.id_campanha, 
+       c.guid as guid_aparte,     
+       c.id_fracao,   
+       b.data_inseminacao
+from xgp_manejo a 
+
+inner join (select b.id_animal,        
+                 max(a.id_manejo) as id_manejo,
+                 max(case when c.id_manejo_operacao = 2 then a.data end) as data_inseminacao
+          from xgp_manejo a, xgp_manejo_detalhe b, xgp_tipo_manejo c
+          where a.id_manejo = b.id_manejo
+            and a.id_tipo_manejo = c.id_tipo_manejo
+            and c.id_manejo_operacao in (5, 2) -- Do ou inseminacao
+            and a.id_campanha = (select id_campanha 
+                                 from xgp_campanha a1
+                                 where a1.data = (select max(DATA) 
+                                                  from xgp_campanha aa1
+                                                  where aa1.tipo_campanha = 'E')) -- ultima campanha) 
+            and b.id_animal in (select aa1.id_animal 
+                                from xgp_manejo_detalhe aa1                                 
+                                where aa1.id_manejo = a.id_manejo
+                                  and aa1.diagnostico_prenhez <> 'P') -- diferente de prenha
+                                  
+          group by b.id_animal, a.id_aparte, a.id_campanha) b on
+   b.id_manejo = a.id_manejo
+
+left join xgp_aparte c on
+  c.id_aparte = a.id_aparte]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

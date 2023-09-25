@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300304</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_CARDEX_ANIMAL</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_CARDEX_ANIMAL, 
+     A.ID_OPERACAO, 
+     A.ID_EMPRESA, 
+     A.ID_ANIMAL, 
+     A.DATA, 
+     A.PESO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     B.DESCRICAO as DESCR_OPERACAO, 
+     B.TIPO, 
+     C.NOME as NOME_EMPRESA, 
+     A.ID_CATEGORIA, 
+     H.DESCRICAO as DESCR_CATEGORIA, 
+     A.ID_CATEGORIA_SAIDA, 
+     I.DESCRICAO as DESCR_CATEGORIA_SAIDA, 
+     B.NATUREZA, 
+     J.ID_MOV 
+from XGP_CARDEX_ANIMAL A 
+     inner join XGP_OPERACAO B on 
+           B.ID_OPERACAO = A.ID_OPERACAO
+     inner join EMPRESA C on 
+           C.ID_EMPRESA = A.ID_EMPRESA
+     left join XGP_CATEGORIA H on 
+           H.ID_CATEGORIA = A.ID_CATEGORIA
+     left join XGP_CATEGORIA I on 
+           i.id_categoria = a.id_categoria_saida
+     left join XGP_MOV_ANIMAL J on 
+           j.id_cardex_animal = a.id_cardex_animal
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300325</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

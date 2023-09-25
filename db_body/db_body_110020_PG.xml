@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">110020</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT L.PID AS INST_ID, 
+	   T.SCHEMANAME AS OWNER,       
+       T.RELNAME AS OBJECT_NAME,       
+       L.LOCKTYPE AS OBJECT_TYPE,
+       L.PAGE SID,
+       L.VIRTUALTRANSACTION SERIAL,
+       L.MODE STATUS,
+       CAST(CAST(NOW() - A.QUERY_START AS TIME) AS VARCHAR(8)) AS TIME_IN_WAIT, 
+       A.USENAME AS OSUSER,
+       COALESCE(CAST(A.CLIENT_HOSTNAME AS TEXT), CAST(A.CLIENT_ADDR AS TEXT)) AS MACHINE,
+       A.APPLICATION_NAME AS PROGRAM       
+FROM PG_LOCKS L
+JOIN PG_CATALOG.PG_STAT_ALL_TABLES T ON L.RELATION = T.RELID
+JOIN PG_CATALOG.PG_STAT_ACTIVITY A ON A.PID = L.PID
+WHERE T.SCHEMANAME <> 'pg_toast' AND T.SCHEMANAME <> 'pg_catalog'
+ORDER BY NOW() - A.QUERY_START DESC]]></body>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</db_body>

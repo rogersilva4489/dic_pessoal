@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">2200168</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">4003</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">ESTACAO_MONTA</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false"><![CDATA[-- utilizado para definir a estação do monta do animal
+a.data_nascimento >= :data_inicial
+and a.data_nascimento <= :data_final
+and exists (select 1 from xgp_entrada_detalhe a1, xgp_entrada b1, xgp_operacao c1
+            where a1.id_entrada = b1.id_entrada
+              and b1.id_operacao = c1.id_operacao
+              and c1.tipo = 'N'
+              and a1.id_animal = a.id_animal)]]></sql>
+  <param_name data_type="character varying" is_pk="false">DATA_INICIAL; DATA_FINAL</param_name>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

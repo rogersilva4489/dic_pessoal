@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_param>
+  <id_param data_type="character varying" is_pk="true">PIS_COFINS_ST_GERA_CPAGAR</id_param>
+  <finalidade data_type="character varying" is_pk="false">Define a geração do contas a pagar ou imposto a recolher referente ao valor do PIS ST e COFINS ST nas entradas. Se ativado deverão ser ativados também os parâmetros CNPJ_PIS_COFINS_ST, NAT_FINAN_PIS_COFINS_ST,  TIPO_VENC_PIS_COFINS_ST e PRAZO_PIS_COFINS_ST.</finalidade>
+  <objeto data_type="character" is_pk="false">C</objeto>
+  <tipo_param data_type="character" is_pk="false">P</tipo_param>
+  <list_options data_type="character varying" is_pk="false">Não=N; Contas a Pagar=C; Imposto Recolher=I</list_options>
+  <lookup_filter data_type="character varying" is_pk="false"/>
+  <valor_default data_type="character varying" is_pk="false">N</valor_default>
+  <ativo data_type="character" is_pk="false">S</ativo>
+  <id_table_lkp data_type="integer" is_pk="false"/>
+  <id_cols_lkpkey data_type="integer" is_pk="false"/>
+  <id_cols_lkpdesc data_type="integer" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false">10044</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">13006</id_modulo>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+</fr_param>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">360020</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">AGDONLINE_CLIENTEPESSOA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false">N</add_distinct>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_CLIENTE, 
+      A.STATUS, 
+      A.STATUS_MOTIVO, 
+      C.ID_PESSOA, 
+      D.NOME as NOME_PESSOA, 
+      D.COD_PESSOA 
+from AGDONLINE_CLIENTE A 
+     inner join PESSOA_FISICA C on 
+           C.ID_PESSOA = A.ID_PESSOA
+     inner join PESSOA D on 
+           D.ID_PESSOA = C.ID_PESSOA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ELIAS</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Tabela de Clientes vinculada a tabela Pessoa]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">200</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

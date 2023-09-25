@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">3200185</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">VE_VENDAS_PARAM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_VENDAS_PARAM, 
+      A.ID_VENDAS, 
+      A.ID_VENDAS_ATENDIMENTO, 
+      A.USUARIO_DESCOR, 
+      A.MOTIVO_DESCOR, 
+      A.CORTESIA, 
+      A.PEDIDO_EXTERNO, 
+      A.DATA_CORTESIA, 
+      A.MOTIVO_CORTESIA, 
+      A.IMPRIME_PRECO_LIQUIDO, 
+      A.TIPO_DOC_ELETRONICO, 
+      A.NUMERO_NFSE, 
+      A.VERSAO_NFE, 
+      A.EH_EXTERNA, 
+      A.TRATAR_COMO_DEVOLUCAO, 
+      A.ENTREGA_EXPRESS, 
+      A.NATUREZA_FISCAL_NF, 
+      A.USUARIO_REFATURAMENTO, 
+      A.DATA_REFATURAMENTO, 
+      A.MOTIVO_CANCELAMENTO, 
+      A.MSG_PRENOTA_ADICIONAL, 
+      A.MOTIVO_DEVOLUCAO, 
+      A.USUARIO_TROCA, 
+      A.USUARIO_CONSUMO, 
+      A.USUARIO_ENTREGA, 
+      A.DATA_ENTREGA, 
+      A.OBS_ADICIONAL, 
+      A.CUPOM_FINALIZADO, 
+      A.DATA_REF_FAT, 
+      A.OUTROS_DOC, 
+      A.NR_FORMULARIO_INICIAL, 
+      A.NR_FORMULARIO_FINAL, 
+      A.CONTADOR_ORDEM_OPERACAO, 
+      A.VENDA_PRESENCIAL 
+from VE_VENDAS_PARAM A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2500108</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

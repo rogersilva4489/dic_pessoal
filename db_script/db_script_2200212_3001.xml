@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">2200212</id_table>
+  <id_script data_type="integer" is_pk="true">3001</id_script>
+  <descricao data_type="character varying" is_pk="false">xgp_acao - Scritp 1</descricao>
+  <script data_type="character varying" is_pk="false">Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(5, 'Desmama', 'GERSON', '01/06/2017');
+update xgp_acao set campo=null, tipo_campo=null where id_acao = 5;
+
+Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(8, 'Observação', 'GERSON', '01/06/2017');
+update xgp_acao set campo='OBSERVACAO', tipo_campo='S' where id_acao = 8;
+
+Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(10, 'Descarte', 'GERSON', '01/06/2017');
+update xgp_acao set campo='ID_DESCARTE', tipo_campo='I' where id_acao = 10;
+
+Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(11, 'De/Para Cod.Botom', 'GERSON', '01/06/2017');
+update xgp_acao set descricao = 'De/Para Cod.Botom' where id_acao = 11;
+update xgp_acao set campo='COD_BOTOM_PARA', tipo_campo='S' where id_acao = 11;
+
+Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(15, 'Pesagem', 'GERSON', '27/06/2017');
+update xgp_acao set descricao = 'Pesagem' where id_acao = 15;
+update xgp_acao set campo='PESO', tipo_campo='I' where id_acao = 15;
+
+Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(16, 'Lote de Manejo Por Animal', 'GERSON', '04/07/2017');
+update xgp_acao set descricao = 'Lote de Manejo Por Animal' where id_acao = 16;
+update xgp_acao set campo='ID_APARTE', tipo_campo='I' where id_acao = 16;
+
+Insert into xgp_acao (id_acao, descricao, usuario_created, data_created) values 
+(17, 'De/Para Cod.Animal', 'GERSON', '04/07/2017');
+update xgp_acao set descricao = 'De/Para Cod.Animal' where id_acao = 17;
+update xgp_acao set campo='COD_ANIMAL_PARA', tipo_campo='S' where id_acao = 17; </script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

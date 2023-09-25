@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250018</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">TB_NCM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_NCM, 
+      A.COD_NCM, 
+      A.EX_TIPI, 
+      A.DESCRICAO, 
+      A.NVE, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      A.CALC_ICMS_DIFAL 
+from TB_NCM A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Cadastro de NCM - Nomenclatura Comum do Mercosul]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">60001354</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false">Combo</obj_type_fk>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

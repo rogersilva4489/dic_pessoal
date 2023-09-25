@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13088</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[-- Função que analisa e retorna como foi o trato no dia
+CREATE OR REPLACE FUNCTION analise_trato_dia(pId_Empresa Integer, pData date) RETURNS varchar AS 
+$body$
+DECLARE
+
+  obs varchar;
+  qtdeTratoForaDia integer = 0;
+  qtdeTratoForaHorario integer = 0;
+  qtdeTratoPrevisto integer = 0;
+  qtdeTratoRealizado integer = 0;
+
+  c_salgar cursor FOR
+  select a.data, a.data_trato
+  from xgp_salgar a 
+  where a.id_empresa = pid_empresa
+    and a.data = pdata;
+
+BEGIN
+   
+   qtdeTratoPrevisto = 0;
+   for r in c_salgar LOOP
+   
+       qtdeTratoPrevisto = qtdeTratoPrevisto + 1;
+
+       if r.data_trato is not null then
+          qtdeTratoRealizado = qtdeTratoRealizado + 1;
+       end if;
+
+       if r.data <> DATE_TRUNC('day',r.data_trato) then
+          qtdeTratoForaDia = qtdeTratoForaDia + 1;
+       end if;
+       
+   end loop;
+
+   obs = '';
+   if (qtdeTratoRealizado = 0) THEN
+      obs = 'NÃO Tratou';
+   else 
+       if (qtdeTratoPrevisto > qtdeTratoRealizado) THEN
+          obs = 'Tratou Parcial '||qtdeTratoRealizado||'/'||qtdeTratoPrevisto;
+       else 
+          obs = 'Tratou: '||qtdeTratoRealizado||'/'||qtdeTratoPrevisto;
+       end if;
+       
+       if (qtdeTratoForaDia > 0) then
+          obs = obs || ', NÃO Cumpriu Agenda ';
+       end if;
+   end if;
+   
+   return obs;
+   
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY INVOKER
+COST 100;]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_param>
+  <id_param data_type="character varying" is_pk="true">DIAS_ENTSAI_ANIMAL</id_param>
+  <finalidade data_type="character varying" is_pk="false">Quantidade de dias que o  lote, entrada ou saida de animais esitvem em aberto para gerar tarefa para o responsavel</finalidade>
+  <objeto data_type="character" is_pk="false">I</objeto>
+  <tipo_param data_type="character" is_pk="false">P</tipo_param>
+  <list_options data_type="character varying" is_pk="false"/>
+  <lookup_filter data_type="character varying" is_pk="false"/>
+  <valor_default data_type="character varying" is_pk="false"/>
+  <ativo data_type="character" is_pk="false">S</ativo>
+  <id_table_lkp data_type="integer" is_pk="false"/>
+  <id_cols_lkpkey data_type="integer" is_pk="false"/>
+  <id_cols_lkpdesc data_type="integer" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false">22003</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">22001</id_modulo>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</fr_param>

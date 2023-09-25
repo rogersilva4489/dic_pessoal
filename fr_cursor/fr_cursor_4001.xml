@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">4001</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XTD_TAREFA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_TAREFA, 
+     A.ID_RECURSO, 
+     A.ID_URGENCIA, 
+     A.ID_STATUS, 
+     A.ID_CATEGORIA, 
+     A.ID_EMPRESA, 
+     A.DESCRICAO, 
+     A.DATA, 
+     A.DATA_PREVISTO, 
+     A.SOLUCAO, 
+     A.DATA_TERMINO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.DESCRICAO as DESCR_RECURSO, 
+     C.DESCRICAO as DESCR_URGENCIA, 
+     D.DESCRICAO as DESCR_STATUS, 
+     E.DESCRICAO as DESCR_CATEGORIA, 
+     F.APELIDO, 
+     A.ID_ANDAMENTO, 
+     A.REPETIR, 
+     A.DATA_LEMBRETE, 
+     AGE(now(), a.data_created) as  INTERVALO, 
+     G.ORDEM, 
+     CURRENT_DATE as SYSDATE, 
+     A.ID_PROCESSO, 
+     A.ID_FK, 
+     A.QTDE_DIAS_REPETIR, 
+     A.ID_ANEXO, 
+     A.VALOR_APROVADO, 
+     A.USUARIO_APROVOU, 
+     A.USUARIO_DATA_LIMITE, 
+     A.DATA_NAO_LIDO, 
+     A.TOTAL_PRODUTOS, 
+     A.TOTAL_SERVICO, 
+     A.ID_ITEM_MAQUINA, 
+     A.KM_HORA, 
+     A.ID_TAREFA_MASTER, 
+     A.VALOR_TOTAL, 
+     A.DATA_ACAO, 
+     A.LIDO, 
+     H.ID_ORIGEM, 
+     A.PERC_CONCLUIDO, 
+     A.GUID, 
+     A.ID_MOTIVO_ABERTURA, 
+     A.TEMPO_ESTIMADO, 
+     A.EH_TAREFA_AVULSA, 
+     A.MEDIDA_TEMPO, 
+     A.DATA_TAREFA_AVULSA, 
+      (select max(a1.data_created) 
+   from xtd_tarefa_acao a1
+   where a1.id_tarefa = a.id_tarefa
+       and a1.id_recurso = -1)
+ as DATA_ACAO_NAO_LIDO, 
+     (select count(*) 
+ from xtd_tarefa_acao a1
+  where a1.id_tarefa = a.id_tarefa
+      and a1.lido = 'N'
+      and a1.id_recurso = -1)
+ as QTDE_NAO_LIDO, 
+     H.DESCRICAO as DESCR_PROCESSO, 
+     A.USUARIO_TERMINO 
+from XTD_TAREFA A 
+     left join XTD_RECURSO B on 
+           B.ID_RECURSO = A.ID_RECURSO
+     left join XTD_URGENCIA C on 
+           C.ID_URGENCIA = A.ID_URGENCIA
+     left join XTD_STATUS D on 
+           D.ID_STATUS = A.ID_STATUS
+     inner join XTD_CATEGORIA E on 
+           E.ID_CATEGORIA = A.ID_CATEGORIA
+     left join EMPRESA F on 
+           F.ID_EMPRESA = A.ID_EMPRESA
+     left join XTD_URGENCIA G on 
+           G.ID_URGENCIA = A.ID_URGENCIA
+     left join XTD_PROCESSO H on 
+           H.ID_PROCESSO = A.ID_PROCESSO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">4001</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

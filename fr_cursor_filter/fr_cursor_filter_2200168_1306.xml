@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_filter>
+  <id_cursor data_type="integer" is_pk="true">2200168</id_cursor>
+  <id_cursor_filter data_type="integer" is_pk="true">1306</id_cursor_filter>
+  <filter_name data_type="character varying" is_pk="false">SOMENTE_CRIA</filter_name>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="character varying" is_pk="false"><![CDATA[a.id_animal in (select a.id_animal 
+                from xgp_animal a, xgp_categoria b
+                where a.id_categoria = b.id_categoria
+                  and a.status = 'E'
+                  and (a.data_desmama is null and b.idade_saida <= 12))
+]]></sql>
+  <param_name data_type="character varying" is_pk="false"/>
+  <show_form data_type="character" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_cursor_att data_type="integer" is_pk="false"/>
+  <id_filter_type data_type="character" is_pk="false">E</id_filter_type>
+</fr_cursor_filter>

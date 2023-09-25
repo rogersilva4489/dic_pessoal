@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">60001305</id_table>
+  <table_name data_type="character varying" is_pk="false">TB_CURVA_ABC_PONTO</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela onde são definidas as pontuações para classificação do item na curva ABC.
+Ex: Mes   Ponto
+        1        20
+        2        15
+        3        10
+        4          5
+
+ - Vamos supor que o item foi vendido no mês (relativo a data atual) 2 e 3 que é igual a 25 pontos. Agora pega-se os pontos e vai na tabela de curva abc ponto inicial e final e verifica em que curva essa pontuação (25) se encaixa</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">2</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

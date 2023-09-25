@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">11007</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT SUBSTR(COLUMN_NAME, 1, 255) AS COLUMN_NAME, TABLE_NAME, POSITION, OWNER, CONSTRAINT_NAME
+FROM ALL_CONS_COLUMNS
+ORDER BY POSITION]]></body>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</db_body>

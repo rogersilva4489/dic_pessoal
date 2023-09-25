@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">3200194</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">3200136</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">COFINS_VALIQPROD</column_cursor>
+  <alias data_type="character varying" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">136</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false">50</length>
+  <dec data_type="integer" is_pk="false">0</dec>
+  <help data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <md5 data_type="character varying" is_pk="false">FBF037A1F44231C08C47631CE1F1F477</md5>
+  <id_table data_type="integer" is_pk="false"/>
+  <id_cols data_type="integer" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">2</id_type>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

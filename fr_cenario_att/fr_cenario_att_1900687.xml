@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cenario_att>
+  <id_cenario_att data_type="integer" is_pk="true">1900687</id_cenario_att>
+  <id_cenario data_type="integer" is_pk="false">190038</id_cenario>
+  <id_cenario_serial data_type="integer" is_pk="false">4</id_cenario_serial>
+  <ordem data_type="integer" is_pk="false">6</ordem>
+  <code_syntax data_type="character varying" is_pk="false">setValueTextBox("txbSenha_80002", "new");</code_syntax>
+  <code data_type="character varying" is_pk="false">setValueTextBox</code>
+  <component_target data_type="character varying" is_pk="false">txbSenha_80002</component_target>
+  <value data_type="character varying" is_pk="false">new</value>
+  <table_name data_type="character varying" is_pk="false"/>
+  <field_name data_type="character varying" is_pk="false"/>
+  <anotacoes data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+</fr_cenario_att>

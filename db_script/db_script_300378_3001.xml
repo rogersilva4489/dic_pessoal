@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">300378</id_table>
+  <id_script data_type="integer" is_pk="true">3001</id_script>
+  <descricao data_type="character varying" is_pk="false">Tipo de Agua</descricao>
+  <script data_type="character varying" is_pk="false">insert into XGP_TIPO_AGUA (id_tipo_agua, descricao) values ('B', 'Bebedouro');
+insert into XGP_TIPO_AGUA (id_tipo_agua, descricao) values ('R', 'Represa');
+insert into XGP_TIPO_AGUA (id_tipo_agua, descricao) values ('C', 'Corgo/Rio');
+insert into XGP_TIPO_AGUA (id_tipo_agua, descricao) values ('G', 'Grota');</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

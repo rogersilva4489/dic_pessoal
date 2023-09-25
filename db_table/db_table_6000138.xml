@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">6000138</id_table>
+  <table_name data_type="character varying" is_pk="false">CP_BAIXA</table_name>
+  <commet data_type="character varying" is_pk="false">Esta Tabela terá 3 Tipos de Registro:
+
+1o. Tipo_Registro = P (Previsto)
+---------------------------------------------------
+      São guardados os valores de multa, juros, desconto, outros antes da baixa ser ocorrida, neste caso estes valores serão somados ao Valor_a_Pagar, para isso, será guardado no campo Valor_Baixa_Prev. Só pode ter 1 registro deste tipo por Parcela
+
+2o. Tipo_Registro = R (Programação)
+-----------------------------------------------------------
+      Programação de Pagto/Pagto Eletronico: Todos os valores informados para programação de Pagto será informado nesta tabela
+
+3o. Tipo_Resgistro = B (Baixa)
+------------------------------------------------
+      Pagamento Confirmado (Baixas)</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">12</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

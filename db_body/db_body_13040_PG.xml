@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13040</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_fracao, 
+       a.cod_fracao
+from xgp_fracao a
+where a.tipo_fracao in ('P', 'C')
+  and a.id_fracao_modulo is null
+union all
+select a.id_fracao_modulo as id_fracao,
+       string_agg(a.cod_fracao, ', ') as cod_fracao 
+--       a.cod_modulo_manejo||' - '||string_agg(a.cod_fracao, ', ') as cod_fracao
+from (select a.id_fracao_modulo,
+             b.cod_fracao as cod_modulo_manejo,
+             a.cod_fracao
+      from xgp_fracao a, xgp_fracao b
+      where a.id_fracao_modulo = b.id_fracao
+        and b.tipo_fracao = 'M'
+      order by a.cod_fracao) a
+group by a.id_fracao_modulo, a.cod_modulo_manejo]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

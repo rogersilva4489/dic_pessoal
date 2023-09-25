@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300249</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_SALGAR</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_SALGAR, 
+     A.ID_CARDEX, 
+     A.DATA, 
+     A.QTDE, 
+     A.CUSTO_MEDIO, 
+     A.CUSTO_TOTAL, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.ID_EMPRESA, 
+     A.QTDE_RACAO_PREVISTA, 
+     A.OBSERVACAO, 
+     A.STATUS, 
+     A.OBS_STATUS, 
+     A.USUARIO_TRATO, 
+     A.DATA_TRATO, 
+     A.ID_ITEM_SUPLEMENTO, 
+     A.ID_FABRICA, 
+     A.HORA_TRATO, 
+     A.NR_TRATO, 
+     coalesce(e.descricao, f.descricao) as DESC_ITEM_FORMULA, 
+     H.APELIDO, 
+     A.ID_FRACAO, 
+     I.COD_FRACAO, 
+     A.ID_ESTRATEGIA 
+from XGP_SALGAR A 
+     left join XGP_ITEM E on 
+           e.id_item = a.id_item_suplemento
+     left join XGP_FABRICA G on 
+           G.ID_FABRICA = A.ID_FABRICA
+     left join XGP_FORMULA F on 
+           F.ID_FORMULA = G.ID_FORMULA
+     left join EMPRESA H on 
+           H.ID_EMPRESA = A.ID_EMPRESA
+     left join XGP_FRACAO I on 
+           I.ID_FRACAO = A.ID_FRACAO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300267</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

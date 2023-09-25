@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">13082</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_tarefa,
+       a.id_recurso as id_recurso_nao_lido, 
+       max(a.data_created) as data_acao_nao_lido,
+       sum(case when a.lido = 'N' then 1 else 0 end) as qtde_nao_lido 
+from xtd_tarefa_acao a
+group by a.id_tarefa, a.id_recurso]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

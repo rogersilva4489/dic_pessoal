@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">150018</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">DBMENU</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[SELECT SB.ID_MENU,
+       SB.ID_MENU_SUPER,
+       SB.ID_FORM,
+       SB.DESCRICAO,
+       SB.ORDEM,
+       SB.ID_IMAGEM
+FROM (
+       SELECT M1.ID_MENU,
+              M1.ID_MENU_SUPER,
+              M1.ID_FORM,
+              M1.DESCRICAO,
+              M1.ORDEM,
+              M1.ID_IMAGEM
+       FROM FR_MENU M1
+       WHERE M1.ID_FORM IS NULL
+       UNION ALL
+       SELECT M.ID_MENU,
+              M.ID_MENU_SUPER,
+              M.ID_FORM,
+              M.DESCRICAO,
+              M.ORDEM,
+              M.ID_IMAGEM
+       FROM FR_MENU M
+            JOIN FR_FORM F ON F.ID_FORM = M.ID_FORM
+            JOIN FR_MODULO D ON D.ID_MODULO = F.ID_MODULO
+            JOIN FR_PROJETO P ON P.ID_PROJETO = D.ID_PROJETO
+       WHERE COALESCE(P.ID_PROJETO, 0) = COALESCE(:ID_PROJETO, P.ID_PROJETO, 0) 
+        AND COALESCE(F.ID_MODULO, 0) = COALESCE(:ID_MODULO, F.ID_MODULO, 0)
+        AND F.ID_FORM IN (SELECT ID_FORM
+                          FROM FR_ACCESS A,
+                               GRUPO_ACESSO B,
+                               GRUPO C,
+                               GRUPO_USUARIO D,
+                               USUARIO E
+                            WHERE E.ID_USUARIO = COALESCE(:ID_USUARIO, E.ID_USUARIO)
+                             AND B.ID_ACCESS = A.ID_ACCESS 
+                             AND C.ID_GRUPO = B.ID_GRUPO 
+                             AND D.ID_GRUPO = C.ID_GRUPO 
+                             AND E.ID_USUARIO = D.ID_USUARIO)
+     ) SB
+ORDER BY SB.ID_MENU_SUPER NULLS FIRST,
+         SB.ORDEM;]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Cursor utilizado para montagem de menu's no framework]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

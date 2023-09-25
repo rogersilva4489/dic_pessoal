@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">6000268</id_table>
+  <id_cols data_type="integer" is_pk="true">600065</id_cols>
+  <id_enum data_type="character" is_pk="true">S</id_enum>
+  <descricao data_type="character varying" is_pk="false">Sub-Chamado</descricao>
+  <comentario data_type="character varying" is_pk="false">São eventos que foram criados pela equipe interna e que estão relacioando a um chamado. Geralmente se cria um sub-chamado quando deseja que uma outra pessoa faça uma tarefa que complementa o chamado</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</fr_enum>

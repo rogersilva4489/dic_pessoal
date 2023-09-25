@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250094</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">CP_COMPRA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.AJUSTE_PRECO_ICMS_ST, 
+      A.BAIRRO, 
+      A.BASE_COFINS_ST, 
+      A.BASE_ICMS_NF, 
+      A.BASE_IRRF, 
+      A.BASE_ISS, 
+      A.BASE_PIS_ST, 
+      A.BASE_RET_PREV, 
+      A.BASE_SUBST_NF, 
+      A.CEP, 
+      A.CHAVE_NFE, 
+      A.COMPLEMENTO_END, 
+      A.DATA_BARREIRA, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      A.DATA_EMISSAO, 
+      A.DATA_ENTRADA, 
+      A.DATA_REC_DAR, 
+      A.EM_CONTAGEM, 
+      A.EN_NAT_FRT, 
+      A.EN_TIPO_CTE, 
+      A.ESPECIE, 
+      A.FACHADA, 
+      A.FORMULARIO_PROPRIO, 
+      A.ID_CIDADE, 
+      A.ID_COMISSAO_CONTROLE, 
+      A.ID_COMPRA, 
+      A.ID_COMPRA_COMPLEMENTAR, 
+      A.ID_EMPRESA, 
+      A.ID_EXERCICIO, 
+      A.ID_FC_LOTE, 
+      A.ID_LOTE, 
+      A.ID_MODELO_FISCAL, 
+      A.ID_NATUREZA, 
+      A.ID_ORC_SOLICITACAO, 
+      A.ID_PESSOA, 
+      A.ID_TIPO_LOGRADOURO, 
+      A.ID_TRANSPORTADORA, 
+      A.ID_UF, 
+      A.INSCRICAO_ESTADUAL, 
+      A.JUSTIF_ESTORNO, 
+      A.LIVRO_FISCAL, 
+      A.MODALIDADE_FRETE, 
+      A.MOTIVO_CANCELAMENTO, 
+      A.MOTIVO_DEVOLUCAO, 
+      A.NATUREZA_FISCAL_NF, 
+      A.NF_IMPORTACAO, 
+      A.NFE, 
+      A.NFE_ESTORNO, 
+      A.NR_DAR, 
+      A.NR_DESPACHO, 
+      A.NR_FORMULARIO_FINAL, 
+      A.NR_FORMULARIO_INICIAL, 
+      A.NUMERO_NOTA, 
+      A.OBS_DAR, 
+      A.OBSERVACAO, 
+      A.PESO_BRUTO, 
+      A.PESO_LIQUIDO, 
+      A.PESO_RATEIO_DESP, 
+      A.RUA, 
+      A.SERIE_NOTA, 
+      A.STATUS, 
+      A.TIPO_RATEIO_DESP, 
+      A.TOTAL_NOTA, 
+      A.TOTAL_PRODUTOS, 
+      A.TOTAL_SERVICOS, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.VALOR_COFINS_RETIDO, 
+      A.VALOR_COFINS_ST, 
+      A.VALOR_CSLL_RETIDO, 
+      A.VALOR_DESC_SUFRAMA_COFINS, 
+      A.VALOR_DESC_SUFRAMA_ICMS, 
+      A.VALOR_DESC_SUFRAMA_PIS, 
+      A.VALOR_DESCONTO_RATEADO, 
+      A.VALOR_DESP_ACESSORIA, 
+      A.VALOR_FRETE, 
+      A.VALOR_FRETE_RATEIO, 
+      A.VALOR_ICMS_DIFERIDO, 
+      A.VALOR_ICMS_NF, 
+      A.VALOR_IPI, 
+      A.VALOR_IPI_OUTROS, 
+      A.VALOR_IRRF, 
+      A.VALOR_ISS, 
+      A.VALOR_PIS_RETIDO, 
+      A.VALOR_PIS_ST, 
+      A.VALOR_RET_PREV, 
+      A.VALOR_SEGURO, 
+      A.VALOR_SUBST_NF, 
+      A.VOLUME_ESPECIE, 
+      A.VOLUME_MARCA, 
+      A.VOLUME_NUMERO, 
+      A.VOLUME_QTDE, 
+      A.ID_ENDERECO, 
+      C.DESCRICAO as DESCR_CIDADE, 
+      D.UF, 
+      B.NOME as NOME_EMPRESA, 
+      A.TIPO_EMISSAO, 
+      E.NOME as NOME_PESSOA 
+from CP_COMPRA A 
+     left join CIDADE C on 
+           C.ID_UF = A.ID_UF and 
+           C.ID_CIDADE = A.ID_CIDADE
+     inner join ESTADO D on 
+           D.ID_UF = C.ID_UF
+     inner join EMPRESA B on 
+           B.ID_EMPRESA = A.ID_EMPRESA
+     inner join PESSOA E on 
+           E.ID_PESSOA = A.ID_PESSOA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000141</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

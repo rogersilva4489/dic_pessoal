@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">110010</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT CL.RELNAME AS TABLE_NAME, ATT.ATTNAME AS COLUMN_NAME, TY.TYPNAME AS DATA_TYPE, 	   
+	   CASE ATT.ATTTYPID
+         WHEN 1700 /*NUMERIC*/ THEN
+           CASE WHEN ATT.ATTTYPMOD = -1 THEN 
+             NULL
+           ELSE 
+             ((ATT.ATTTYPMOD - 4) > 16) & 65535 
+           END
+         WHEN 700 /*FLOAT4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*FLOAT8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE 
+           CASE 
+             WHEN ATT.ATTTYPMOD - 4 < 0 THEN NULL
+           ELSE
+             ATT.ATTTYPMOD - 4
+           END           
+  	   END AS DATA_LENGTH, 
+       
+       CASE WHEN ATTTYPID IN (1700) THEN            
+         CASE WHEN ATTTYPMOD = -1 THEN 
+           NULL       
+         ELSE 
+           (ATTTYPMOD - 4) & 65535     
+         END
+       ELSE 
+         NULL
+       END AS DATA_PRECISION, 
+       NULL AS DATA_SCALE,        
+	   CASE 
+         WHEN ATT.ATTNOTNULL = TRUE THEN 'S'
+       ELSE  
+         'N' 
+       END AS NULLABLE, 
+       N1.NSPNAME AS OWNER, ATT.ATTNUM AS COLUMN_ID
+FROM PG_CATALOG.PG_ATTRIBUTE ATT
+JOIN PG_CATALOG.PG_CLASS CL ON CL.OID = ATT.ATTRELID
+JOIN PG_CATALOG.PG_TYPE TY ON TY.OID = ATT.ATTTYPID
+LEFT JOIN PG_CATALOG.PG_NAMESPACE N1 ON (N1.OID = CL.RELNAMESPACE)
+JOIN PG_CATALOG.PG_TABLES T ON T.TABLENAME = CL.RELNAME
+   						   AND T.SCHEMANAME = N1.NSPNAME
+WHERE ATT.ATTISDROPPED = FALSE
+ AND ATT.ATTNUM > 0]]></body>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</db_body>

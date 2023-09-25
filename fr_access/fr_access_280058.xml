@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_access>
+  <id_access data_type="integer" is_pk="true">280058</id_access>
+  <descricao data_type="character varying" is_pk="false">Abrir Formulario</descricao>
+  <perigoso data_type="character" is_pk="false"/>
+  <obj_name data_type="character varying" is_pk="false">FrmAgendaFilaMobile</obj_name>
+  <id_form data_type="integer" is_pk="false">28005</id_form>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+</fr_access>

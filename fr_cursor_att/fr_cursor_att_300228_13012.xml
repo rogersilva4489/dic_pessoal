@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">300228</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">13012</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">KM_HORA_AUTONOMIA</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">28</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Autonomia do veiculo/maquina  para o proximo abastecimento. Quantidade de horas que o trator ira rodar com tanque, quando veiculo é KM. Considera sempre que o tanque foi completado, para este calculo</help>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false">E5C7B0821B36C2D9A3B3B55578E457D8</md5>
+  <id_table data_type="integer" is_pk="false">300249</id_table>
+  <id_cols data_type="integer" is_pk="false">1308</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false">S</updatable>
+</fr_cursor_att>

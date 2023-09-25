@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130174</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_FRACAO_INVENTARIO</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_fracao,
+       c.id_categoria,
+       d.descricao as descr_categoria,
+       c.id_raca,
+       e.descricao as descr_raca,
+       count(distinct b.id_animal) as qtde_animal_estoque,
+       avg(b.peso) as peso_medio,
+       CAST(to_timestamp(avg(extract(epoch from c.data_nascimento))) as date) as data_media_nasc
+
+from xgp_manejo a
+left join xgp_manejo_detalhe b on 
+   b.id_manejo = a.id_manejo
+left join xgp_animal c on 
+   c.id_animal = b.id_animal
+left join xgp_categoria d on
+   d.id_categoria = c.id_categoria
+left join xgp_raca e on
+   e.id_raca = c.id_raca
+where c.status = 'E'
+  ]]></sql>
+  <group_by data_type="character varying" is_pk="false">a.id_fracao, c.id_categoria, d.descricao, c.id_raca, e.descricao</group_by>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Cursor que totaliza a quantiade de animais para inventario via manejo]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">999</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

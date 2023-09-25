@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">110014</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT N.NSPNAME AS SEQUENCE_OWNER,
+	   C.RELNAME AS SEQUENCE_NAME,
+	   (SELECT F_INF_SEQUENCE 
+        FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'MIN_VALUE')) AS MIN_VALUE,
+
+	   (SELECT F_INF_SEQUENCE 
+        FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'MAX_VALUE')) AS MAX_VALUE,
+       
+       (SELECT F_INF_SEQUENCE 
+        FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'INCREMENT_BY')) AS INCREMENT_BY,
+      
+ 	   CASE 
+         WHEN (SELECT F_INF_SEQUENCE 
+       		   FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'IS_CYCLED')) = 'f' THEN 'N'
+       ELSE
+         'S'        
+       END AS CYCLE_FLAG,
+
+ 	   CASE 
+         WHEN (SELECT F_INF_SEQUENCE 
+       		   FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'IS_CALLED')) = 'f' THEN 'N'
+       ELSE
+         'S'        
+       END AS ORDER_FLAG,
+
+       (SELECT F_INF_SEQUENCE 
+        FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'CACHE_VALUE')) AS CACHE_SIZE,
+        
+       (SELECT F_INF_SEQUENCE 
+        FROM PUBLIC.F_INF_SEQUENCE(CAST(C.RELNAME AS VARCHAR), 'LAST_VALUE')) AS LAST_NUMBER
+       
+FROM PG_CLASS C
+LEFT OUTER JOIN PG_ROLES U ON U.OID = C.RELOWNER
+INNER JOIN PG_NAMESPACE N ON C.RELNAMESPACE = N.OID
+LEFT OUTER JOIN PG_DEPEND D ON C.RELKIND = 'S' 
+							AND D.CLASSID = C.TABLEOID
+       						AND D.OBJID = C.OID 
+                            AND D.OBJSUBID = 0 
+                            AND D.REFCLASSID = C.TABLEOID 
+                            AND D.DEPTYPE = 'i'
+LEFT OUTER JOIN PG_DESCRIPTION DS ON C.OID = DS.OBJOID
+WHERE C.RELKIND = 'S']]></body>
+  <usuario_created data_type="character varying" is_pk="false"/>
+</db_body>

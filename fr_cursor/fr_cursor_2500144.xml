@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2500144</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">PESSOA_PARAM_EMPRESA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_EMPRESA, 
+      A.ID_PESSOA, 
+      A.ID_VENDEDOR, 
+      A.ID_TAB_PRECO, 
+      A.ID_TRANSPORTADORA, 
+      A.ID_CLASSE_ENTREGA, 
+      A.MARGEM_MINIMA_MKP, 
+      A.PERC_DESCONTO_DPL, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      B.COD_PESSOA, 
+      B.NOME as NOME_PESSOA, 
+      C.NOME as NOME_EMPRESA 
+from PESSOA_PARAM_EMPRESA A 
+     inner join PESSOA B on 
+           B.ID_PESSOA = A.ID_PESSOA
+     inner join EMPRESA C on 
+           C.ID_EMPRESA = A.ID_EMPRESA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">60001004</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

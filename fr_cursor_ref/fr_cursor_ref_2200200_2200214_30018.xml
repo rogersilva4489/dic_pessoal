@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_ref>
+  <id_cursor data_type="integer" is_pk="true">2200200</id_cursor>
+  <id_table data_type="integer" is_pk="true">2200214</id_table>
+  <id_cols data_type="integer" is_pk="true">30018</id_cols>
+</fr_cursor_ref>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">50063</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_PARCELA_CONSULTA</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_TITULO, 
+      A.ID_PARCELA, 
+      A.ID_PORTADOR,  
+      B.ID_TAREFA,
+      A.DATA_VENCIMENTO, 
+      A.DATA_BAIXA, 
+      A.VALOR, 
+      A.SALDO, 
+      A.STATUS, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      B.NR_DOCUMENTO, 
+      B.DATA_EMISSAO, 
+      C.NOME as NOME_PESSOA, 
+      D.DESCRICAO as DESCR_CARTEIRA, 
+      E.DESCRICAO as DESCR_PORTADOR, 
+      F.APELIDO, 
+      D.TIPO_TITULO, 
+      B.ID_PESSOA, 
+      B.ID_NATUREZA, 
+      G.DESCRICAO as DESCR_NATUREZA, 
+      B.ID_CARTEIRA,
+      B.ID_ORIGENS,
+      H.DESCRICAO AS DESCR_ORIGENS,
+      B.ID_EMPRESA,
+      B.VALOR AS VALOR_TITULO,
+      B.ID_LCONTAS,
+      B.ID_ANEXO,
+      I.OBSERVACAO
+from XGP_PARCELA A 
+     inner join XGP_TITULOS B on 
+           B.ID_TITULO = A.ID_TITULO
+     inner join XGP_PESSOA C on 
+           C.ID_PESSOA = B.ID_PESSOA
+     inner join XGP_CARTEIRA D on 
+           D.ID_CARTEIRA = B.ID_CARTEIRA
+     left join XGP_PORTADOR E on 
+           E.ID_PORTADOR = A.ID_PORTADOR
+     inner join EMPRESA F on 
+           F.ID_EMPRESA = B.ID_EMPRESA
+     inner join XGP_NATUREZA G on 
+           G.ID_NATUREZA = B.ID_NATUREZA
+     inner join XGP_ORIGENS H on 
+           H.ID_ORIGENS = B.ID_ORIGENS 
+     left join VW_XGP_TITULOS_OBSERVACAO I on
+           I.ID_TITULO = A.ID_TITULO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

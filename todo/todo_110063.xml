@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110063</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110061</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Mandei gerar os scripts do FrDoc no postgres pelo freedom. E vi um detalhe na tabela doc_anexo o campo anexo ele criou como text porém fui para modificar no freedom para o tipo file e mandei gerar o script e o freedom não gerou de alteração do campo. Exclui o campo e mandei sincronizar e criou com o tipo certo.</solicitacao>
+  <solucao data_type="character varying" is_pk="false"/>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">N</status>
+  <percentual_concluido data_type="numeric" is_pk="false">0</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60005</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">11004</id_categoria>
+</todo>

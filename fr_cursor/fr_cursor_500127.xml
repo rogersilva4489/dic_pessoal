@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">500127</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XDE_TOTAL_ABASTECIMENTO_DRE</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[ select e.id_dre,
+        sum(a.custo_total) as custo_total
+from xgp_abastecimento a
+left join xgp_motivo_baixa b ON
+     b.id_motivo_baixa = a.id_motivo_baixa
+left join xde_classe_gerencial d on
+     d.id_classe_gerencial = b.id_classe_gerencial
+left join xde_ccusto_conta e on
+     e.id_ccusto = d.id_ccusto_despesa and
+     e.id_conta = d.id_conta_despesa
+   ]]></sql>
+  <group_by data_type="character varying" is_pk="false">e.id_dre</group_by>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"><![CDATA[Total de abastecimento para relatorio do DRE]]></help>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

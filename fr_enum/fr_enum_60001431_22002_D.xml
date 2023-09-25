@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_enum>
+  <id_table data_type="integer" is_pk="true">60001431</id_table>
+  <id_cols data_type="integer" is_pk="true">22002</id_cols>
+  <id_enum data_type="character" is_pk="true">D</id_enum>
+  <descricao data_type="character varying" is_pk="false">Compensação Cheque Emitido</descricao>
+  <comentario data_type="character varying" is_pk="false">Identivica que a origem do lançamento na tesouraria foi uma compensação de cheque emetido pela Empresa
+</comentario>
+  <cod_terceiro data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</fr_enum>

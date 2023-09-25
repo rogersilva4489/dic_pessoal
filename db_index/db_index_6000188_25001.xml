@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_index>
+  <id_table data_type="integer" is_pk="true">6000188</id_table>
+  <id_index data_type="integer" is_pk="true">25001</id_index>
+  <index_name data_type="character varying" is_pk="false">IDX25001</index_name>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <unique_indexes data_type="character" is_pk="false">S</unique_indexes>
+</db_index>

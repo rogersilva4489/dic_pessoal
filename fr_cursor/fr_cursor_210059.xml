@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">210059</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">LOGRADOURO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_LOGRADOURO, 
+      A.CEP, 
+      A.ID_TIPO_LOGRADOURO, 
+      A.RUA, 
+      A.BAIRRO, 
+      A.ID_UF, 
+      A.ID_CIDADE, 
+      A.ATIVO, 
+      B.DESCRICAO as TIPO_LOGRADOURO, 
+      D.DESCRICAO as CIDADE, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      E.UF, 
+      E.DESCRICAO as DESCR_ESTADO, 
+      b.descricao||' '||a.rua as TIPO_RUA 
+from LOGRADOURO A 
+     left join TIPO_LOGRADOURO B on 
+           B.ID_TIPO_LOGRADOURO = A.ID_TIPO_LOGRADOURO
+     left join CIDADE D on 
+           D.ID_UF = A.ID_UF and 
+           D.ID_CIDADE = A.ID_CIDADE
+     left join ESTADO E on 
+           E.ID_UF = D.ID_UF
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000755</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false">BandBox</obj_type_fk>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

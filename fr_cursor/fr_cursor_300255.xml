@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300255</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_OS</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_OS, 
+     A.ID_PESSOA, 
+     A.DATA_ABERTURA, 
+     A.KM_HORA, 
+     A.VALOR_PECAS, 
+     A.VALOR_TOTAL, 
+     A.STATUS, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.NOME as NOME_PESSOA, 
+     A.VALOR_SERVICO, 
+     A.ID_EMPRESA, 
+     A.ID_ITEM_PRODUTO, 
+     A.ID_MOTIVO_OS, 
+     D.DESCRICAO as DESCR_MOTIVO_OS, 
+     A.ID_TAREFA, 
+     E.DESCRICAO as DESCR_TAREFA, 
+     A.DATA_FECHAMENTO, 
+     A.USUARIO_FECHOU, 
+     A.DESCRICAO_SERVICO, 
+     A.USUARIO_LIBEROU, 
+     F.DESCRICAO as DESCR_ITEM, 
+     A.ID_ANEXO, 
+     A.ID_DEPTO, 
+     A.USUARIO_CANCELOU, 
+     A.DATA_CANCELOU, 
+     G.DESCRICAO as DESCR_STATUS, 
+     A.VALOR_FATURA, 
+     A.ID_TITULO, 
+     A.ID_OS_PRINCIPAL, 
+     H.APELIDO as APELIDO_EMPRESA, 
+     A.USUARIO_REPONSAVEL, 
+     A.DATA_PREVISTO 
+from XGP_OS A 
+     left join XGP_PESSOA B on 
+           B.ID_PESSOA = A.ID_PESSOA
+     left join XGP_MOTIVO_OS D on 
+           D.ID_MOTIVO_OS = A.ID_MOTIVO_OS
+     left join XTD_TAREFA E on 
+           E.ID_TAREFA = A.ID_TAREFA
+     left join XGP_ITEM F on 
+           F.ID_ITEM = A.ID_ITEM_PRODUTO
+     inner join XGP_STATUS G on 
+           G.STATUS = A.STATUS
+     inner join EMPRESA H on 
+           H.ID_EMPRESA = A.ID_EMPRESA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300251</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

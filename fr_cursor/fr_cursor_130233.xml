@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130233</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_AGENDA_SUPLEMENTO</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_fracao,
+       f.id_empresa,
+       f.cod_fracao, 
+       a.id_fracao,
+       a.id_estrategia,   
+       c.id_estrategia_trato,
+       c.nr_trato,
+       c.hora_inicial, 
+       c.hora_final,     
+       c.id_tipo_agenda,
+       b.id_formula,
+       COALESCE(c.perc_trato, 100) as perc_trato,
+       COALESCE(c.qtde_trato, 1) as qtde_trato,
+       c.dia_semana_ini,
+       c.dia_semana_fim,
+       c.id_forma_distr,
+       g.qtde_animais,
+       g.peso_medio
+       
+from xgp_fracao a
+
+inner join xgp_estrategia b on 
+    b.id_estrategia = a.id_estrategia
+
+inner join xgp_estrategia_trato c on 
+    c.id_estrategia = a.id_estrategia
+    
+left join xgp_fracao f on
+  f.id_fracao = a.id_fracao
+  
+left join (select a1.id_fracao,
+                  sum(a1.qtde_animais) as qtde_animais,
+                  avg(a1.peso_medio_animais) as peso_medio
+           from xgp_lote_animal a1
+           where qtde_animais > 0
+           group by a1.id_fracao) g on
+     g.id_fracao = a.id_fracao      
+
+where b.tipo_estrategia = 'S'  
+  and b.agendamento_automatico = 'S'
+  and g.qtde_animais > 0]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

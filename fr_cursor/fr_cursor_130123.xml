@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130123</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_AGENDA_ADAPTACAO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_AGENDA_ADAPTACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     E.COD_FRACAO, 
+     A.ID_EMPRESA, 
+     G.NOME as NOME_EMPRESA, 
+     A.NR_TRATO, 
+     A.ID_FORMULA, 
+     H.DESCRICAO as DESCR_FORMULA, 
+     A.DATA_INICIO, 
+     J.DESCRICAO as DESCR_ESTRATEGIA, 
+     K.DESCRICAO as DESCR_APARTE, 
+     G.APELIDO, 
+     A.GUID_APARTE_FRACAO 
+from XGP_AGENDA_ADAPTACAO A 
+     inner join XGP_APARTE_FRACAO L on 
+           L.GUID_APARTE_FRACAO = A.GUID_APARTE_FRACAO
+     inner join XGP_APARTE K on 
+           K.ID_APARTE = L.ID_APARTE
+     inner join XGP_FRACAO E on 
+           E.ID_FRACAO = L.ID_FRACAO
+     inner join EMPRESA G on 
+           G.ID_EMPRESA = A.ID_EMPRESA
+     inner join XGP_FORMULA H on 
+           H.ID_FORMULA = A.ID_FORMULA
+     left join XGP_ESTRATEGIA J on 
+           J.ID_ESTRATEGIA = K.ID_ESTRATEGIA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">130117</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

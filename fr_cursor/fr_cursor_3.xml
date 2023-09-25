@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">3</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">MASTERTABLE_PROPERTIES</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_form, a.id_dataset_master, a.id_dataset, a.id_att_master, a.id_dataset_att, 
+       a.id_dataset_filter, a.filter_type,  
+       b.att_name, 
+       b.id_cursor_att,       
+       c.att_name as att_name_master, 
+       c.id_cursor as id_cursor_master,
+       c.id_cursor_att as id_cursor_attMaster,
+       c.taborder,
+       d.id_type,
+       e.datatable as datatable_master,
+       e.alias as alias_master,
+       f.datatable,
+       f.alias,
+       h.filter_name
+from fr_master a
+left join fr_dataset_att b on
+  b.id_form = a.id_form and
+  b.id_dataset = a.id_dataset and
+  b.id_dataset_att = a.id_dataset_att
+
+inner join fr_dataset_att c on
+  c.id_form = a.id_form and
+  c.id_dataset = a.id_dataset_master and
+  c.id_dataset_att = a.id_att_master
+
+left join fr_cursor_att d on
+  d.id_cursor = c.id_cursor and
+  d.id_cursor_att = c.id_cursor_att
+
+inner join fr_dataset e on
+  e.id_form = a.id_form and
+  e.id_dataset = a.id_dataset_master 
+
+inner join fr_dataset f on
+  f.id_form = a.id_form and
+  f.id_dataset = a.id_dataset
+
+left join fr_dataset_filter g on
+  g.id_form = a.id_form and
+  g.id_dataset = a.id_dataset and
+  g.id_dataset_filter = a.id_dataset_filter
+
+left join fr_cursor_filter h on
+  h.id_cursor = g.id_cursor and
+  h.id_cursor_filter = g.id_cursor_filter 
+
+where a.filter_type = 'M']]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ANDREAS</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

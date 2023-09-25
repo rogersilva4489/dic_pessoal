@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">2500111</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">25006</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">BLOQUEADA</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">6</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">S/N caso esteja bloqueada alocação não será permitido a venda de um item nela e nem estocagem por
+uma entrada de nota.
+Esta locação mesmo que a empresa utilize WMS poderá colocar itens diferente ou seja o bloqueo que
+existe para quando utiliza o processo de WMS da locação não pode colocar itens diferente não será feito.
+OBS: caso o usuário queira saber o motivo que a locação esta bloqueado o mesmo deverá usaro nome
+da locação para identificar.</help>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <md5 data_type="character varying" is_pk="false">62DD375A7783985DCB08F8642C9A717C</md5>
+  <id_table data_type="integer" is_pk="false">60001341</id_table>
+  <id_cols data_type="integer" is_pk="false">60008</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false"/>
+</fr_cursor_att>

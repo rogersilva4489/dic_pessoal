@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">110031</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">PARAM_SISTEMA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      D.ID_PARAM, 
+      D.FINALIDADE, 
+      D.OBJETO, 
+      D.TIPO_PARAM, 
+      D.LIST_OPTIONS, 
+      D.LOOKUP_KEY_FIELD, 
+      D.LOOK_DISPLAY_FIELD, 
+      D.VALOR_DEFAULT, 
+      D.ATIVO, 
+      CASE
+         WHEN D.TIPO_PARAM = 'G' THEN 'GERAL'
+         WHEN D.TIPO_PARAM = 'P' THEN 'EMPRESA'
+         WHEN D.TIPO_PARAM = 'M' THEN 'MATRIZ'
+       END as TIPO_PARAM_DESC, 
+      D.ID_MODULO, 
+      D.LOOKUP_TABLE, 
+      D.LOOKUP_FILTER, 
+      E.DESCRICAO as DESCR_MODULO, 
+      D.USUARIO_CREATED, 
+      D.DATA_CREATED, 
+      D.USUARIO_CHANGED, 
+      D.DATA_CHANGED 
+from PARAM_SISTEMA D 
+     inner join FR_MODULO E on 
+           E.ID_PROJETO = D.ID_PROJETO and 
+           E.ID_MODULO = D.ID_MODULO
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000781</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">200</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false">BandBox</obj_type_fk>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

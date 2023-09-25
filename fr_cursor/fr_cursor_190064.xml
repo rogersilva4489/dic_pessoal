@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">190064</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">PESSOA_ENDERECO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_PESSOA, 
+      A.ID_ENDERECO, 
+      A.CEP, 
+      A.EN_TIPO_ENDERECO, 
+      A.ID_TIPO_LOGRADOURO, 
+      A.RUA, 
+      A.FACHADA, 
+      A.BAIRRO, 
+      A.ID_UF, 
+      A.ID_CIDADE, 
+      A.COMPLEMENTO, 
+      A.INSCRICAO_ESTADUAL, 
+      A.INSCRICAO_MUNICIPAL, 
+      A.ATIVO, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      E.DESCRICAO as DESCR_CIDADE, 
+      F.UF, 
+      J.DESCRICAO as DESCR_TIPO_LOGRADOURO, 
+      L.DESCRICAO as DESCR_TIPO_ENDERECO, 
+      M.ID_ENDERECO_COBRANCA, 
+      M.ID_ENDERECO_FATURAMENTO, 
+      A.LATITUDE, 
+      A.LONGITUDE 
+from PESSOA_ENDERECO A 
+     left join CIDADE E on 
+           E.ID_UF = A.ID_UF and 
+           E.ID_CIDADE = A.ID_CIDADE
+     left join ESTADO F on 
+           F.ID_UF = E.ID_UF
+     left join TIPO_LOGRADOURO J on 
+           J.ID_TIPO_LOGRADOURO = A.ID_TIPO_LOGRADOURO
+     left join VW_TIPO_ENDERECO L on 
+           L.EN_TIPO_ENDERECO = A.EN_TIPO_ENDERECO
+     left join PESSOA_DIVERSOS M on 
+           M.ID_PESSOA = A.ID_PESSOA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000999</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">300</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

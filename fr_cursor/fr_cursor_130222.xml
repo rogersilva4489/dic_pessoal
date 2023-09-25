@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130222</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_EMBRIAO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_EMBRIAO, 
+     A.ID_TECNICO, 
+     A.ID_ANIMAL_MAE, 
+     A.ID_ANIMAL_PAI, 
+     A.ID_ITEM, 
+     A.DESCRICAO, 
+     A.ORIGEM, 
+     A.CLASSIFICACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.ID_EMBRIAO_TEC, 
+     B.DESCRICAO as DESCR_EMBRIAO_TEC, 
+     C.DESCRICAO as DESCR_ITEM, 
+     A.ATIVO 
+from XGP_EMBRIAO A 
+     left join XGP_EMBRIAO_TEC B on 
+           B.ID_EMBRIAO_TEC = A.ID_EMBRIAO_TEC
+     left join XGP_ITEM C on 
+           C.ID_ITEM = A.ID_ITEM
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">130207</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

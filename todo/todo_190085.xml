@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">190085</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110015</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Que é a seguinte: Por exemplo temos o form Compra e este form tenho mais dois forms acessórios de Partial Form. Quando gero o partialForm1 ele remove os dataSet do PartialForm2, no caso remove do CompraRN. E quando gero o PartialForm2 ele remove os dataSet do partialForm1 e vice versa. Só quando gero o Form de Compra que ele para de ficar tirando os dataset um dos outros. Não sei ao certo o ponto que isso daria problema no futuro.</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Resolvido</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2017-06-08T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60006</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">14002</id_categoria>
+</todo>

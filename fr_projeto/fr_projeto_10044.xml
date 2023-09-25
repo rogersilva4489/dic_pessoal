@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_projeto>
+  <id_projeto data_type="integer" is_pk="true">10044</id_projeto>
+  <descricao data_type="character varying" is_pk="false">Freedom</descricao>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false"/>
+  <sql_padrao data_type="character" is_pk="false">A</sql_padrao>
+  <svn_report_url data_type="character varying" is_pk="false"/>
+  <svn_script_url data_type="character varying" is_pk="false"/>
+  <cursor_updating data_type="character" is_pk="false">S</cursor_updating>
+  <cursor_name data_type="character" is_pk="false">S</cursor_name>
+  <requered_audit data_type="character" is_pk="false">S</requered_audit>
+  <requered_hash data_type="character" is_pk="false">N</requered_hash>
+  <dir_projeto data_type="character varying" is_pk="false">C:\projects\negocio</dir_projeto>
+  <dir_cursor data_type="character varying" is_pk="false">c:\projects\negocio\modulos\cursores\src\freedom\bytecode\cursor</dir_cursor>
+  <dir_template data_type="character varying" is_pk="false">C:\projects\negocio\design\template</dir_template>
+  <tipo_projeto data_type="character" is_pk="false">W</tipo_projeto>
+  <cursor_temp data_type="character varying" is_pk="false">cursor.prg</cursor_temp>
+  <tipo_frontend data_type="character" is_pk="false">ZK</tipo_frontend>
+  <dir_frontend data_type="character varying" is_pk="false">ZK</dir_frontend>
+</fr_projeto>

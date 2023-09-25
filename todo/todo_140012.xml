@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">140012</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false"/>
+  <solicitacao data_type="character varying" is_pk="false">Criar/Definir Hash ou MD5 como palavra reservada para o freedom</solicitacao>
+  <solucao data_type="character varying" is_pk="false"/>
+  <responsavel data_type="character varying" is_pk="false">GERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-12-07T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60006</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">14001</id_categoria>
+</todo>

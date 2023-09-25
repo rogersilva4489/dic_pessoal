@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_test_suite>
+  <id_test_suite data_type="integer" is_pk="true">190020</id_test_suite>
+  <test_suite_name data_type="character varying" is_pk="false">Login</test_suite_name>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_projeto data_type="integer" is_pk="false">10044</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">10041</id_modulo>
+  <seq_id_test_suite data_type="integer" is_pk="false">1</seq_id_test_suite>
+  <anotacoes data_type="character varying" is_pk="false"/>
+  <id_form_tmp data_type="integer" is_pk="false">190062</id_form_tmp>
+</fr_test_suite>

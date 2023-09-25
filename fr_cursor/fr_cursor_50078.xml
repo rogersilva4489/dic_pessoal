@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">50078</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XDE_TOTALIZADOR</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.VALOR1, 
+      A.AV1, 
+      A.VALOR2, 
+      A.AV2, 
+      A.AH2, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.ID_DRE, 
+      B.ORDEM_APRESENTACAO, 
+      B.DESCRICAO as DESCR_DRE, 
+      case when b.tipo_registro = 'T'
+                 or b.tipo_registro = 'L' then
+                 upper(b.descricao)
+         else
+                 '        '||b.descricao
+end  as DESCR_DRE_AUX, 
+      B.TIPO_REGISTRO, 
+      B.ID_GRUPO 
+from XDE_TOTALIZADOR A 
+     inner join XDE_DRE B on 
+           B.ID_DRE = A.ID_DRE
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">50085</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

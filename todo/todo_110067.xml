@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110067</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110061</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">Modifiquei os campos para not null e pedi para gerar o Script para atualizar no banco. Porém a sintaxe de comando não esta gerando corretamente para o postgres.
+Errado:
+alter table CIDADE modify column DESCRICAO not null;
+Correto:
+ALTER TABLE cidade ALTER COLUMN descricao SET NOT NULL;</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Gerson. Corrigiu Problema]</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-11-11T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60005</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">11004</id_categoria>
+</todo>

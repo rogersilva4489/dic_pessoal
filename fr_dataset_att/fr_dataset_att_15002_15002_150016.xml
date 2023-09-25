@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_dataset_att>
+  <id_form data_type="integer" is_pk="true">15002</id_form>
+  <id_dataset data_type="integer" is_pk="true">15002</id_dataset>
+  <id_dataset_att data_type="integer" is_pk="true">150016</id_dataset_att>
+  <id_form_rel data_type="integer" is_pk="false"/>
+  <id_dataset_lkp data_type="integer" is_pk="false"/>
+  <id_attribute_lkpkey data_type="integer" is_pk="false"/>
+  <id_attribute_lkpdesc data_type="integer" is_pk="false"/>
+  <id_cursor data_type="integer" is_pk="false">150011</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="false">110016</id_cursor_att>
+  <att_name data_type="character varying" is_pk="false">QUERY_HTML</att_name>
+  <title data_type="character varying" is_pk="false">Query Html</title>
+  <width data_type="integer" is_pk="false">400</width>
+  <height data_type="integer" is_pk="false">42</height>
+  <show_grid data_type="character" is_pk="false">N</show_grid>
+  <title_grid data_type="character varying" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <width_grid data_type="integer" is_pk="false"/>
+  <flex_grid data_type="character" is_pk="false"/>
+  <compute_grid data_type="character varying" is_pk="false"/>
+  <title_compute_grid data_type="character varying" is_pk="false"/>
+  <addmsg data_type="character" is_pk="false"/>
+  <serial data_type="character" is_pk="false"/>
+  <format data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <pwd data_type="character" is_pk="false"/>
+  <required data_type="character" is_pk="false"/>
+  <taborder data_type="integer" is_pk="false">16</taborder>
+  <updatable data_type="character" is_pk="false">S</updatable>
+  <readonly data_type="character" is_pk="false">N</readonly>
+  <show_form data_type="character" is_pk="false">N</show_form>
+  <newline data_type="integer" is_pk="false">1</newline>
+  <full_size data_type="character" is_pk="false">S</full_size>
+  <orderby data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false"/>
+  <id_conteiner data_type="integer" is_pk="false"/>
+  <obj_type data_type="character varying" is_pk="false">Memo</obj_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_dataset_rel data_type="integer" is_pk="false"/>
+  <id_attribute_rel data_type="integer" is_pk="false"/>
+  <row data_type="integer" is_pk="false"/>
+  <col data_type="integer" is_pk="false"/>
+  <row_span data_type="integer" is_pk="false"/>
+  <col_span data_type="integer" is_pk="false"/>
+  <lbl_row data_type="integer" is_pk="false"/>
+  <lbl_col data_type="integer" is_pk="false"/>
+  <keyfield_treegrid data_type="character" is_pk="false"/>
+  <retain data_type="character" is_pk="false"/>
+  <help data_type="character varying" is_pk="false"/>
+  <id_attribute_lkpsearch data_type="integer" is_pk="false"/>
+  <parentfield_treegrid data_type="character" is_pk="false"/>
+  <build_order data_type="character" is_pk="false"/>
+  <flex_grid_col_desktop data_type="integer" is_pk="false"/>
+  <flex_grid_col_tablet data_type="integer" is_pk="false"/>
+  <flex_grid_col_celular data_type="integer" is_pk="false"/>
+  <break_line data_type="character" is_pk="false"/>
+  <id_dataset_upd data_type="integer" is_pk="false"/>
+  <id_attribute_upd data_type="integer" is_pk="false"/>
+</fr_dataset_att>

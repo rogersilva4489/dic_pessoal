@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">130200</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[WITH RECURSIVE grupo AS (
+   SELECT a.id_grupo, a.id_grupo_pai, upper(a.descricao) as descricao, a.tipo, ARRAY[a.id_grupo] path, ' ' as espaco
+   from xgp_grupo a where id_grupo_pai is null
+   UNION ALL
+   SELECT a1.id_grupo, a1.id_grupo_pai, a1.descricao as descricao, a1.tipo, g.path||a1.id_grupo, g.espaco||'1.'
+   from xgp_grupo a1, grupo g
+   where a1.id_grupo_pai = g.id_grupo
+) 
+SELECT g1.id_grupo, g1.id_grupo_pai, g1.espaco||' '||g1.descricao as descricao, g1.tipo, g1.path
+FROM grupo g1 order by path]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

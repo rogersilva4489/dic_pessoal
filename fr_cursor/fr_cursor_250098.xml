@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">250098</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">CP_COMPRA_ITEM</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_COMPRA, 
+      A.ID_COMPRA_ITEM, 
+      A.ID_OPERACAO, 
+      A.ID_EMPRESA, 
+      A.ID_ITEM, 
+      A.ID_CARDEX_ITEM, 
+      A.QTDE, 
+      A.VALOR_UNITARIO, 
+      A.PERC_DESCONTO, 
+      A.VALOR_DESCONTO, 
+      A.VALOR_LIQUIDO_FINAL, 
+      A.ALIQ_IPI, 
+      A.PEDIDO_FORNECEDOR, 
+      A.VOLUME, 
+      A.VALOR_FRETE, 
+      A.VALOR_SEGURO, 
+      A.VALOR_DESP_ACESSORIA, 
+      A.VALOR_DESCONTO_RATEADO, 
+      A.USUARIO_CHANGED, 
+      A.USUARIO_CREATED, 
+      A.DATA_CHANGED, 
+      A.DATA_CREATED, 
+      B.COD_ITEM, 
+      B.DESCRICAO as DESCR_ITEM, 
+      A.PESO_LIQUIDO, 
+      A.VALOR_LIQUIDO, 
+      A.VALOR_CUSTO_COMPRA, 
+      A.VALOR_CUSTO_MEDIO, 
+      A.OBS_TRIB_XML, 
+      A.DATA_ENTRADA, 
+      C.ID_TIPO_OPERACAO, 
+      C.DESCRICAO as OP_SYS_DESCRICAO, 
+      C.CREDITAR_ICMS as OP_SYS_CREDITAR_ICMS, 
+      C.GERAR_FINANCEIRO as OP_SYS_GERAR_FINANCEIRO, 
+      C.TIPO_ITEM as OP_SYS_TIPO_ITEM, 
+      C.MOVIMENTAR_ESTOQUE as OP_SYS_MOVIMENTAR_ESTOQUE, 
+      C.GERAR_PRECO_VENDA as OP_SYS_GERAR_PRECO_VENDA, 
+      C.CALC_ICMS_DIFAL as OP_SYS_CALC_ICMS_DIFAL, 
+      C.CALC_TRANSP_ESTOQUE as OP_SYS_CALC_TRANSP_ESTOQUE, 
+      E.ID_RETENCAO_IRRF, 
+      E.ID_RETENCAO_INSS, 
+      E.ID_NBS, 
+      F.TIPO_IMPOSTO, 
+      G.ID_PRODUTOS_ANP, 
+      A.VALOR_FRETE_RATEADO 
+from CP_COMPRA_ITEM A 
+     left join TB_ITEM B on 
+           B.ID_ITEM = A.ID_ITEM
+     left join TB_OPERACAO_SISTEMA C on 
+           C.ID_OPERACAO = A.ID_OPERACAO
+     left join SE_SERVICO E on 
+           E.ID_ITEM = B.ID_ITEM
+     left join SE_NBS F on 
+           F.ID_NBS = E.ID_NBS
+     left join TB_PRODUTO G on 
+           G.ID_ITEM = B.ID_ITEM
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000146</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200145</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">CRM_TAREFA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_PROJETO, 
+      A.ID_TAREFA, 
+      A.ID_AGENDAMENTO, 
+      A.ID_REQUISICAO, 
+      A.ID_TAREFA_PAI, 
+      A.ID_QUESTIONARIO, 
+      A.ID_RECURSO, 
+      A.DESCRICAO, 
+      A.DURACAO, 
+      A.DATA_INICIO, 
+      A.DATA_TERMINO, 
+      A.ORDEM, 
+      A.CONTROLE_ORDEM, 
+      A.PERC_TERMINADO, 
+      A.SEMAFARO, 
+      A.COR, 
+      A.NEGRITO, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      A.EN_TIPO 
+from CRM_TAREFA A 
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">6000357</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

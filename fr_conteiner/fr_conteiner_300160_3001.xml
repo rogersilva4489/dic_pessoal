@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_conteiner>
+  <id_form data_type="integer" is_pk="true">300160</id_form>
+  <id_conteiner data_type="integer" is_pk="true">3001</id_conteiner>
+  <id_conteiner_principal data_type="integer" is_pk="false"/>
+  <title data_type="character varying" is_pk="false">Auditoria</title>
+  <name data_type="character varying" is_pk="false">gbAudittbXgpTouro</name>
+  <width data_type="integer" is_pk="false"/>
+  <height data_type="integer" is_pk="false"/>
+  <obj_type data_type="character varying" is_pk="false">GroupBox</obj_type>
+  <id_aplicacao data_type="character" is_pk="false"/>
+  <nr_col_edition data_type="integer" is_pk="false"/>
+  <closed data_type="character" is_pk="false">S</closed>
+  <groupbox_style data_type="character" is_pk="false">L</groupbox_style>
+  <caption_color data_type="character varying" is_pk="false">255</caption_color>
+  <gridpanel_layout data_type="character varying" is_pk="false"/>
+  <top data_type="integer" is_pk="false"/>
+  <break_line data_type="character" is_pk="false"/>
+  <flex_grid_col_desktop data_type="integer" is_pk="false"/>
+  <flex_grid_col_tablet data_type="integer" is_pk="false"/>
+  <flex_grid_col_celular data_type="integer" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">0</ordem>
+</fr_conteiner>

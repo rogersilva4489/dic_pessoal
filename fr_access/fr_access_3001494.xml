@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_access>
+  <id_access data_type="integer" is_pk="true">3001494</id_access>
+  <descricao data_type="character varying" is_pk="false">Horimetro - APP Mobile</descricao>
+  <perigoso data_type="character" is_pk="false">N</perigoso>
+  <obj_name data_type="character varying" is_pk="false"/>
+  <id_form data_type="integer" is_pk="false">300244</id_form>
+  <ordem data_type="integer" is_pk="false"/>
+</fr_access>

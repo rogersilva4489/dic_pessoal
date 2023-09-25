@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">190035</id_table>
+  <db_name data_type="character varying" is_pk="true">ORA</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[SELECT U.ID_USUARIO, C.NOME AS NOME_COLABORADOR, H.DESCRICAO AS DESCRICAO_HORARIO, HD.EN_DIA_SEMANA, VW.DESCRICAO AS DIA_SEMANA, 
+       HD.HORA_ENTRADA_MANHA, HD.HORA_SAIDA_MANHA, HD.HORA_ENTRADA_TARDE, HD.HORA_SAIDA_TARDE
+FROM HORARIO_DETALHE HD
+JOIN HORARIO H ON H.ID_HORARIO = HD.ID_HORARIO
+JOIN COLABORADOR C ON C.ID_HORARIO = H.ID_HORARIO
+JOIN VW_HORARIO_DETALHE_EN_DIA_SEMA VW ON VW.EN_DIA_SEMANA = HD.EN_DIA_SEMANA
+LEFT JOIN USUARIO U ON U.ID_PESSOA = C.ID_PESSOA
+ORDER BY C.NOME, HD.EN_DIA_SEMANA]]></body>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+</db_body>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300265</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ALMOXARIFADO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+      A.ID_ALMOXARIFADO, 
+      A.ID_MOTIVO_BAIXA, 
+      A.ID_PESSOA_USO, 
+      A.ID_ITEM, 
+      A.DATA, 
+      A.QTDE_ESTOQUE, 
+      A.CUSTO_MEDIO, 
+      A.CUSTO_TOTAL, 
+      A.OBSERVACAO, 
+      A.USUARIO_CREATED, 
+      A.DATA_CREATED, 
+      A.USUARIO_CHANGED, 
+      A.DATA_CHANGED, 
+      A.ID_EMPRESA, 
+      A.ID_CARDEX, 
+      B.DESCRICAO as DESCR_ITEM, 
+      C.NOME as NOME_PESSOA, 
+      D.DESCRICAO as DESCR_MOTIVO_BAIXA 
+from XGP_ALMOXARIFADO A 
+     inner join XGP_ITEM B on 
+           B.ID_ITEM = A.ID_ITEM
+     inner join XGP_PESSOA C on 
+           C.ID_PESSOA = A.ID_PESSOA_USO
+     inner join XGP_MOTIVO_BAIXA D on 
+           D.ID_MOTIVO_BAIXA = A.ID_MOTIVO_BAIXA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300291</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

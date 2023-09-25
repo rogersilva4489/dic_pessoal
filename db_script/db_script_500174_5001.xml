@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_script>
+  <id_table data_type="integer" is_pk="true">500174</id_table>
+  <id_script data_type="integer" is_pk="true">5001</id_script>
+  <descricao data_type="character varying" is_pk="false">XGP_Manejo_Operacao</descricao>
+  <script data_type="character varying" is_pk="false">Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(1, 'Outras Operações', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set descricao = 'Outras Operações' where id_manejo_operacao = 1;
+update xgp_manejo_operacao set aplicacao = 'O' where id_manejo_operacao = 1;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(2, 'Cobertura', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set descricao = 'Cobertura' where id_manejo_operacao = 2;
+update xgp_manejo_operacao set aplicacao = 'I' where id_manejo_operacao = 2;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(3, 'Engorda', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set descricao = 'Engorda' where id_manejo_operacao = 3;
+update xgp_manejo_operacao set aplicacao = 'E' where id_manejo_operacao = 3;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(5, 'D0', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set descricao = 'D0' where id_manejo_operacao = 5;
+update xgp_manejo_operacao set aplicacao = 'I' where id_manejo_operacao = 5;
+
+-- Operação que serve para definir os touros da ficha para os touros multiplos de repasse
+-- Se a fazenda não faz exame de DNA não tem necessidade de usar essa operação
+--Insert into xgp_manejo_operacao 
+--(id_manejo_operacao, descricao, usuario_created, data_created) values 
+--(6, 'Def. Animal para TM', 'GERSON', '27/11/2020');
+--update xgp_manejo_operacao set descricao = 'Def. Animal para TM' where id_manejo_operacao = 6;
+--update xgp_manejo_operacao set aplicacao = 'O' where id_manejo_operacao = 6;
+delete from xgp_manejo_operacao where id_manejo_operacao = 6;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(7, 'Outros Manejos Monta', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set descricao = 'Outros Manejos Monta' where id_manejo_operacao = 7;
+update xgp_manejo_operacao set aplicacao = 'I' where id_manejo_operacao = 7;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(9, 'Inventário Animais', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set aplicacao = 'O' where id_manejo_operacao = 9;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(11, 'Acasalamento Matriz e Touro', 'GERSON', '14/01/2023');
+update xgp_manejo_operacao set aplicacao = 'O' where id_manejo_operacao = 11;
+update xgp_manejo_operacao set descricao = 'Acasalamento Matriz e Touro' where id_manejo_operacao = 11;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(12, 'Ler Acasalamento', 'GERSON', '14/01/2023');
+update xgp_manejo_operacao set aplicacao = 'O' where id_manejo_operacao = 12;
+update xgp_manejo_operacao set descricao = 'Acasalamento' where id_manejo_operacao = 12;
+
+Insert into xgp_manejo_operacao 
+(id_manejo_operacao, descricao, usuario_created, data_created) values 
+(14, 'Repasse', 'GERSON', '27/11/2020');
+update xgp_manejo_operacao set descricao = 'Repasse' where id_manejo_operacao = 14;
+update xgp_manejo_operacao set aplicacao = 'O' where id_manejo_operacao = 14;
+
+</script>
+  <ordem data_type="integer" is_pk="false">1</ordem>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_script>

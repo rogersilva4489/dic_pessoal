@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200161</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_PESSOA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_PESSOA, 
+     A.NOME, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.COD_CLIENTE, 
+     A.ID_GRUPO, 
+     A.NOME_FANTASIA, 
+     A.TIPO_PESSOA, 
+     A.EMAIL, 
+     A.SITE, 
+     A.DATA_VENC_CADASTRO, 
+     A.LIMITE_CREDITO, 
+     A.BLOQUEADO, 
+     A.MOTIVO_BLOQUEIO, 
+     A.NAO_BLOQ_AUTOMATICO, 
+     A.OBS_VENDA, 
+     A.ID_CATEGORIA, 
+     B.DESCRICAO as DESCR_CATEGORIA, 
+     C.DESCRICAO as DESCR_GRUPO, 
+     A.ID_EMPRESA, 
+     A.INSCRICAO_ESTADUAL, 
+     A.PRODUTOR_RURAL, 
+     A.SOLICITA_ORDEM_COMPRA, 
+     d.ddd||'-'||d.telefone as TELEFONE, 
+     case when a.nome_fantasia is not null then
+             a.nome||' / '||a.nome_fantasia
+        else 
+             a.nome
+end  as NOME_E_FANTASIA, 
+     A.ID_ANEXO, 
+     A.ID_CLASSE_DESCONTO 
+from XGP_PESSOA A 
+     inner join XPE_CATEGORIA B on 
+           B.ID_CATEGORIA = A.ID_CATEGORIA
+     left join XPE_GRUPO C on 
+           C.ID_GRUPO = A.ID_GRUPO
+     left join XPE_TELEFONE D on 
+           d.id_pessoa = a.id_pessoa
+           and d.contato = 'S'
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200172</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

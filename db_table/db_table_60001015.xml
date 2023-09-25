@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">60001015</id_table>
+  <table_name data_type="character varying" is_pk="false">PREFIXO_TEL_LOCAL</table_name>
+  <commet data_type="character varying" is_pk="false">Esta tabela é utilizada para a ação de ligação do Voip
+precisamos excluir o ddd quando a ligação é local porem existe cidades de interior na qual tem o mesmo ddd mais neste caso precisa ter o ddd, desta forma esta tabela irá cadastrar somente os prefixo que nao precisa de ddd, e seram excluido o ddd na ação do voip, para que seja feito uma ligação local.
+ex: será cadastrado os prefixos de cuiabá e varzea grande na qual a ligação será local.
+para funcionar desta forma deve ser retirado o ddd do parametro que era utilizado  DDD_EXCLUIR_VOIP porque senao será excluido todos os ddd que tiverem igual ao do parametro.</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">3</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

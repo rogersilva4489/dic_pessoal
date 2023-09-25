@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sync_version>
+  <id_version data_type="integer" is_pk="true">1</id_version>
+  <date_version data_type="timestamp without time zone" is_pk="false">2010-01-21T00:00:00.000</date_version>
+  <version data_type="integer" is_pk="false">693</version>
+  <tag data_type="integer" is_pk="false">0</tag>
+  <user_logged data_type="character varying" is_pk="false"/>
+</sync_version>

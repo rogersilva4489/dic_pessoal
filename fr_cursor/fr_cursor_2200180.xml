@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">2200180</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ENTRADA</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_ENTRADA, 
+     A.ID_LOTE, 
+     A.DATA_ENTRADA, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     B.DESCRICAO as DESCR_LOTE, 
+     A.DATA_ESTOQUE, 
+     A.USUARIO_ESTOQUE, 
+     A.STATUS, 
+     A.DESCRICAO, 
+     A.ID_TAREFA, 
+     A.ID_EMPRESA, 
+     A.ID_OPERACAO, 
+     C.DESCRICAO as DESCR_OPERACAO, 
+     A.ID_EMPRESA_TRANSF, 
+     C.TIPO, 
+     A.ARQUIVO, 
+     A.ID_TITULO, 
+     A.VALOR_ADTO, 
+     A.VALOR_PAGAR, 
+     A.TOTAL_PAGO, 
+     A.TOTAL_UNITARIO, 
+     A.CRITICA_ENTRADA, 
+     A.TOTAL_DESPESAS, 
+     A.VALOR_DEVOLUCAO, 
+     A.VALOR_RECEBER, 
+     D.APELIDO as APELIDO_EMPRESA, 
+     A.ID_PROTOCOLO, 
+     A.ID_APARTE 
+from XGP_ENTRADA A 
+     left join XGP_LOTE B on 
+           B.ID_LOTE = A.ID_LOTE
+     left join XGP_OPERACAO C on 
+           C.ID_OPERACAO = A.ID_OPERACAO
+     left join EMPRESA D on 
+           D.ID_EMPRESA = A.ID_EMPRESA
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">2200194</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_form>
+  <id_form data_type="integer" is_pk="true">250034</id_form>
+  <title data_type="character varying" is_pk="false">Cotação</title>
+  <name data_type="character varying" is_pk="false">TbCotacao</name>
+  <help data_type="character varying" is_pk="false">Tabela onde são definidos os grupos de cotações que um determinado item do estoque pertence, este grupo tem a finalidade separar os fornecedores de um determinado produto. Ex: Grupo BMW, Grupo VW</help>
+  <readonly data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <id_form_type data_type="character" is_pk="false">D</id_form_type>
+  <id_cardinalidade data_type="character" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false">10044</id_projeto>
+  <id_modulo data_type="integer" is_pk="false">40008</id_modulo>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <id_form_tmp data_type="integer" is_pk="false"/>
+  <id_form_function data_type="character" is_pk="false">1</id_form_function>
+  <changed_prop data_type="character" is_pk="false">N</changed_prop>
+  <id_form_ref data_type="integer" is_pk="false"/>
+  <id_imagem data_type="integer" is_pk="false">19001</id_imagem>
+  <eh_template data_type="character" is_pk="false">N</eh_template>
+  <id_tecnologia data_type="character varying" is_pk="false">ZK</id_tecnologia>
+</fr_form>

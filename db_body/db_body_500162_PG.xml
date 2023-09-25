@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">500162</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select a.id_empresa,
+       a.id_fracao, 
+       a.id_estrategia,
+       a.id_tipo_aparte,
+       a.cod_fracao, 
+       a.capacidade,
+       cast(c.peso_total /450 as integer) as lotacao_ua,
+       c.qtde_animais,
+       case when c.qtde_animais is not null and c.qtde_animais > 0 then
+           CAST(c.peso_total/c.qtde_animais as Integer) 
+       else 
+           null
+       end as peso_medio_animais,
+       c.data_media_nasc,       
+       d.descricao as descr_estrategia,
+       e.descricao as descr_tipo_aparte,
+       a.data_inicio
+from xgp_fracao a
+
+left join (select a1.id_fracao,
+             sum(a1.qtde_animais) as qtde_animais,
+             sum(a1.peso_medio_animais * a1.qtde_animais) as peso_total,
+             CAST(to_timestamp(avg(extract(epoch from a1.data_media_nasc))) as date) as data_media_nasc
+           from xgp_lote_animal a1
+           group by a1.id_fracao) c on
+   c.id_fracao = a.id_fracao
+
+left join xgp_estrategia d on
+   d.id_estrategia = a.id_estrategia      
+
+left join xgp_tipo_aparte e on
+   e.id_tipo_aparte = a.id_tipo_aparte
+
+where a.id_fracao_modulo is null
+  and a.ativo = 'S'
+  and a.tipo_fracao in ('P', 'M', 'C')
+
+order by a.cod_fracao]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

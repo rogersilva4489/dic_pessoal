@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_table>
+  <id_table data_type="integer" is_pk="true">600094</id_table>
+  <table_name data_type="character varying" is_pk="false">COMPENSACAO_FINAN</table_name>
+  <commet data_type="character varying" is_pk="false">Tabela onde são registrados o processo de compensação de documentos no financeiro. Geralmente o processo de compensação envolve 2 transações por exemplo baixa do contas a receber e entrada de cheque, dessa forma, quando ocorre a primeira transação é registrada nesta tabela com status "Pendente" e quando ocorre a 2a. transação o status é alterado para "Baixado". Esta tabela tambem servira para informar aos usuarios as compensações que estão pendentes ao efetuarem logon no sistema.
+</commet>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <ora data_type="text" is_pk="false"/>
+  <pg data_type="text" is_pk="false"/>
+  <type data_type="character" is_pk="false">T</type>
+  <seq_id_cols data_type="integer" is_pk="false">13</seq_id_cols>
+  <usuario_locked data_type="character varying" is_pk="false">GERSON</usuario_locked>
+  <comment_locked data_type="character varying" is_pk="false"/>
+  <is_fix_table data_type="character" is_pk="false"/>
+</db_table>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">250017</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false"/>
+  <solicitacao data_type="character varying" is_pk="false">poermitir usuario informar texto com o que precisa ser feito na compra.</solicitacao>
+  <solucao data_type="character varying" is_pk="false"/>
+  <responsavel data_type="character varying" is_pk="false">ROGERIO</responsavel>
+  <status data_type="character" is_pk="false">N</status>
+  <percentual_concluido data_type="numeric" is_pk="false">0</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">11006</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">25001</id_categoria>
+</todo>

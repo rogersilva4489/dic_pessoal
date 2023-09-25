@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300202</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_CFGIMP_DETALHE</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_CFGIMP, 
+     A.ID_CFGIMP_DETALHE, 
+     A.TABELA, 
+     A.CAMPO, 
+     A.TIPO_VALOR, 
+     A.VALOR, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.POSICAO, 
+     A.COLUMN_NAME, 
+     C.DATA_TYPE, 
+     C.DATA_LENGTH, 
+     C.DATA_PRECISION, 
+     C.DATA_SCALE, 
+     C.NULLABLE 
+from XGP_CFGIMP_DETALHE A 
+     inner join XGP_CFGIMP B on 
+           B.ID_CFGIMP = A.ID_CFGIMP
+     left join VIEW_TAB_COLUMNS C on 
+           c.table_name = b.table_name and 
+           c.column_name = a.column_name
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300234</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

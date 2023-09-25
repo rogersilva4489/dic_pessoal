@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">1303</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[CREATE OR REPLACE FUNCTION gera_ordem_lcontas() RETURNS varchar AS 
+$body$
+DECLARE
+
+  idConta INTEGER;
+  dataLanc Date;
+  ordem Integer;
+
+  c_lcontas cursor FOR
+  select l.id_conta, l.data, l.id_lcontas
+  from xgp_lcontas l 
+  order by l.id_conta, l.data, l.id_lcontas;
+
+BEGIN
+   
+   ordem = 1;
+   idConta = 0;
+   dataLanc = CURRENT_DATE;
+   for r in c_lcontas LOOP
+       if r.id_conta <> idConta or r.data <> dataLanc then
+          -- ultima sequencia gerada para conta na data
+          if idConta > 0 then
+              update xgp_saldo set 
+                seq_ordem_lanc = ordem 
+              where id_conta = idConta
+                and data = dataLanc;
+          end if;
+          ordem = 1;
+          idConta = r.id_conta;
+          dataLanc = r.data;
+       end if;
+       
+       update xgp_lcontas set 
+       ordem_lanc = ordem 
+       where id_lcontas = r.id_lcontas;
+
+       ordem = ordem + 1;
+   end loop;
+   
+   return 'Ok pronto';
+   
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY INVOKER
+COST 100;
+]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

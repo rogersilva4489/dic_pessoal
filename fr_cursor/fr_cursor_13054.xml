@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">13054</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_NASCIMENTO</cursor_name>
+  <tipo data_type="character" is_pk="false">B</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select 
+     A.ID_NASCIMENTO, 
+     A.ID_ANIMAL, 
+     A.ID_ANIMAL_MAE, 
+     A.ID_ESPECIE, 
+     A.ID_RACA, 
+     A.GUID, 
+     A.TIPO_NASCIMENTO, 
+     A.COD_ANIMAL, 
+     A.DATA_NASCIMENTO, 
+     A.SEXO, 
+     A.PESO_INICIAL, 
+     A.COD_ANIMAL_MAE, 
+     A.OBSERVACAO, 
+     A.USUARIO_CREATED, 
+     A.DATA_CREATED, 
+     A.USUARIO_CHANGED, 
+     A.DATA_CHANGED, 
+     A.STATUS, 
+     A.ID_EMPRESA, 
+     A.ID_CATEGORIA, 
+     A.ID_CAMPANHA, 
+     A.ID_CARDEX_ANIMAL, 
+     B.DESCRICAO as DESCR_ESPECIE, 
+     C.DESCRICAO as DESCR_RACA, 
+     D.NOME as NOME_EMPRESA, 
+     A.ID_FRACAO, 
+     E.COD_FRACAO, 
+     A.ID_LOTE_CARDEX, 
+     A.FOI_PESADO, 
+     A.ID_TIPO_PRENHEZ, 
+     A.TEMPO_GESTACAO, 
+     A.INTERVALO_PARTO, 
+     D.APELIDO, 
+     A.ID_ANIMAL_PAI, 
+     coalesce(g.cod_animal, g.cod_botom_manejo) as DESC_ANIMAL_TOURO, 
+     A.ID_TOURO_LIXO 
+from XGP_NASCIMENTO A 
+     left join XGP_ESPECIE B on 
+           B.ID_ESPECIE = A.ID_ESPECIE
+     left join XGP_RACA C on 
+           C.ID_RACA = A.ID_RACA
+     inner join EMPRESA D on 
+           D.ID_EMPRESA = A.ID_EMPRESA
+     left join XGP_FRACAO E on 
+           E.ID_FRACAO = A.ID_FRACAO
+     left join XGP_ANIMAL G on 
+           g.id_animal = a.id_animal_pai
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false">300245</id_table_updating>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_modulo>
+  <id_projeto data_type="integer" is_pk="true">400017</id_projeto>
+  <id_modulo data_type="integer" is_pk="true">40009</id_modulo>
+  <descricao data_type="character varying" is_pk="false">Integrador</descricao>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <svn_source_url data_type="character varying" is_pk="false"/>
+  <eh_template data_type="character" is_pk="false">N</eh_template>
+  <dir_cursor data_type="character varying" is_pk="false"/>
+  <tipo_projeto_java data_type="character" is_pk="false"/>
+  <tipo_versionamento data_type="character" is_pk="false">B</tipo_versionamento>
+  <cod_acesso data_type="character varying" is_pk="false"/>
+  <show_home data_type="character varying" is_pk="false"/>
+  <context_path data_type="character varying" is_pk="false"/>
+</fr_modulo>

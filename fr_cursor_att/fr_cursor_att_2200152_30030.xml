@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor_att>
+  <id_cursor data_type="integer" is_pk="true">2200152</id_cursor>
+  <id_cursor_att data_type="integer" is_pk="true">30030</id_cursor_att>
+  <column_cursor data_type="character varying" is_pk="false">TIPO_FRACAO</column_cursor>
+  <alias data_type="character varying" is_pk="false">A</alias>
+  <ordem data_type="integer" is_pk="false">22</ordem>
+  <expressao data_type="character varying" is_pk="false"/>
+  <group_by data_type="character" is_pk="false"/>
+  <order_by data_type="character" is_pk="false"/>
+  <length data_type="integer" is_pk="false"/>
+  <dec data_type="integer" is_pk="false"/>
+  <help data_type="character varying" is_pk="false">Tipo de fração de terra, sendo:
+Pasto - área de pastagem
+Modulo - Agrupamento de vários PASTOS que compoem um modulo para pastejo rotacionado
+Confinamento - Baia/Currais de confinamento
+Semi-Confinamento - Pastos para Semi-Confinamento
+Represa - Represa de Peixes
+Entrevero - Pasto fecticio onde ficarão os lotes com animais não encontrados no manejo</help>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <md5 data_type="character varying" is_pk="false">F869374F941D2F47E4B95D6BFE1A5E12</md5>
+  <id_table data_type="integer" is_pk="false">2200160</id_table>
+  <id_cols data_type="integer" is_pk="false">30032</id_cols>
+  <id_type data_type="integer" is_pk="false"/>
+  <lkp_desc data_type="character" is_pk="false"/>
+  <show_grid data_type="character" is_pk="false"/>
+  <order_grid data_type="integer" is_pk="false"/>
+  <json_name data_type="character varying" is_pk="false"/>
+  <json_false_value data_type="character varying" is_pk="false"/>
+  <json_true_value data_type="character varying" is_pk="false"/>
+  <json_exportable data_type="character" is_pk="false">S</json_exportable>
+  <json_null_on_empty data_type="character" is_pk="false">S</json_null_on_empty>
+  <updatable data_type="character" is_pk="false">S</updatable>
+</fr_cursor_att>

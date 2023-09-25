@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">6000391</id_table>
+  <id_cols data_type="integer" is_pk="true">600014</id_cols>
+  <column_name data_type="character varying" is_pk="false">TARIFA_BANCARIA_INFORMATIVA</column_name>
+  <ordem data_type="integer" is_pk="false">14</ordem>
+  <length data_type="integer" is_pk="false">1</length>
+  <dec data_type="integer" is_pk="false"/>
+  <primary_key data_type="character" is_pk="false"/>
+  <not_null data_type="character" is_pk="false"/>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Campo que defini se a Tarifa Bancária que vem no arquivo retorno como despesa bancaria deduz diretamente do valor a ser creditado na conta corrente da empresa ou não. 
+Este campo foi criado pois o banco do itau manda como despesa bancaria deduz do valor total mais na conta do cliente ele manda o credito com o valor total, desta forma o cliente deseja que seja baxado com o valor total e depois o mesmo irá lançar manualmente a tarifa do banco separada, para ficar igual o extrato do banco. Então caso seja marcado este campo o valor da despesa irá ser zerado e o valor total irá somar o valor da despesa.</commet>
+  <listoptions data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">300</user_perfil>
+  <user_ie data_type="character" is_pk="false">I</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">1</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false"/>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>

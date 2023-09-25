@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_body>
+  <id_table data_type="integer" is_pk="true">130136</id_table>
+  <db_name data_type="character varying" is_pk="true">PG</db_name>
+  <body data_type="text" is_pk="false"><![CDATA[select COALESCE(a.id_aparte, b.id_aparte) as id_aparte,
+       count(distinct c.id_animal) as qtde_animal,
+       count(distinct case when c.status = 'E' then c.id_animal end) as qtde_animal_estoque,
+       count(distinct case when c.status = 'B' then c.id_animal end) as qtde_animal_baixado,
+       count(distinct case when c.status = 'T' then c.id_animal end) as qtde_animal_transito,
+       avg(b.peso) as peso_medio,
+       CAST(to_timestamp(avg(extract(epoch from c.data_nascimento))) as date) as data_media_nasc,
+       avg(c.gmd) as gmd_medio_ultimo,
+       max(c.data_peso) as data_ultima_pesagem
+
+from xgp_manejo a, xgp_manejo_detalhe b, xgp_animal c
+where a.id_manejo = b.id_manejo
+  and b.id_animal = c.id_animal
+group by COALESCE(a.id_aparte, b.id_aparte)]]></body>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+</db_body>

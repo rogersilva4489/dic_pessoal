@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">130239</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_ENGORDA_ESTOQUE</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a.id_empresa,
+       a.id_item,
+       c.cod_item,
+       c.descricao,
+       a.qtde,
+       a.custo_medio,
+       d.qtde_consumo_medio_dia,
+       cast((a.qtde / d.qtde_consumo_medio_dia) as Integer) as dias_estoque
+       
+from XGP_ESTOQUE A 
+     inner join EMPRESA B on 
+           B.ID_EMPRESA = A.ID_EMPRESA
+     inner join XGP_ITEM C on 
+           C.ID_ITEM = A.ID_ITEM
+           
+left join (select b1.id_empresa,
+                  a1.id_item_ingrediente,
+                  avg(a1.qtde_realizado) as qtde_consumo_medio_dia
+            from xgp_fabrica_item a1, xgp_fabrica b1
+            where a1.id_fabrica = b1.id_fabrica
+              and b1.data_agendamento >= (CURRENT_DATE  - 30)   -- ultimos 30 dias
+            group by b1.id_empresa, a1.id_item_ingrediente) d on
+     d.id_empresa = a.id_empresa and 
+     d.id_item_ingrediente = a.id_item                 
+
+where a.id_item in (select c1.id_item_ingrediente 
+                    from xgp_estrategia a1, xgp_estrategia_for b1, xgp_ingredientes c1
+                    where a1.id_estrategia = b1.id_estrategia
+                      and b1.id_formula = c1.id_formula
+                      and a1.tipo_estrategia = 'E'
+                      and a1.ativo = 'S'
+                      and c1.baixa_estoque = 'S')
+
+order by c.descricao
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">100</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false">N</create_rowtype>
+</fr_cursor>

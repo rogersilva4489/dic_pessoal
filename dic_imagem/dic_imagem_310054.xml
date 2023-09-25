@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dic_imagem>
+  <id_imagem data_type="integer" is_pk="true">310054</id_imagem>
+  <descricao_imagem data_type="character varying" is_pk="false">UnCheck 16</descricao_imagem>
+  <valor_imagem data_type="bytea" is_pk="false">89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF610000005F4944415478DA636460606007E26E208E03627E06E2C047205E04C4A58C40621210FB037131103F23D2002920EE05E28D20033E00710A10AF2152330C8400F11C9001FF81D81A888F91688015101F1D3560D400AA19407152A6383351949D0184F831196C2EDAFC0000000049454E44AE426082</valor_imagem>
+  <nivel_acesso data_type="integer" is_pk="false"/>
+</dic_imagem>

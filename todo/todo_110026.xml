@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<todo>
+  <id_todo data_type="integer" is_pk="true">110026</id_todo>
+  <id_todo_patent data_type="integer" is_pk="false">110061</id_todo_patent>
+  <solicitacao data_type="character varying" is_pk="false">MER - Ao modificar as Views para Inserir os SQL para as Bases Oracle e Postgres o mesmo esta gerando erro. E ao realizar o Debug identifiquei que faz necessário adquirir a licença do SQLParser. Rever Gerson</solicitacao>
+  <solucao data_type="character varying" is_pk="false">Não será implementado a validação.</solucao>
+  <responsavel data_type="character varying" is_pk="false">EMERSON</responsavel>
+  <status data_type="character" is_pk="false">S</status>
+  <percentual_concluido data_type="numeric" is_pk="false">100</percentual_concluido>
+  <prioridade data_type="integer" is_pk="false">0</prioridade>
+  <data_termino data_type="timestamp without time zone" is_pk="false">2015-11-27T00:00:00.000</data_termino>
+  <usuario_created data_type="character varying" is_pk="false">EMERSON</usuario_created>
+  <id_grupo data_type="integer" is_pk="false">60005</id_grupo>
+  <id_categoria data_type="integer" is_pk="false">60009</id_categoria>
+</todo>

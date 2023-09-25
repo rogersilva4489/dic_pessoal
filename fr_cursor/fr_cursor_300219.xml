@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_cursor>
+  <id_cursor data_type="integer" is_pk="true">300219</id_cursor>
+  <cursor_name data_type="character varying" is_pk="false">XGP_CURVA_NASCIMENTO</cursor_name>
+  <tipo data_type="character" is_pk="false">S</tipo>
+  <add_distinct data_type="character" is_pk="false"/>
+  <observacao data_type="character varying" is_pk="false"/>
+  <sql data_type="text" is_pk="false"><![CDATA[select a1.mes_ano, a1.qtde_prevista, b1.qtde_nascidos
+from (select to_char(a.data_parto, 'YYYYMM')  as mes_ano,
+             count(*) as qtde_prevista
+      from xgp_animal a
+      where a.data_parto is not null
+      group by to_char(a.data_parto, 'YYYYMM')) a1
+
+      left join (select to_char(a.data_entrada, 'YYYYMM') as mes_ano,
+                        count(*) as qtde_nascidos
+                 from xgp_entrada a, xgp_entrada_detalhe b, xgp_operacao c
+                 where a.id_entrada = b.id_entrada
+                   and a.id_operacao = c.id_operacao 
+                   and c.tipo = 'N'
+                 group by to_char(a.data_entrada, 'YYYYMM')) b1 on 
+       a1.mes_ano = b1.mes_ano
+]]></sql>
+  <group_by data_type="character varying" is_pk="false"/>
+  <order_by data_type="character varying" is_pk="false">a1.mes_ano</order_by>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <help data_type="text" is_pk="false"/>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_table_updating data_type="integer" is_pk="false"/>
+  <id_perfil data_type="integer" is_pk="false">200</id_perfil>
+  <obj_type_fk data_type="character varying" is_pk="false"/>
+  <create_rowtype data_type="character varying" is_pk="false"/>
+</fr_cursor>

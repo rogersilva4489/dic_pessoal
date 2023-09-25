@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fr_menu>
+  <id_menu data_type="integer" is_pk="true">50046</id_menu>
+  <id_menu_super data_type="integer" is_pk="false">40013</id_menu_super>
+  <descricao data_type="character varying" is_pk="false">Compesação de Cheque Emitido</descricao>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <id_form data_type="integer" is_pk="false">50052</id_form>
+  <id_imagem data_type="integer" is_pk="false"/>
+  <ordem data_type="integer" is_pk="false">3</ordem>
+  <cod_acesso data_type="character varying" is_pk="false"/>
+  <icon_class data_type="character varying" is_pk="false"/>
+  <path_route data_type="character varying" is_pk="false"/>
+  <id_projeto data_type="integer" is_pk="false"/>
+  <id_modulo data_type="integer" is_pk="false"/>
+</fr_menu>

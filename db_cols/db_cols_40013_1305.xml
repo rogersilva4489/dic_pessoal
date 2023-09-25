@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<db_cols>
+  <id_table data_type="integer" is_pk="true">40013</id_table>
+  <id_cols data_type="integer" is_pk="true">1305</id_cols>
+  <column_name data_type="character varying" is_pk="false">ID_TIPO_MANEJO</column_name>
+  <ordem data_type="integer" is_pk="false">3</ordem>
+  <length data_type="integer" is_pk="false">0</length>
+  <dec data_type="integer" is_pk="false">0</dec>
+  <primary_key data_type="character" is_pk="false">N</primary_key>
+  <not_null data_type="character" is_pk="false">N</not_null>
+  <delete_cascade data_type="character" is_pk="false"/>
+  <commet data_type="character varying" is_pk="false">Tipo de manejo relacionado ao protocolo. Este relacionamento serve para definir a ordem de execução do manejo</commet>
+  <listoptions data_type="character varying" is_pk="false"/>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
+  <user_perfil data_type="integer" is_pk="false">999</user_perfil>
+  <user_ie data_type="character" is_pk="false">E</user_ie>
+  <md5 data_type="character varying" is_pk="false"/>
+  <id_type data_type="integer" is_pk="false">3</id_type>
+  <id_charcase data_type="character" is_pk="false">N</id_charcase>
+  <id_special_type data_type="character" is_pk="false"/>
+  <id_table_rel data_type="integer" is_pk="false"/>
+  <id_cols_rel data_type="integer" is_pk="false"/>
+  <comment_fk data_type="character varying" is_pk="false"/>
+  <default_value data_type="character varying" is_pk="false"/>
+  <sequence_name data_type="character varying" is_pk="false"/>
+</db_cols>
