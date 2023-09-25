@@ -2,8 +2,8 @@
 <db_pkg_table>
   <id_pkg data_type="integer" is_pk="true">220038</id_pkg>
   <id_table data_type="integer" is_pk="true">500147</id_table>
-  <p_top data_type="integer" is_pk="false">374</p_top>
-  <p_left data_type="integer" is_pk="false">1242</p_left>
+  <p_top data_type="integer" is_pk="false">370</p_top>
+  <p_left data_type="integer" is_pk="false">1282</p_left>
   <ativo data_type="character" is_pk="false">S</ativo>
   <atributo data_type="character" is_pk="false">T</atributo>
   <cor data_type="integer" is_pk="false">13041663</cor>

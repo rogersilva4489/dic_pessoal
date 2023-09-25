@@ -3,7 +3,7 @@
   <id_table data_type="integer" is_pk="true">130127</id_table>
   <id_cols data_type="integer" is_pk="true">13033</id_cols>
   <column_name data_type="character varying" is_pk="false">PESO_MEDIO_ANT</column_name>
-  <ordem data_type="integer" is_pk="false">11</ordem>
+  <ordem data_type="integer" is_pk="false">13</ordem>
   <length data_type="integer" is_pk="false"/>
   <dec data_type="integer" is_pk="false"/>
   <primary_key data_type="character" is_pk="false"/>

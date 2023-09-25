@@ -8,7 +8,6 @@
   <sql data_type="text" is_pk="false"><![CDATA[select 
      A.ID_INVENTARIO_CAMPO, 
      A.ID_FRACAO, 
-     A.ID_TIPO_APARTE, 
      A.DATA, 
      A.QTDE, 
      A.PESO, 
@@ -32,8 +31,8 @@
 from XGP_INVENTARIO_CAMPO A 
      inner join EMPRESA B on 
            B.ID_EMPRESA = A.ID_EMPRESA
-     inner join XGP_TIPO_APARTE C on 
-           C.ID_TIPO_APARTE = A.ID_TIPO_APARTE
+     left join XGP_TIPO_APARTE C on 
+           C.ID_TIPO_APARTE = D.ID_TIPO_APARTE
      inner join XGP_FRACAO D on 
            D.ID_FRACAO = A.ID_FRACAO
 ]]></sql>

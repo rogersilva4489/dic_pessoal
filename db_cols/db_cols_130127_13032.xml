@@ -3,7 +3,7 @@
   <id_table data_type="integer" is_pk="true">130127</id_table>
   <id_cols data_type="integer" is_pk="true">13032</id_cols>
   <column_name data_type="character varying" is_pk="false">QTDE_ANIMAIS_ANT</column_name>
-  <ordem data_type="integer" is_pk="false">8</ordem>
+  <ordem data_type="integer" is_pk="false">11</ordem>
   <length data_type="integer" is_pk="false"/>
   <dec data_type="integer" is_pk="false"/>
   <primary_key data_type="character" is_pk="false"/>

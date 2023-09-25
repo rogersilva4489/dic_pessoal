@@ -13,5 +13,5 @@
   <id_cols_lkpdesc data_type="integer" is_pk="false"/>
   <id_projeto data_type="integer" is_pk="false">22003</id_projeto>
   <id_modulo data_type="integer" is_pk="false">22001</id_modulo>
-  <usuario_created data_type="character varying" is_pk="false">ROGERIO</usuario_created>
+  <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
 </fr_param>

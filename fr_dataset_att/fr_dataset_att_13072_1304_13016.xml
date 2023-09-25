@@ -15,7 +15,7 @@
   <height data_type="integer" is_pk="false">19</height>
   <show_grid data_type="character" is_pk="false">S</show_grid>
   <title_grid data_type="character varying" is_pk="false">Inv - Est</title_grid>
-  <order_grid data_type="integer" is_pk="false">9</order_grid>
+  <order_grid data_type="integer" is_pk="false">5</order_grid>
   <width_grid data_type="integer" is_pk="false"/>
   <flex_grid data_type="character" is_pk="false"/>
   <compute_grid data_type="character varying" is_pk="false">SUM</compute_grid>
@@ -26,7 +26,7 @@
   <default_value data_type="character varying" is_pk="false"/>
   <pwd data_type="character" is_pk="false"/>
   <required data_type="character" is_pk="false"/>
-  <taborder data_type="integer" is_pk="false">13</taborder>
+  <taborder data_type="integer" is_pk="false">9</taborder>
   <updatable data_type="character" is_pk="false"/>
   <readonly data_type="character" is_pk="false"/>
   <show_form data_type="character" is_pk="false"/>

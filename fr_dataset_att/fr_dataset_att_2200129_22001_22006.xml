@@ -28,7 +28,7 @@
   <required data_type="character" is_pk="false">F</required>
   <taborder data_type="integer" is_pk="false">10</taborder>
   <updatable data_type="character" is_pk="false">S</updatable>
-  <readonly data_type="character" is_pk="false">S</readonly>
+  <readonly data_type="character" is_pk="false">F</readonly>
   <show_form data_type="character" is_pk="false">S</show_form>
   <newline data_type="integer" is_pk="false">0</newline>
   <full_size data_type="character" is_pk="false">N</full_size>

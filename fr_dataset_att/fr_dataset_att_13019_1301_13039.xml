@@ -11,7 +11,7 @@
   <id_cursor_att data_type="integer" is_pk="false">13039</id_cursor_att>
   <att_name data_type="character varying" is_pk="false">DESC_ANIMAL_TOURO</att_name>
   <title data_type="character varying" is_pk="false">Pai</title>
-  <width data_type="integer" is_pk="false">100</width>
+  <width data_type="integer" is_pk="false">150</width>
   <height data_type="integer" is_pk="false">19</height>
   <show_grid data_type="character" is_pk="false">S</show_grid>
   <title_grid data_type="character varying" is_pk="false"/>

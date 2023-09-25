@@ -32,7 +32,7 @@
   <show_form data_type="character" is_pk="false">S</show_form>
   <newline data_type="integer" is_pk="false">0</newline>
   <full_size data_type="character" is_pk="false">N</full_size>
-  <orderby data_type="character varying" is_pk="false"/>
+  <orderby data_type="character varying" is_pk="false">Asc</orderby>
   <usuario_created data_type="character varying" is_pk="false">GERSON</usuario_created>
   <id_conteiner data_type="integer" is_pk="false"/>
   <obj_type data_type="character varying" is_pk="false">Combo</obj_type>
